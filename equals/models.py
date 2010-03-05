@@ -2,7 +2,7 @@ from django.db import models
 
 from feedinator.models import FeedEntry
 from blogdor.models import Post
-from schedule.models.events import Event
+# from schedule.models.events import Event
 # Create your models here.
 
 
@@ -13,5 +13,5 @@ def url_to_post(url):
     popular.register(Post, '^/blog/[0-9]{4}/', url_to_post)
 
 
-class Meeting(Event):
-    location = models.CharField(max_length=64, db_index=True)
+#class Meeting(Event):
+#    location = models.CharField(max_length=64, db_index=True)

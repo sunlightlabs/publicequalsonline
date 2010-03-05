@@ -31,9 +31,9 @@ def register(request):
             'form': form,
         })
 
-def meeting(request):
-    return render_to_response("schedule.html")
+#def meeting(request):
+#    return render_to_response("schedule.html")
 
-def event_detail(request, id):
-    return render_to_response("event.html")
+#def event_detail(request, id):
+#    return render_to_response("event.html")
        
