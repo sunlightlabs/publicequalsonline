@@ -1,0 +1,56 @@
+
+/*BSD TWEAKS*/
+#SKIN #blue_hat { background:#ffffff;}
+
+#SKIN #blue_hat #hat_dashboard { background:#ffffff;}
+#SKIN #blue_hat #hat_logout { display:none; background:#ffffff;}
+#SKIN #blue_hat li { border:0px solid;}
+#SKIN .yui-pg-container { background:#ffffff;}
+
+
+
+
+#hat_socialnet { display:none;}
+#hat_profile { display:none;}
+#hat_circle { display:none;}
+
+
+#SKIN .widget_header { background:#ffffff;}
+#SKIN .widget_title { color:#000000; }
+
+/* events */
+#SKIN .odd { background:#ffffff;}
+
+/* widgets */
+#SKIN #widget_group_1 { display:none;}
+#SKIN #control_set { display:none;}
+#SKIN #widget_circle_find_a_group { width:600px;}
+#SKIN #widget_circle_start_a_group .group_last { background:none; }
+
+
+#SKIN.module_circle .widget_groups_container #widget_group_2 { background:none;}
+#SKIN.module_circle .widget_groups_container #widget_group_2 .group_last { background:none;}
+#SKIN #widget_group_2 { background:none;}
+#SKIN #widget_group_2 .group_last { background:none;}
+
+#SKIN #widget_socialnet_widget { display:none;}
+
+#SKIN .main { border:0px solid; width:600px; margin:0;}
+
+
+/* LOG IN PAGE styles */
+
+#loginform table { background:#ffffff; border:0px solid;}
+.logintitle { color:#000;}
+
+#signupform table { background:#ffffff; border:0px solid;}
+
+
+/* event actions */
+#SKIN .basic .main h2, #SKIN .basic .main h2.header, #SKIN .basic .main h2#sectionheader { color:#000; border-bottom:1px solid #000;}
+
+
+
+/*tables */
+#SKIN #detailtable {border:none; background:#ffffff;}
+

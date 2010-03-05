@@ -1,0 +1,42 @@
+{% extends "blogdor/base.html" %}
+
+{% load tagging_tags %}
+
+{% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
+
+{% block content %}
+<div id="postTitle" class="contentHeader">
+    <h2 class="post">{{post.title}}</h2>
+</div>
+<div class="module" id="blog_detail">
+    <dl class="entryMetadata">
+        <dt>Written by</dt>
+        <dd><a class="seperationBlock" href="{{post.author.get_absolute_url}}">author name here</a></dd>
+        <dt>Date</dt>
+        <dd>{{post.date_published|date:"m/d/Y P"}}</dd>
+    </dl>
+    <div class="postBody">
+        {{post.content}}
+    </div>
+
+    {% tags_for_object post as tags %}
+    {% if tags %}
+    <div id="tags">
+        <span>Tags:</span>
+        <ul>
+            {% for tag in tags %}
+            <li><a href="{% url blogdor_tag tag.name %}" rel="tag">{{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <div class="clear"></div>
+    </div>
+    {% endif %}
+
+    {% if post.is_published %}
+    {% with post as comment_obj %}
+        {% include "comments/comment_box.html" %}
+    {% endwith %}
+    {% endif %}
+
+</div>
+{% endblock content %}

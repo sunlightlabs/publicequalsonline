@@ -1,0 +1,86 @@
+/* PUBLIC EQUALS ONLINE STYLES */
+/* 950 */
+
+/* THIS STUFF GOES WITH WRAPPER? */
+#stripe { background-color:#76a050; margin:0 0 40px 0; padding:0; height:3px;}
+#logo_topleft { height:100px; width:475px; margin-bottom:50px;  background-image:url(http://assets.publicequalsonline.com/images/peo_logo_header.png); }
+#joinbox { width:300px; margin-right:0; margin-left:auto;  text-align:right;}
+
+#topnav { margin:0 0 0 0; padding:0; }
+#topnav li { display: inline; font-family:georgia; font-size:16px; margin:0; padding:0 40px 0 0;}
+
+#topnav a:link { text-decoration:none; color:#cccccc; }
+#topnav a:visited { text-decoration:none; color:#cccccc;}
+#topnav a:hover {text-decoration:none; color:#cccccc; }
+#topnav a:active {text-decoration:none; color:#cccccc;}
+
+
+#main_graphic_box { background-color:#e6e6e6; float:left; height:300px; width:629px; margin:0; padding:0;}
+
+#main_nav_box {margin-left:630px; width:320px; }
+#main_nav { margin:0; padding:0;}
+#main_nav ul { margin:0; padding:0;}
+#main_nav li { height:74px; border-top:1px solid #ffffff; list-style:none; }
+
+#main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/images/peo_right_nav_sprite.png'); background-repeat:no-repeat;}
+#main_nav li a.option_1 {background-position:0px 0px; display:block;}
+#main_nav li a:hover.option_1 {background-position:0px -300px;}
+
+#main_nav li a.option_2 {background-position:0px -75px; display:block;}
+#main_nav li a:hover.option_2 {background-position:0px -375px;}
+
+#main_nav li a.option_3 {background-position:0px -150px; display:block;}
+#main_nav li a:hover.option_3 {background-position:0px -450px;}
+
+#main_nav li a.option_4 {background-position:0px -225px; display:block;}
+#main_nav li a:hover.option_4 {background-position:0px -525px;}
+
+
+
+/*social icons */
+
+#social_bar {
+ width: 96px;
+ height: 16px;
+ margin:4px 0; padding:0;
+ position: relative;
+
+}
+#social_bar li {margin: 0; padding: 0; list-style: none; position: absolute; top: 0;}
+
+#social_bar li, #social_bar a { height:16px; display: block;}
+
+#panel1b {left:0; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) 0 0; background-repeat:no-repeat;}
+#panel2b {left:25px; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) -20px 0; background-repeat:no-repeat;}
+#panel3b {left:50px; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) -40px 0; background-repeat:no-repeat;}
+#panel4b {left:75px; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) -60px 0; background-repeat:no-repeat;}
+#panel5b {left:100px; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) -80px 0; background-repeat:no-repeat;}
+
+
+/*end social */
+
+
+#hor_dot { background-image:url(http://assets.publicequalsonline.com/images/dotted.png); background-repeat:repeat-x; margin:10px 0 20px 0; }
+
+#front_blog_posts { margin:0; padding:0;}
+#front_blog_posts li {list-style:none; margin-bottom:20px; }
+#front_blog_posts h4 { margin:0; padding:0; font-weight:bold;}
+
+#mission_front { padding:0 20px 0 0;}
+.front_mission { font-family:georgia; font-size:16px; color:#c6c6c6;}
+
+
+#upcoming_front { padding:0 0 0 20px;}
+#front_upcoming { margin:0; padding:0;}
+#front_upcoming li { display:block; height:55px;}
+
+
+
+.join_strong { font-size:24px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
+.join_us { font-size:24px; color:#669933; font-family:georgia;}
+.already_member { font-size:16px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
+.get_in_here { font-size:16px; color:#669933; font-family:georgia;}
+
+
+/* BSD CONTAINER */
+#bsd_container { background-color:#ffffff;}

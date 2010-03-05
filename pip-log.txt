@@ -1,0 +1,85 @@
+Obtaining django-schedule from git+git://github.com/thauber/django-schedule.git#egg=django-schedule (from -r requirements.txt (line 12))
+  Cloning git://github.com/thauber/django-schedule.git to /Users/kerry/.virtualenvs/publicequals/src/django-schedule
+  Running command git clone -q git://github.com/thauber/django-schedule.git /Users/kerry/.virtualenvs/publicequals/src/django-schedule
+  Running command git checkout -q origin/master
+  Running setup.py egg_info for package django-schedule
+    running egg_info
+    creating django_schedule.egg-info
+    writing requirements to django_schedule.egg-info/requires.txt
+    writing django_schedule.egg-info/PKG-INFO
+    writing top-level names to django_schedule.egg-info/top_level.txt
+    writing dependency_links to django_schedule.egg-info/dependency_links.txt
+    writing manifest file 'django_schedule.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_schedule.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_schedule.egg-info/SOURCES.txt'
+Requirement already satisfied: markdown in /Users/kerry/.virtualenvs/publicequals/lib/python2.6/site-packages (from -r requirements.txt (line 5))
+Requirement already satisfied: django-tagging in /Users/kerry/.virtualenvs/publicequals/src/tagging (from -r requirements.txt (line 10))
+Obtaining django-registration from hg+http://bitbucket.org/ubernostrum/django-registration/#egg=django-registration (from -r requirements.txt (line 11))
+  Cloning hg http://bitbucket.org/ubernostrum/django-registration/ to /Users/kerry/.virtualenvs/publicequals/src/django-registration
+  Running command hg clone -q http://bitbucket.org/ubernostrum/django-registration/ /Users/kerry/.virtualenvs/publicequals/src/django-registration
+  Error [Errno 2] No such file or directory while executing command hg clone -q http://bitbucket.org/ubernostrum/django-registration/ /Users/kerry/.virtualenvs/publicequals/src/django-registration
+Exception:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 479, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1948, in install_files
+    req_to_install.update_editable(not self.is_download)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1624, in update_editable
+    vcs_backend.obtain(self.source_dir)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3329, in obtain
+    call_subprocess(['hg', 'clone', '-q', url, dest])
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3821, in call_subprocess
+    cwd=cwd, env=env)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/subprocess.py", line 621, in __init__
+    errread, errwrite)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/subprocess.py", line 1126, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+------------------------------------------------------------
+/usr/local/bin/pip run on Thu Jan 28 16:48:14 2010
+Obtaining django-schedule from git+git://github.com/thauber/django-schedule.git#egg=django-schedule (from -r requirements.txt (line 12))
+  Running command git config remote.origin.url
+  git://github.com/thauber/django-schedule.git
+  Clone in /Users/kerry/.virtualenvs/publicequals/src/django-schedule exists, and has correct URL (git://github.com/thauber/django-schedule.git)
+  Updating /Users/kerry/.virtualenvs/publicequals/src/django-schedule clone
+  Running command git fetch -q
+  Running command git checkout -q -f origin/master
+  Running setup.py egg_info for package django-schedule
+    running egg_info
+    writing requirements to django_schedule.egg-info/requires.txt
+    writing django_schedule.egg-info/PKG-INFO
+    writing top-level names to django_schedule.egg-info/top_level.txt
+    writing dependency_links to django_schedule.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_schedule.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_schedule.egg-info/SOURCES.txt'
+Requirement already satisfied: markdown in /Users/kerry/.virtualenvs/publicequals/lib/python2.6/site-packages (from -r requirements.txt (line 5))
+Requirement already satisfied: django-tagging in /Users/kerry/.virtualenvs/publicequals/src/tagging (from -r requirements.txt (line 10))
+Obtaining django-registration from hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration (from -r requirements.txt (line 11))
+  Cloning hg https://bitbucket.org/ubernostrum/django-registration/ to /Users/kerry/.virtualenvs/publicequals/src/django-registration
+  Running command hg clone -q https://bitbucket.org/ubernostrum/django-registration/ /Users/kerry/.virtualenvs/publicequals/src/django-registration
+  Error [Errno 2] No such file or directory while executing command hg clone -q https://bitbucket.org/ubernostrum/django-registration/ /Users/kerry/.virtualenvs/publicequals/src/django-registration
+Exception:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 479, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1948, in install_files
+    req_to_install.update_editable(not self.is_download)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1624, in update_editable
+    vcs_backend.obtain(self.source_dir)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3329, in obtain
+    call_subprocess(['hg', 'clone', '-q', url, dest])
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3821, in call_subprocess
+    cwd=cwd, env=env)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/subprocess.py", line 621, in __init__
+    errread, errwrite)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/subprocess.py", line 1126, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory

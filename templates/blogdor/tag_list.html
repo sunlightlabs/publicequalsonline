@@ -1,0 +1,10 @@
+{% extends "blogdor/base.html" %}
+
+{% block content %}
+    <p>Tags</p>
+    <ol id="tags">
+        {% for tag in tag_list %}
+            <li><a href="{% url blogdor_tag tag.name %}">{{ tag.name }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}

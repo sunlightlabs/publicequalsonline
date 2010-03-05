@@ -1,3 +1,20 @@
 Django
+
+# non-django dependencies
+python-twitter
+markdown
+textile
+feedparser
+
+# third party apps
+django-tagging
+# -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
+# -e git://github.com/thauber/django-schedule.git#egg=django-schedule
+
+
+# sunlight apps
+-e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
+-e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
+# -e git://github.com/sunlightlabs/django-gatekeeper.git@0.1.0#egg=django-gatekeeper
 django-mediasync
 django-debug-toolbar
