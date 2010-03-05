@@ -1,43 +1,77 @@
 {% load i18n %}
+{% load media %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-    <link rel="stylesheet" href="/style.css" />
+	 {% css "/styles/screen.css" %}
+    {% css_print "/styles/print.css" %}
+    <!--[if IE 6]>{% css "/styles/ie.css" %}<![endif]-->
+    {% css "/styles/style.css" %}
+
+	<!-- icons -->
+		<link rel="shortcut icon" href="{% media_url %}/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
+		<link href="http://assets.publicequalsonline.com/favicon.ico" rel="shortcut icon" type="image/ico" />
+	<!-- feeds -->
+		<link rel="alternate" type="application/rss+xml" title="Public Equals Online" href="http://www.publicequalsonline.com/feeds/latest/" />
+
+	<!-- scripts -->
+
+
     <title>{% block title %}Public Equals Online{% endblock %}</title>
 </head>
 
 <body>
-    <div id="header">
-	
+	<div id="stripe">&nbsp;</div>
 
-	
-        {% block header %}
-	<a href="{% url index %}">{% trans "Home" %}</a> | <a href="/blog/">Blog</a> | <a href="/schedule/">Upcoming Events</a> | <a href="/events/1/">Specific Event</a> | <a href="/about/">About</a> | <a href="/about/mission/">Mission</a>
+	<div class="container">
+		<div class="column span-8">
+			<div id="logo_topleft">switch to the H1 tag</div>
+		</div>
+		<div class="column span-16 last">
+			<div id="joinbox">
+				<span class="join_strong">54,252 STRONG</span><span class="join_us"><a href="#">JOIN US</a></span>
+				<br />
+				<span class="already_member">ALREADY A MEMBER?</span><span class="get_in_here"><a href="http://local.publicequalsonline.com/page/dashboard/view/private">GET IN HERE!</a></span>
+			</div>
+		</div>	
+	</div>
 
-	{% if user.is_authenticated %}
-	{% trans "Logged in" %}: {{ user.username }} 
-	(<a href="{% url auth_logout %}">{% trans "Log out" %}</a> | 
-	<a href="{% url auth_password_change %}">{% trans "Change password" %}</a>)
-	{% else %}
-	<a href="{% url auth_login %}">{% trans "Log in" %}</a> / <a href="/accounts/register">Register</a>
-	{% endif %}
-	<hr />
-        {% endblock %}
-    </div>
+	<div class="container">
+		<div class="column span-20">
+			<ul id="topnav">
+				<li><a href="/">HOME</li>
+				<li><a href="/pledge/">ACT NOW</a></li>
+				<li><a href="/local/">GET LOCAL</a></li>
+				<li><a href="/toolkit/">GET THE TOOLKIT</a></li>
+				<li><a href="/about/">ABOUT THE CAMPAIGN</a></li>
+			</ul>	
+		</div>	
+		<div class="column span-4 last">
+			<ul id="social_bar">
+				<li id="panel1b"><a href="rssfeed"></a></li>			
+				<li id="panel2b"><a href="http://twitter.com/sunlightnetwork"></a></li>
+				<li id="panel3b"><a href="facebook"></a></li>
+				<li id="panel4b"><a href="flickr"></a></li>
+				<li id="panel5b"><a href="youtube"></a></li>
+			</ul>
 
-    <div id="content">
-        {% block content %}
+		</div>
+
+
+		<div class="column span-24">
+		{% block body %}
 
 		{% endblock %}
-    </div>
+</div>
 
-    <div id="footer">
-        {% block footer %}
-        <hr />
-        {% endblock %}
-    </div>
+
+{% block footer %}
+ footer
+{% endblock %}
+
 </body>
 
 </html>

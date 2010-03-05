@@ -31,6 +31,11 @@ def register(request):
             'form': form,
         })
 
+
+
+
+
+
 #def meeting(request):
 #    return render_to_response("schedule.html")
 

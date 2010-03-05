@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}From the Sunlight Foundation Transparency Ecosystem{% endblock %}
+
+{% block body %}
+
+hello?
+<form  action="http://local.publicequalsonline.com/page/event/search_simple/" method="post" name="event_simple_search_form" id="event_simple_search_form">
+
+<table>
+      <tr id="event_zip_row">
+
+      <th class="form_label"><span id="event_zip_txt" class="event_zip_search_txt">Zip Code</span>:</th>
+      <td><input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /></td>
+    </tr>
+        <tr id="event_radius_row">
+      <th class="form_label">Search Radius:</th>
+      <td><input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;<span id='event_radius_unit'>miles <br /> Max radius: 100 miles</span></td>
+
+    </tr>
+            <tr>
+      <td colspan="2" class="button">
+        <input type="submit" value="Find Events" />
+      </td>
+    </tr>
+  </table>
+</form>
+	
+
+{% endblock %}

@@ -83,3 +83,31 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python/2.6.3/lib/python2.6/subprocess.py", line 1126, in _execute_child
     raise child_exception
 OSError: [Errno 2] No such file or directory
+------------------------------------------------------------
+/usr/local/bin/pip run on Fri Mar  5 13:07:59 2010
+--editable=requirements.txt should be formatted with svn+URL, git+URL, hg+URL or bzr+URL
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 475, in run
+    InstallRequirement.from_editable(name))
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1336, in from_editable
+    name, url = parse_editable(editable_req)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3971, in parse_editable
+    '--editable=%s should be formatted with svn+URL, git+URL, hg+URL or bzr+URL' % editable_req)
+InstallationError: --editable=requirements.txt should be formatted with svn+URL, git+URL, hg+URL or bzr+URL
+------------------------------------------------------------
+/usr/local/bin/pip run on Fri Mar  5 13:08:27 2010
+--editable=boto should be formatted with svn+URL, git+URL, hg+URL or bzr+URL
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 475, in run
+    InstallRequirement.from_editable(name))
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1336, in from_editable
+    name, url = parse_editable(editable_req)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3971, in parse_editable
+    '--editable=%s should be formatted with svn+URL, git+URL, hg+URL or bzr+URL' % editable_req)
+InstallationError: --editable=boto should be formatted with svn+URL, git+URL, hg+URL or bzr+URL

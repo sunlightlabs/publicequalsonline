@@ -1,6 +1,7 @@
 Django
 
 # non-django dependencies
+boto
 python-twitter
 markdown
 textile
@@ -10,6 +11,7 @@ feedparser
 django-tagging
 # -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
 # -e git://github.com/thauber/django-schedule.git#egg=django-schedule
+# -e git://github.com/t11e/boto.git#egg=boto
 
 
 # sunlight apps

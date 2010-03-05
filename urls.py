@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
     url(r'^blog/$', 'equalsonline.equals.views.blog_wrapper'),
-    url(r'^blog/', include('blogdor.urls')),
+    url(r'^blog/', include('blogdor.urls')), 
+    url(r'^', include('equalsonline.equals.urls')),    
     
     
 #schedule
@@ -36,8 +37,10 @@ urlpatterns = patterns('',
 #    url(r'^(?P<url>.+)(/?)', 'flatpage_wrapper'),
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns('',
+
+    
+if (settings.DEBUG):
+    urlpatterns += patterns('',  
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
-    )
+#        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
+    )    
