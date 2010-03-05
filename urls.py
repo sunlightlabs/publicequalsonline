@@ -15,9 +15,9 @@ blog_feeds = {
 urlpatterns = patterns('',
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    url(r'^blog/$', 'equalsonline.equals.views.blog_wrapper'),
+    url(r'^blog/$', 'publicequalsonline.equals.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')), 
-    url(r'^', include('equalsonline.equals.urls')),    
+    url(r'^', include('publicequalsonline.equals.urls')),    
     
     
 #schedule
