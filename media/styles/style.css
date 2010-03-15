@@ -9,19 +9,26 @@ h1.technique-three { width:475px; height:100px; background: url("http://assets.p
 
 #joinbox { width:300px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
 
+
 a.join_us:link { color:#669933; text-decoration:none;}
 a.join_us:visited { color:#669933; text-decoration:none;}
-a.join_us:hover { color:#669933; text-decoration:none;}
+a.join_us:hover { color:#669933; text-decoration:underline;}
 a.join_us:active { color:#669933; text-decoration:none;}
 
 a.get_in_here:link { color:#3465c0; text-decoration:none;}
 a.get_in_here:visited { color:#3465c0; text-decoration:none;}
-a.get_in_here:hover { color:#3465c0; text-decoration:none;}
+a.get_in_here:hover { color:#3465c0; text-decoration:underline;}
 a.get_in_here:active { color:#3465c0; text-decoration:none;}
+
+.join_strong { font-size:24px; padding-right:18px; font-family:georgia; color:#b3b3b3;}
+.join_us { font-size:24px; color:#669933; font-family:georgia;}
+.already_member { font-size:16px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
+.get_in_here { font-size:16px; color:#669933; font-family:georgia;}
 
 
 #topnav { margin:0 0 0 0; padding:0; }
-#topnav li { display: inline; font-family:georgia; font-size:16px; margin:0; padding:0 40px 0 0;}
+#topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",georgia,serif;
+ font-size:16px; margin:0; padding:0 40px 0 0;}
 
 #topnav a:link { text-decoration:none; color:#b0b0b0; }
 #topnav a:visited { text-decoration:none; color:#b0b0b0;}
@@ -82,7 +89,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 /* FRONT BLOG AREA */
 #front_blogs {padding:0 20px 0 10px; background:url(http://assets.publicequalsonline.com/images/dotted_vert.png); background-repeat:repeat-y; background-position:right;}
-#front_blogs h3 { font-family: arial, helvetica; }
+#front_blogs h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px;}
 
 #front_blog_posts { margin:0; padding:0;}
 
@@ -99,10 +106,13 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 .mission_line { background:url(http://assets.publicequalsonline.com/images/dotted_vert.png); background-repeat:repeat-y; background-position:right; }
 
 #mission_front { padding:0 20px 0 0; }
-.front_mission { font-family:georgia; font-size:18px; color:#c6c6c6;}
+#mission_front h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px;}
+.front_mission { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",serif, georgia; font-size:18px; color:#c6c6c6;}
 
 /* UPCOMING FRONT */
+
 #upcoming_front { padding:0 0 0 20px;}
+#upcoming_front h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px;}
 
 #front_upcoming { margin:0; padding:0;}
 #front_upcoming li { list-style:none; margin:0;}
@@ -124,10 +134,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 .upcoming_item_2 { background-color:#ffffff; }
 
 
-.join_strong { font-size:24px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
-.join_us { font-size:24px; color:#669933; font-family:georgia;}
-.already_member { font-size:16px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
-.get_in_here { font-size:16px; color:#669933; font-family:georgia;}
+
 
 /* FOOTER */
 
