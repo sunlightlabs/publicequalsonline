@@ -5,10 +5,23 @@ from django.shortcuts import render_to_response
 from django.contrib.flatpages.views import flatpage
 from blogdor.models import Post
 from blogdor.views import archive
+from publicequalsonline.equals.models import FeaturedPost
+from feedinator.models import FeedEntry
 
 
 def index(request):
-     return render_to_response("index.html")
+        try:
+            featured_blog = FeedEntry.objects.filter(feed__codename='upcoming_events').latest("date_published")
+        except FeedEntry.DoesNotExist:
+            featured_blog = None
+
+        feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:4]
+
+        context = {
+        'feature_post': feature_post,
+         }
+
+        return render_to_response("index.html", context)
     
                              
 def blog_wrapper(request):
@@ -31,7 +44,16 @@ def register(request):
             'form': form,
         })
 
+        #
+        # utility views to make life easier
+        #
 
+
+def page_not_found(request):
+            subject = "[404] publicequalsonline.com%s" % request.path 
+            message = "See subject for error"
+            #mail_admins(subject, message)
+            return defaults.page_not_found(request)
 
 
 

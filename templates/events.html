@@ -4,9 +4,10 @@
 {% block title %}From the Sunlight Foundation Transparency Ecosystem{% endblock %}
 
 {% block body %}
-
-hello?
+<div class="column span-16">
+<div style="margin-top:50px;">
 <form  action="http://local.publicequalsonline.com/page/event/search_simple/" method="post" name="event_simple_search_form" id="event_simple_search_form">
+	<input name="form_type" type="hidden" value="simple" />
 
 <table>
       <tr id="event_zip_row">
@@ -26,6 +27,12 @@ hello?
     </tr>
   </table>
 </form>
-	
+</div>
+</div>
+
+<div class="column span-8">
+sidebar
+</div>
+
 
 {% endblock %}

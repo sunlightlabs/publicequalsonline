@@ -2,6 +2,8 @@
 /*BSD TWEAKS*/
 #SKIN #blue_hat { background:#ffffff;}
 
+#SKIN .basic { width:700px;}
+
 #SKIN #blue_hat #hat_dashboard { background:#ffffff;}
 #SKIN #blue_hat #hat_logout { display:none; background:#ffffff;}
 #SKIN #blue_hat li { border:0px solid;}

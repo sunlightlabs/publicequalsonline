@@ -2,18 +2,34 @@
 /* 950 */
 
 /* THIS STUFF GOES WITH WRAPPER? */
-#stripe { background-color:#76a050; margin:0 0 40px 0; padding:0; height:3px;}
-#logo_topleft { height:100px; width:475px; margin-bottom:50px;  background-image:url(http://assets.publicequalsonline.com/images/peo_logo_header.png); }
-#joinbox { width:300px; margin-right:0; margin-left:auto;  text-align:right;}
+#stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
+#logo_topleft { height:100px; width:475px; margin-bottom:50px; background-image:url(http://assets.publicequalsonline.com/images/peo_logo_header.png); }
+
+h1.technique-three { width:475px; height:100px; background: url("http://assets.publicequalsonline.com/images/peo_logo_header.png"); text-indent: -9999px; }
+
+#joinbox { width:300px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
+
+a.join_us:link { color:#669933; text-decoration:none;}
+a.join_us:visited { color:#669933; text-decoration:none;}
+a.join_us:hover { color:#669933; text-decoration:none;}
+a.join_us:active { color:#669933; text-decoration:none;}
+
+a.get_in_here:link { color:#3465c0; text-decoration:none;}
+a.get_in_here:visited { color:#3465c0; text-decoration:none;}
+a.get_in_here:hover { color:#3465c0; text-decoration:none;}
+a.get_in_here:active { color:#3465c0; text-decoration:none;}
+
 
 #topnav { margin:0 0 0 0; padding:0; }
 #topnav li { display: inline; font-family:georgia; font-size:16px; margin:0; padding:0 40px 0 0;}
 
-#topnav a:link { text-decoration:none; color:#cccccc; }
-#topnav a:visited { text-decoration:none; color:#cccccc;}
-#topnav a:hover {text-decoration:none; color:#cccccc; }
-#topnav a:active {text-decoration:none; color:#cccccc;}
+#topnav a:link { text-decoration:none; color:#b0b0b0; }
+#topnav a:visited { text-decoration:none; color:#b0b0b0;}
+#topnav a:hover {text-decoration:none; color:#3465c0; }
+#topnav a:active {text-decoration:none; color:#b0b0b0;}
 
+
+/* FRONT MAIN CONTENT AREA */
 
 #main_graphic_box { background-color:#e6e6e6; float:left; height:300px; width:629px; margin:0; padding:0;}
 
@@ -40,7 +56,8 @@
 /*social icons */
 
 #social_bar {
- width: 96px;
+    float:right;
+ width: 120px;
  height: 16px;
  margin:4px 0; padding:0;
  position: relative;
@@ -57,23 +74,54 @@
 #panel5b {left:100px; width:16px; background:url(http://assets.publicequalsonline.com/images/peo_social_icons.png) -80px 0; background-repeat:no-repeat;}
 
 
-/*end social */
-
-
+/* HORIZONTAL BARS */
 #hor_dot { background-image:url(http://assets.publicequalsonline.com/images/dotted.png); background-repeat:repeat-x; margin:10px 0 20px 0; }
+#hor_dot_top { background-image:url(http://assets.publicequalsonline.com/images/dotted.png); background-repeat:repeat-x; margin:5px 0 20px 0; position:top; }
+.collapsed {height:15px;}
+
+
+/* FRONT BLOG AREA */
+#front_blogs {padding:0 20px 0 10px; background:url(http://assets.publicequalsonline.com/images/dotted_vert.png); background-repeat:repeat-y; background-position:right;}
+#front_blogs h3 { font-family: arial, helvetica; }
 
 #front_blog_posts { margin:0; padding:0;}
-#front_blog_posts li {list-style:none; margin-bottom:20px; }
+
+#front_blog_posts li {list-style:none; margin:0 0 20px 0; }
+
+
 #front_blog_posts h4 { margin:0; padding:0; font-weight:bold;}
+#front_blog_posts p { color:#4d4d4d;}
 
-#mission_front { padding:0 20px 0 0;}
-.front_mission { font-family:georgia; font-size:16px; color:#c6c6c6;}
+.front_blog_source { text-transform:uppercase;}
 
+/* FRONT MISSION */
 
+.mission_line { background:url(http://assets.publicequalsonline.com/images/dotted_vert.png); background-repeat:repeat-y; background-position:right; }
+
+#mission_front { padding:0 20px 0 0; }
+.front_mission { font-family:georgia; font-size:18px; color:#c6c6c6;}
+
+/* UPCOMING FRONT */
 #upcoming_front { padding:0 0 0 20px;}
-#front_upcoming { margin:0; padding:0;}
-#front_upcoming li { display:block; height:55px;}
 
+#front_upcoming { margin:0; padding:0;}
+#front_upcoming li { list-style:none; margin:0;}
+#front_upcoming li a { display:block; padding:10px 10px 0 10px; margin:0;}
+
+#front_upcoming li a:visited { display:block; }
+#front_upcoming li a:hover { display:block; background-color:#c9d686;}
+#front_upcoming li a:active { display:block;}
+#front_upcoming li p { margin:0; padding:0 0 10px 0;}
+
+#front_upcoming h4 { margin:0; padding:0; font-weight:bold;}
+
+#front_upcoming li a:link { text-decoration:none; color:#000000;}
+#front_upcoming li a:visited { text-decoration:none; color:#000000;}
+#front_upcoming li a:hover { text-decoration:none; color:#000000;}
+#front_upcoming li a:active { text-decoration:none; color:#000000;}
+
+.upcoming_item_1 { background-color:#f4f4f4; }
+.upcoming_item_2 { background-color:#ffffff; }
 
 
 .join_strong { font-size:24px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
@@ -81,6 +129,9 @@
 .already_member { font-size:16px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
 .get_in_here { font-size:16px; color:#669933; font-family:georgia;}
 
+/* FOOTER */
+
+
 
 /* BSD CONTAINER */
-#bsd_container { background-color:#ffffff;}
+#bsd_container { background-color:#eff5e6;}

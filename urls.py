@@ -42,5 +42,6 @@ urlpatterns = patterns('',
 if (settings.DEBUG):
     urlpatterns += patterns('',  
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+        url(r'^admin/(.*)', admin.site.root),     
 #        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
     )    

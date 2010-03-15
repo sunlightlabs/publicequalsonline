@@ -1,0 +1,13 @@
+{% if entries %}
+    {% for entry in entries %}
+
+<li class="hentry">
+<div class="{% cycle 'upcoming_item_1' 'upcoming_item_2' %}"><a href="{{ entry.link }}">
+<h4>{{ entry.title|safe }}</h4>
+<p>{{ entry.summary|safe }}</p>
+</a>
+</div>
+</li>
+
+    {% endfor %}
+{% endif %}
