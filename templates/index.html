@@ -2,17 +2,21 @@
 {% load feeds %}
 {% load media %}
 {% load i18n %}
+{% block title %}Public Equals Online{% endblock %}
 
 {% block body %}
+
 	<div class="column span-24">
+		<div id="slider">
 		<div id="main_graphic_box"><a href="/pledge/"><img src="../media/images/peo_pledge_main.jpg"></a></div>	
 		<div id="main_nav_box">
 		<ul id="main_nav">
 			<li><a class="option_1" href="/pledge/"></a></li>
-			<li><a class="option_2" href="#groups"></a></li>
-			<li><a class="option_3" href="#events"></a></li>
-			<li><a class="option_4" href="#donate"></a></li>
+			<li><a class="option_2" href="/local/"></a></li>
+			<li><a class="option_3" href="/local/"></a></li>
+			<li><a class="option_4" href="/donate/"></a></li>
 		</ul>				
+		</div>
 		</div>
 	</div>
 </div>
@@ -21,7 +25,7 @@
 	<div class="column span-24"><div id="hor_dot">&nbsp;</div></div>	
 <div class="column span-8 mission_line">
 	<div id="mission_front">
-	<h3>Mission</h3>
+	<h3>Our Mission</h3>
 	<p class="front_mission">We seek to create a transparent 
 	government built on open data 
 	and information. We believe a 
@@ -44,8 +48,8 @@
 			
 			{% for feature_post in feature_post %}
 			<li>
-				<a href="{{ feature_post.url }}" target="_new">
-			<h4>{{ feature_post.title }}</h4></a>
+				
+			<h4><a href="{{ feature_post.url }}" target="_new">{{ feature_post.title }}</a></h4>
 				<p><span class="front_blog_source">{{ feature_post.source }}</span> &mdash; {{ feature_post.summary }}</p>
 
 			</li>
@@ -60,7 +64,6 @@
 			<h3>Upcoming Events</h3>
 			<ul id="front_upcoming">
 	 			{% headlines "upcoming_events" 5 %}	
-	{% headlines "upcoming_events" 5 %}	
 			</ul>	
 		</div>
 	</div>

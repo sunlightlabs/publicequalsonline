@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Create Account{% endblock %}
+
+{% block body %}
+<div class="column span-24">
+	<div style="margin-top:50px;">
+		
+<strong>Signup:</strong> To create a new account...
+		<form  action="http://local.publicequalsonline.com/page/user/login?successurl=L3BhZ2Uvc29jaWFsbmV0L215bmV0d29yaw==&amp;_h=ZQqx9qC75ZAna6r7PmsJhqIEOxw" method="post" name="signup" id="signup">
+		<table>
+		<tr>
+		    <td colspan="2" class="signupdesc">To create an account, just fill out the form below.</td>
+		</tr>
+
+
+
+		<tr>
+
+		    <th>Your&nbsp;First&nbsp;Name:</th>
+		    <td><input size="15" maxlength="100" name="firstname" type="text" /></td>
+		</tr>
+
+		<tr>
+		    <th>Your&nbsp;Last&nbsp;Name:</th>
+		    <td><input size="15" maxlength="100" name="lastname" type="text" /></td>
+
+		</tr>
+
+		<tr>
+		    <th>Zip&nbsp;Code:</th>
+		    <td><input size="6" name="zip" type="text" /></td>
+		</tr>
+
+		<tr>
+		    <th>Email&nbsp;Address:</th>
+		    <td><input size="25" maxlength="100" name="email" type="text" /></td>
+
+		</tr>
+
+
+
+		<tr>
+		    <th>Password:</th>
+		    <td><input size="10" maxlength="100" name="password1" type="password" /></td>
+		</tr>
+
+		<tr>
+		    <th>Password&nbsp;(again):</th>
+
+		    <td><input size="10" maxlength="100" name="password2" type="password" /></td>
+		</tr>
+
+
+		<tr>
+		    <td colspan="2" class="signupbutton"><input class="button" name="signup_submit" value="Signup" type="submit" /></td>
+		</tr>
+		</table>
+		</form>
+
+	
+	</div>
+</div>	
+{% endblock %}

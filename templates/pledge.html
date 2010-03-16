@@ -1,15 +1,142 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}SIGN THE PLEDGE{% endblock %}
+{% block title %}Sign the Pledge{% endblock %}
 
 {% block body %}
 <div class="column span-24">
-	<div style="margin-top:50px;">
-		pledge. might end up being on BSD as an "invite" page.
-	
-	<a href="http://bsd.sunlightfoundation.com/page/invite/peo">http://bsd.sunlightfoundation.com/page/invite/peo</a>
-	
+	<div id="contentpage">
+<h3 class="page_header">The Pledge</h3>		
+		
+		<div id="pledge_page_pledge">
+		
+		<h3>	&#8220;Government transparency is critical to creating a better democracy, and of highest importance in how I cast my vote.  I pledge, through my sustained engagement, to hold public officials accountable for being open and transparent.	&#8221;</h3>
+</div>
+
+<div style="width:500px; float:left;">
+
+
+		<h4 class="goudy">Through this pledge we let our elected officials and candidates for office know that they must answer to the public in being more transparent. Government must make make what it does, how it is influenced and how it spends our money available to citizens ONLINE and in REAL-TIME. </h4>
+
+		<div id="pledge_details" style="margin-top:30px;">
+			<p>	In signing this pledge, you are helping to ensure:</p>
+
+		<ul>
+			<li>Candidates for office are more transparent through their campaigns</li>
+			<li>Government budget and spending information is easily available</li>
+			<li>"Public" government information is "online" through the Public Online Information Act</li>
+			<li>All legislation is available online for 72 hours before it's debated (H.Res. 554)</li>
+			<li>Public officials disclose who or what they receive money from, online and in real-time</li>
+			<li>Lobbyists are held to greater account for the influence they exert on public officials	</li>
+		</ul>
+		</div>
+
+</div>
+<div id="pledge_right" style="margin-left:540px;">
+<form name="signup" action="http://local.publicequalsonline.com/page/s/pledge" method="post" id="signup">
+<fieldset>
+	<legend>Sign Here</legend>
+
+<label class="field">Email Address:&nbsp;<span class="required">*</span></label>
+<input size="48" id="email" name="email" type="text" />
+<label class="field">First Name:&nbsp;<span class="required">*</span></label>
+<input size="16" id="firstname" name="firstname" type="text" />
+<label class="field">Last Name:&nbsp;<span class="required">*</span></label>
+<input size="25" id="lastname" name="lastname" type="text" />
+<label class="field">City:</label>
+<input id="city" name="city" type="text" />
+<label class="field">State/Region/Province:</label>
+<select id="state_cd" name="state_cd">
+	<option value=""></option>
+	<option value="AA">AA</option>
+	<option value="AE">AE</option>
+	<option value="AK">AK</option>
+
+	<option value="AL">AL</option>
+	<option value="AP">AP</option>
+	<option value="AR">AR</option>
+	<option value="AS">AS</option>
+	<option value="AZ">AZ</option>
+	<option value="CA">CA</option>
+
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DC">DC</option>
+	<option value="DE">DE</option>
+	<option value="FL">FL</option>
+	<option value="FM">FM</option>
+
+	<option value="GA">GA</option>
+	<option value="GU">GU</option>
+	<option value="HI">HI</option>
+	<option value="IA">IA</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+
+	<option value="IN">IN</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="MA">MA</option>
+	<option value="MD">MD</option>
+
+	<option value="ME">ME</option>
+	<option value="MH">MH</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MO">MO</option>
+	<option value="MP">MP</option>
+
+	<option value="MS">MS</option>
+	<option value="MT">MT</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="NE">NE</option>
+	<option value="NH">NH</option>
+
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NV">NV</option>
+	<option value="NY">NY</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="PR">PR</option>
+	<option value="PW">PW</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VA">VA</option>
+	<option value="VI">VI</option>
+
+	<option value="VT">VT</option>
+	<option value="WA">WA</option>
+	<option value="WI">WI</option>
+	<option value="WV">WV</option>
+	<option value="WY">WY</option>
+</select>
+<label class="field">Zip:&nbsp;<span class="required">*</span></label>
+<input size="8" id="zip" name="zip" type="text" />
+<label class="field"></label>
+<input name="submit-btn" value="Submit Form" type="submit" />
+<span class="required">*</span><span style="font-size: 80%;"> denotes required field</span>
+
+</fieldset>
+</form>
+
+
+
+
+</div>
+
+<div id="clearfix">&nbsp;</div>
+
 	</div>
 </div>	
 {% endblock %}

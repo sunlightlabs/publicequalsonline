@@ -2,6 +2,13 @@
 /* 950 */
 
 /* THIS STUFF GOES WITH WRAPPER? */
+
+
+/* USEFUL STUFF */
+#clearfix { clear:both;}
+
+
+/* front page */
 #stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; background-image:url(http://assets.publicequalsonline.com/images/peo_logo_header.png); }
 
@@ -20,14 +27,14 @@ a.get_in_here:visited { color:#3465c0; text-decoration:none;}
 a.get_in_here:hover { color:#3465c0; text-decoration:underline;}
 a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
-.join_strong { font-size:24px; padding-right:18px; font-family:georgia; color:#b3b3b3;}
-.join_us { font-size:24px; color:#669933; font-family:georgia;}
-.already_member { font-size:16px; padding-right:10px; font-family:georgia; color:#b3b3b3;}
-.get_in_here { font-size:16px; color:#669933; font-family:georgia;}
+.join_strong { font-size:24px; padding-right:18px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
+.join_us { font-size:24px; color:#669933; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
+.already_member { font-size:16px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
+.get_in_here { font-size:16px; color:#669933; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
 
 
 #topnav { margin:0 0 0 0; padding:0; }
-#topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",georgia,serif;
+#topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;
  font-size:16px; margin:0; padding:0 40px 0 0;}
 
 #topnav a:link { text-decoration:none; color:#b0b0b0; }
@@ -93,11 +100,17 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 #front_blog_posts { margin:0; padding:0;}
 
-#front_blog_posts li {list-style:none; margin:0 0 20px 0; }
+#front_blog_posts li {list-style:none; margin:0 0 30px 0; }
 
 
 #front_blog_posts h4 { margin:0; padding:0; font-weight:bold;}
 #front_blog_posts p { color:#4d4d4d;}
+
+#front_blog_posts a:link { color:#000000; text-decoration:none;}
+#front_blog_posts a:visited { color:#c6c6c6; text-decoration:none;}
+#front_blog_posts a:hover { color:#3465c0; text-decoration:none;}
+#front_blog_posts a:active { color:#000000; text-decoration:none;}
+
 
 .front_blog_source { text-transform:uppercase;}
 
@@ -105,9 +118,9 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 .mission_line { background:url(http://assets.publicequalsonline.com/images/dotted_vert.png); background-repeat:repeat-y; background-position:right; }
 
-#mission_front { padding:0 20px 0 0; }
+#mission_front { padding:0 30px 0 0; }
 #mission_front h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px;}
-.front_mission { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",serif, georgia; font-size:18px; color:#c6c6c6;}
+.front_mission { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; font-size:18px; color:#c6c6c6;}
 
 /* UPCOMING FRONT */
 
@@ -133,6 +146,26 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 .upcoming_item_1 { background-color:#f4f4f4; }
 .upcoming_item_2 { background-color:#ffffff; }
 
+/* ALL CONTENT PAGES */
+.chunk { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif;  text-transform:uppercase; }
+.goudy { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; }
+
+#contentpage h4 { font-size: 18px; line-height:25px;}
+
+#contentpage { margin-top:20px;}
+
+#contentpage p { font-size:14px; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
+
+.page_header { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px; text-transform:uppercase; }
+
+/* pledge page */
+
+#pledge_page_pledge h3 {font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px; font-weight:bold;}
+
+
+/* form */
+label.field { display:block;}
+
 
 
 
@@ -142,3 +175,10 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 /* BSD CONTAINER */
 #bsd_container { background-color:#eff5e6;}
+
+
+
+/* SCROLL */
+
+
+
