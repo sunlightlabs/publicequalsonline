@@ -203,7 +203,7 @@ label.field { display:block;}
 
 .side_nk1 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position:right 20px; background-repeat:no-repeat;}
-.side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:right 10px; background-repeat:no-repeat;}
+.side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
 
 #about_subnav { margin:0; padding:0; }
@@ -224,6 +224,7 @@ label.field { display:block;}
 #actnow_content_box { width:550px; margin-bottom:20px; }
 
 #act_options li { margin:0 0 10px 0; padding:20px; list-style:none; border:1px solid #c6c6c6;}
+.side_actnow {  background:url(http://assets.publicequalsonline.com/media/images/sidebar_peo_circle.png); background-position:550px 200px; background-repeat:no-repeat; }
 
 /* DONATE*/
 #donate_content_box { width:550px; margin-bottom:20px; }
