@@ -15,7 +15,7 @@ def index(request):
         except FeedEntry.DoesNotExist:
             featured_blog = None
 
-        feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:4]
+        feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:3]
 
         context = {
         'feature_post': feature_post,

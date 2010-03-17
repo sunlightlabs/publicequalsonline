@@ -52,11 +52,12 @@
 	<div id="feature-3" class="ui-tabs-panel ui-tabs-hide">
 	
 	<div id="front_carousel_groups">
-	<h3>Search for a Group</h3>
+		<div id="front_groups_box">
+	<h3 class="feature_header">Search for a Group</h3>
+	<div id="front_group_box" style="border:1px solid #9fad57; padding:15px; width:350px; background-color:#cdd69b; ">
 	<form action="http://local.publicequalsonline.com/page/group" method="get">
-	<p>Use the form below to search for groups by keyword or enter a 5 digit zip code to search for groups near a zip code.</p>
 	
-		<fieldset>
+
 		<p>By Keyword: <input type="text" name="q" id="search_display_name" value="" size="15" maxlength="100" /><input type="submit" value="Search"/></p>		
 		<p>By Zip Code: <input type="text" name="z" id="search_zip_code" value="" size="5" maxlength="5" />
 		<input type="submit" value="Search" class="form_input_submit" /></p>	
@@ -133,29 +134,70 @@
 		                                                        </select>
 
 		                                <input type="submit" value="Search"/></p>		
-		                        </fieldset>
+		                       
 		                </form>
 					</div>
-</div>
+					</div>
+				</div>
+			</div>
 
 
     <!-- Third Content -->
     <div id="feature-4" class="ui-tabs-panel ui-tabs-hide" style="">
     	
 		<div id="front_carousel_events">
-			<h3 class="page_header">Find an Event</h3>
+
+			<div id="front_event_header"><h3 class="feature_header">Find Events Near You</h3></div>
+			
+			<div id="front_find_event" style="border:1px solid #9fad57; padding:15px; width:300px; background-color:#cdd69b;">
 			<form action="http://local.publicequalsonline.com/page/event/search_simple" method="post" name="event_simple_search_form" id="event_simple_search_form">
-			<p><input name="form_type" type="hidden" value="simple" />Zip Code:<input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /></p> 
-			<p>Search Radius:<input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;miles <small>Max radius: 100 miles</small></p>
-	<input type="submit" value="Find Events" />
-	</form>
+			<p><input name="form_type" type="hidden" value="simple" />Zip Code:<input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /> Radius:<input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" /> <small>(Max: 100 miles)</small></p>
+			<input type="submit" value="Find Local Events" />
+			</form>
+			</div>
 	</div>
 </div> <!--ends feature-3 div container -->
 
 
     <!-- Fourth Content -->
-    <div id="feature-5" class="ui-tabs-panel ui-tabs-hide">Donate Form Goes Here.</div>
-	</div>
+    <div id="feature-5" class="ui-tabs-panel ui-tabs-hide">
+		<div id="front_carousel_donate">
+			<h3 class="feature_header">Donate to the campaign</h3>
+		<div id="donate_box_front">
+			<script type="text/javascript"> 
+			function validateAmount(amount){
+				if(amount.value.match( /^[0-9]+(\.([0-9]+))?$/)){
+					return true;
+				}else{
+					alert('You must enter a valid donation.');
+					amount.focus();
+					return false;
+				}
+			}
+			</script>
+			<form action="https://checkout.google.com/cws/v2/Donations/548702786961191/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" onSubmit="return validateAmount(this.item_price_1)" target="_top">
+			    <input name="item_name_1" type="hidden" value="Public Equals Online"/>
+			    <input name="item_description_1" type="hidden" value="Donation to the Sunlight Foundation in support of Public Equals Online Campaign"/>
+			    <input name="item_quantity_1" type="hidden" value="1"/>
+			    <input name="item_currency_1" type="hidden" value="USD"/>
+			    <input name="item_is_modifiable_1" type="hidden" value="true"/>
+			    <input name="item_min_price_1" type="hidden" value="0.01"/>
+			    <input name="item_max_price_1" type="hidden" value="25000.0"/>
+			    <input name="_charset_" type="hidden" value="utf-8"/>
+			    <table cellpadding="5" cellspacing="0" width="1%">
+			        <tr>
+			            <td align="right" nowrap="nowrap" width="1%">&#x24; <input id="item_price_1" name="item_price_1" onfocus="this.style.color='black'; this.value='';" size="11" style="color:grey;" type="text" value="Enter Amount"/>
+			            </td>
+			            <td align="left" width="1%">
+			                <input alt="Donate" src="https://checkout.google.com/buttons/donateNow.gif?merchant_id=548702786961191&amp;w=115&amp;h=50&amp;style=white&amp;variant=text&amp;loc=en_US" type="image"/>
+			            </td>
+			        </tr>
+			    </table>
+			</form>
+			</div>
+		</div>
+    </div>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -225,10 +267,46 @@ $(document).ready(function(){
 
 	<div class="column span-8 last">
 		<div id="upcoming_front">		
-			<h3>Upcoming Events</h3>
-			<ul id="front_upcoming">
+			<h3 class="header">The Twitter Buzz</h3>
+			<!--<ul id="front_upcoming">
 	 			{% headlines "upcoming_events" 5 %}	
-			</ul>	
+			</ul>
+			-->
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'search',
+			  search: '#thepoia OR #public=online OR publicequalsonline',
+			  interval: 6000,
+			  title: 'Government in Real Time',
+			  subject: 'PUBLIC=ONLINE',
+			  width: 275,
+			  height: 200,
+			  theme: {
+			    shell: {
+			      background: '#cdd69b',
+			      color: '#3f6819'
+			    },
+			    tweets: {
+			      background: '#ffffff',
+			      color: '#444444',
+			      links: '#1985b5'
+			    }
+			  },
+			  features: {
+			    scrollbar: false,
+			    loop: true,
+			    live: true,
+			    hashtags: true,
+			    timestamp: true,
+			    avatars: true,
+			    behavior: 'default'
+			  }
+			}).render().start();
+			</script>
+			
+				
 		</div>
 	</div>
 
