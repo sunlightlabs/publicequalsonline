@@ -35,10 +35,10 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 #topnav { margin:0 0 0 0; padding:0; }
 #topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;
- font-size:16px; margin:0; padding:0 40px 0 0;}
+ font-size:16px; margin:0; padding:0 30px 0 0;}
 
 #topnav a:link { text-decoration:none; color:#b0b0b0; }
-#topnav a:visited { text-decoration:none; color:#b0b0b0;}
+#topnav a:visited { text-decoration:none; color:#c0c0c0;}
 #topnav a:hover {text-decoration:none; color:#3465c0; }
 #topnav a:active {text-decoration:none; color:#b0b0b0;}
 
@@ -161,6 +161,9 @@ this might be deprecated as of now.  maybe remove?
 #contentpage p { font-size:14px; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
 
 .page_header { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px; text-transform:uppercase; }
+
+#sidebox { margin-top:20px;}
+
 
 /* pledge page */
 

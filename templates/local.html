@@ -13,142 +13,55 @@
 <div class="column span-24">
 		<div id="contentpage">
 	<h3 class="page_header">Get Local</h3>
-<p>Introductory copy goes here.</p>
-<ul>
-	<li>Find an event (map)</li>
-	<li>Create an event</li>
-	<li>Find a Group</li>
-	<li>Start a Group</li>
-</ul>		
-
-
-Public=Online Events (map)
-<hr>
-<div id="pre_loader" style="display: none; text-align:center;background-color:#ddd;">
-<img src="/images/indicator.gif" width="16" height="16" style="margin-top: 15%; margin-bottom: 4px;" /><br />
-<span style="font-size: 80%;color:#333;">Loading Map. . .</span>
+<p>Introductory copy goes here.</p>		
+<br /><br />
 </div>
 
-<div id="map_container" style="width: 500px; height: 300px;"></div>
+<div class="column span-11">
+	<h3 class="page_header">Local Events</h3>
+	<ul>
+		<li>Find an event (map or search)</li>
+		<li>Create an event</li>
+	</ul>	
 
-<script type="text/javascript">
-    new BSD.event.maps.event_map("html", "http://bsd.sunlightfoundation.com/page/event/search_results?mime=text/xml&format=geo_rss&wrap=no&db_alias=cp_read&radius_unit=miles&country=US",null,null,"United States","map_container","pre_loader",null);
-</script>
+	<div id="pre_loader" style="display: none; text-align:center;background-color:#ddd;">
+	<img src="/images/indicator.gif" width="16" height="16" style="margin-top: 15%; margin-bottom: 4px;" /><br />
+	<span style="font-size: 80%;color:#333;">Loading Map. . .</span>
+	</div>
+
+	<br />
+	<h3>Search for an Event</h3>
+	<form action="http://local.publicequalsonline.com/page/event/search_simple" method="post" name="event_simple_search_form" id="event_simple_search_form">
+		<fieldset>
+	<input name="form_type" type="hidden" value="simple" />
+
+	Zip Code:<input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /><br />
+	Search Radius:<input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;miles
+	<small>Max radius: 100 miles</small>
+	<input type="submit" value="Find Events" />
+	</fieldset>
+	</form>
+
+	<div id="map_container" style="width: 400px; height: 300px;"></div>
+
+	<script type="text/javascript">
+	    new BSD.event.maps.event_map("html", "http://bsd.sunlightfoundation.com/page/event/search_results?mime=text/xml&format=geo_rss&wrap=no&db_alias=cp_read&radius_unit=miles&country=US",null,null,"United States","map_container","pre_loader",null);
+	</script>
 
 
-<br />
-Search for an Event
-<hr>
-<form  action="http://local.publicequalsonline.com/page/event/search_simple" method="post" name="event_simple_search_form" id="event_simple_search_form">
-<input name="form_type" type="hidden" value="simple" />
-
-Zip Code:<input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" />
-Search Radius:<input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;miles
-<small>Max radius: 100 miles</small>
-<input type="submit" value="Find Events" />
-</form>  
-
-
-
-<br />
-Search for a Group
-<hr>
- <form action="http://local.publicequalsonline.com/page/group" method="get">
-<p>Use the form below to search for groups by keyword or enter a 5 digit zip code to search for groups near a zip code.</p>
-<fieldset>
-<h4>By Keyword</h4>
-<input type="text" name="q" id="search_display_name" value="" size="15" maxlength="100" />
-<input type="submit" value="Search" class="form_input_submit" />		
-
-<h4>By Zip Code</h4>
-<input type="text" name="z" id="search_zip_code" value="" size="5" maxlength="5" />
-<div class="form_button_group">
-<input type="submit" value="Search" class="form_input_submit" />		
-                            
-
-<h4>By State</h4>
-<select name="state_cd" id="search_state_cd">
-                                                            <option value="" selected="selected"></option>
-                                                            <option value="AA">AA</option>
-                                                            <option value="AE">AE</option>
-
-                                                            <option value="AK">AK</option>
-                                                            <option value="AL">AL</option>
-                                                            <option value="AP">AP</option>
-                                                            <option value="AR">AR</option>
-                                                            <option value="AS">AS</option>
-                                                            <option value="AZ">AZ</option>
-
-                                                            <option value="CA">CA</option>
-                                                            <option value="CO">CO</option>
-                                                            <option value="CT">CT</option>
-                                                            <option value="DC">DC</option>
-                                                            <option value="DE">DE</option>
-                                                            <option value="FL">FL</option>
-
-                                                            <option value="GA">GA</option>
-                                                            <option value="GU">GU</option>
-                                                            <option value="HI">HI</option>
-                                                            <option value="ID">ID</option>
-                                                            <option value="IL">IL</option>
-                                                            <option value="IN">IN</option>
-
-                                                            <option value="IA">IA</option>
-                                                            <option value="KS">KS</option>
-                                                            <option value="KY">KY</option>
-                                                            <option value="LA">LA</option>
-                                                            <option value="ME">ME</option>
-                                                            <option value="MD">MD</option>
-
-                                                            <option value="MA">MA</option>
-                                                            <option value="MI">MI</option>
-                                                            <option value="MN">MN</option>
-                                                            <option value="MS">MS</option>
-                                                            <option value="MO">MO</option>
-                                                            <option value="MT">MT</option>
-
-                                                            <option value="NE">NE</option>
-                                                            <option value="NV">NV</option>
-                                                            <option value="NH">NH</option>
-                                                            <option value="NJ">NJ</option>
-                                                            <option value="NM">NM</option>
-                                                            <option value="NY">NY</option>
-
-                                                            <option value="NC">NC</option>
-                                                            <option value="ND">ND</option>
-                                                            <option value="OH">OH</option>
-                                                            <option value="OK">OK</option>
-                                                            <option value="OR">OR</option>
-                                                            <option value="PA">PA</option>
-
-                                                            <option value="PR">PR</option>
-                                                            <option value="RI">RI</option>
-                                                            <option value="SC">SC</option>
-                                                            <option value="SD">SD</option>
-                                                            <option value="TN">TN</option>
-                                                            <option value="TX">TX</option>
-
-                                                            <option value="UT">UT</option>
-                                                            <option value="VT">VT</option>
-                                                            <option value="VA">VA</option>
-                                                            <option value="VI">VI</option>
-                                                            <option value="WA">WA</option>
-                                                            <option value="WV">WV</option>
-
-                                                            <option value="WI">WI</option>
-                                                            <option value="WY">WY</option>
-                                                        </select>
-
-                                <input type="submit" value="Search" class="form_input_submit" />		
-                        </fieldset>
-                </form>
-	
-	
 	
 
-				<br />
-				Start a Group
-				<hr>
+
+
+</div>
+
+<div class="column span-2">&nbsp;</div>
+
+<div class="column span-11 last">
+	<h3 class="page_header">Local Groups</h3>
+<p>Local groups are collections of humans with a similar interest in Transparency and Accountability in Government</p>
+
+<h3>Start a Group</h3>
 <form action="http://local.publicequalsonline.com/page/group_create" method="get">
 <p>Use the form below to start your own group.</p>
 <fieldset>
@@ -156,7 +69,101 @@ Group Name
 <input id="start_group_name" type="text" name="name" size="20" maxlength="100" class="form_input_text" />
 <input type="submit" value="Start Group &gt;" class="form_input_submit" />
 </fieldset>
-</form>
+</form>	
+	
+<h3>Search for a Group</h3>
+<form action="http://local.publicequalsonline.com/page/group" method="get">
+<p>Use the form below to search for groups by keyword or enter a 5 digit zip code to search for groups near a zip code.</p>
+
+	<fieldset>
+	<p>By Keyword: <input type="text" name="q" id="search_display_name" value="" size="15" maxlength="100" /><input type="submit" value="Search"/></p>		
+	<p>By Zip Code: <input type="text" name="z" id="search_zip_code" value="" size="5" maxlength="5" />
+	<input type="submit" value="Search" class="form_input_submit" /></p>	
+	<p>By State: <select name="state_cd" id="search_state_cd">
+	                                                            <option value="" selected="selected"></option>
+	                                                            <option value="AA">AA</option>
+	                                                            <option value="AE">AE</option>
+
+	                                                            <option value="AK">AK</option>
+	                                                            <option value="AL">AL</option>
+	                                                            <option value="AP">AP</option>
+	                                                            <option value="AR">AR</option>
+	                                                            <option value="AS">AS</option>
+	                                                            <option value="AZ">AZ</option>
+
+	                                                            <option value="CA">CA</option>
+	                                                            <option value="CO">CO</option>
+	                                                            <option value="CT">CT</option>
+	                                                            <option value="DC">DC</option>
+	                                                            <option value="DE">DE</option>
+	                                                            <option value="FL">FL</option>
+
+	                                                            <option value="GA">GA</option>
+	                                                            <option value="GU">GU</option>
+	                                                            <option value="HI">HI</option>
+	                                                            <option value="ID">ID</option>
+	                                                            <option value="IL">IL</option>
+	                                                            <option value="IN">IN</option>
+
+	                                                            <option value="IA">IA</option>
+	                                                            <option value="KS">KS</option>
+	                                                            <option value="KY">KY</option>
+	                                                            <option value="LA">LA</option>
+	                                                            <option value="ME">ME</option>
+	                                                            <option value="MD">MD</option>
+
+	                                                            <option value="MA">MA</option>
+	                                                            <option value="MI">MI</option>
+	                                                            <option value="MN">MN</option>
+	                                                            <option value="MS">MS</option>
+	                                                            <option value="MO">MO</option>
+	                                                            <option value="MT">MT</option>
+
+	                                                            <option value="NE">NE</option>
+	                                                            <option value="NV">NV</option>
+	                                                            <option value="NH">NH</option>
+	                                                            <option value="NJ">NJ</option>
+	                                                            <option value="NM">NM</option>
+	                                                            <option value="NY">NY</option>
+
+	                                                            <option value="NC">NC</option>
+	                                                            <option value="ND">ND</option>
+	                                                            <option value="OH">OH</option>
+	                                                            <option value="OK">OK</option>
+	                                                            <option value="OR">OR</option>
+	                                                            <option value="PA">PA</option>
+
+	                                                            <option value="PR">PR</option>
+	                                                            <option value="RI">RI</option>
+	                                                            <option value="SC">SC</option>
+	                                                            <option value="SD">SD</option>
+	                                                            <option value="TN">TN</option>
+	                                                            <option value="TX">TX</option>
+
+	                                                            <option value="UT">UT</option>
+	                                                            <option value="VT">VT</option>
+	                                                            <option value="VA">VA</option>
+	                                                            <option value="VI">VI</option>
+	                                                            <option value="WA">WA</option>
+	                                                            <option value="WV">WV</option>
+
+	                                                            <option value="WI">WI</option>
+	                                                            <option value="WY">WY</option>
+	                                                        </select>
+
+	                                <input type="submit" value="Search"/></p>		
+	                        </fieldset>
+	                </form>	
+	
+	
+</div>
+
+
+
+<div class="column span-24">
+
+
+				
 
 
 

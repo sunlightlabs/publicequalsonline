@@ -4,35 +4,49 @@
 {% block title %}From the Sunlight Foundation Transparency Ecosystem{% endblock %}
 
 {% block body %}
+<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.4&appid=blue_address"></script>
+<script type="text/javascript" src="http://local.publicequalsonline.com/ext/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="http://local.publicequalsonline.com/javascript/bsd.js"></script>
+<script type="text/javascript" src="http://local.publicequalsonline.com/page/event/js/event_maps"></script>
 <div class="column span-16">
-<div style="margin-top:50px;">
-<form  action="http://local.publicequalsonline.com/page/event/search_simple/" method="post" name="event_simple_search_form" id="event_simple_search_form">
+	<div id="contentpage">
+		<h3 class="page_header">Local Events</h3>
+		
+		<div id="pre_loader" style="display: none; text-align:center;background-color:#ddd;">
+		<img src="/images/indicator.gif" width="16" height="16" style="margin-top: 15%; margin-bottom: 4px;" /><br />
+		<span style="font-size: 80%;color:#333;">Loading Map. . .</span>
+		</div>
+
+		<div id="map_container" style="width: 600px; height: 300px;"></div>
+
+		<script type="text/javascript">
+		    new BSD.event.maps.event_map("html", "http://bsd.sunlightfoundation.com/page/event/search_results?mime=text/xml&format=geo_rss&wrap=no&db_alias=cp_read&radius_unit=miles&country=US",null,null,"United States","map_container","pre_loader",null);
+		</script>
+
+
+
+
+
+		
+		
+</div>
+</div>
+
+<div class="column span-8 last">
+	
+<div id="sidebox">	
+	<h3>Search for an Event</h3>
+	<form action="http://local.publicequalsonline.com/page/event/search_simple" method="post" name="event_simple_search_form" id="event_simple_search_form">
+		<fieldset>
 	<input name="form_type" type="hidden" value="simple" />
 
-<table>
-      <tr id="event_zip_row">
-
-      <th class="form_label"><span id="event_zip_txt" class="event_zip_search_txt">Zip Code</span>:</th>
-      <td><input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /></td>
-    </tr>
-        <tr id="event_radius_row">
-      <th class="form_label">Search Radius:</th>
-      <td><input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;<span id='event_radius_unit'>miles <br /> Max radius: 100 miles</span></td>
-
-    </tr>
-            <tr>
-      <td colspan="2" class="button">
-        <input type="submit" value="Find Events" />
-      </td>
-    </tr>
-  </table>
-</form>
+	Zip Code:<input id="event_search_zip" size="6" maxlength="12" onkeypress="" name="zip" type="text" /><br />
+	Search Radius:<input size="4" maxlength="4" onkeypress="" name="radius" type="text" value="100" />&nbsp;&nbsp;miles
+	<small>Max radius: 100 miles</small>
+	<input type="submit" value="Find Events" />
+	</fieldset>
+	</form>
 </div>
 </div>
-
-<div class="column span-8">
-sidebar
-</div>
-
 
 {% endblock %}
