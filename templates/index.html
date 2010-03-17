@@ -6,20 +6,62 @@
 
 {% block body %}
 
-	<div class="column span-24">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" ></script>
+<div class="column span-24">
+	<div id="featured">
+		<ul class="ui-tabs-nav">
+	    	<li class="ui-tabs-nav-item ui-tabs-selected" id="nav-feature-1">
+				<div id="main_nav_sprite"><a id="option1" href="#feature-1"></a></div>
+			</li>
+	    	<li class="ui-tabs-nav-item" id="nav-feature-2">
+	    		<div id="main_nav_sprite"><a id="option2" href="#feature-2"></a></div>
+	    	</li>
+	    	<li class="ui-tabs-nav-item" id="nav-feature-3">
+	    		<div id="main_nav_sprite"><a id="option3" href="#feature-3"></a></div>
+	    	</li>
+	    	<li class="ui-tabs-nav-item" id="nav-feature-4">
+	    		<div id="main_nav_sprite"><a id="option4" href="#feature-4"></a></div>
+	    	</li>
+		</ul>
+	
+	<!-- First Content -->
+	<div id="feature-1" class="ui-tabs-panel" style=""><a href="/pledge/"><img src="../media/images/peo_pledge_main.jpg"></a></div>
+	<!-- Second Content -->
+	<div id="feature-2" class="ui-tabs-panel ui-tabs-hide" style="">Join a Local Group</div>
+    <!-- Third Content -->
+    <div id="feature-3" class="ui-tabs-panel ui-tabs-hide" style="">Find an Event Search Form</div>
+    <!-- Fourth Content -->
+    <div id="feature-4" class="ui-tabs-panel ui-tabs-hide" style="">Donate Form Goes Here.</div>
+	</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#featured").tabs({fx:{opacity: "toggle"}});
+});
+</script>
+
+</div>
+
+
+
+<!--	
+<div class="column span-24">
 		<div id="slider">
-		<div id="main_graphic_box"><a href="/pledge/"><img src="../media/images/peo_pledge_main.jpg"></a></div>	
-		<div id="main_nav_box">
-		<ul id="main_nav">
-			<li><a class="option_1" href="/pledge/"></a></li>
-			<li><a class="option_2" href="/local/"></a></li>
-			<li><a class="option_3" href="/local/"></a></li>
-			<li><a class="option_4" href="/donate/"></a></li>
-		</ul>				
-		</div>
+			<div id="main_graphic_box"><a href="/pledge/"><img src="../media/images/peo_pledge_main.jpg"></a></div>	
+				<div id="main_nav_box">
+					<ul id="main_nav">
+						<li><a class="option_1" href="/pledge/"></a></li>
+						<li><a class="option_2" href="/local/"></a></li>
+						<li><a class="option_3" href="/local/"></a></li>
+						<li><a class="option_4" href="/donate/"></a></li>
+					</ul>				
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+-->
+
 
 <div class="container">
 	<div class="column span-24"><div id="hor_dot">&nbsp;</div></div>	
