@@ -158,7 +158,7 @@ this might be deprecated...
 
 #contentpage h4 { font-size: 18px; line-height:25px;}
 
-#contentpage { margin-top:20px;}
+#contentpage { margin-top:20px; margin-left:20px;}
 
 
 
@@ -182,6 +182,9 @@ h3.red {font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#
 
 .centered { text-align:center;}
 
+h4.subhead { margin:0; font-weight:bold;}
+h4.subhead_lite { margin:0; font-weight:thin;}
+
 /* pledge page */
 
 #pledge_page_pledge h3 {font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px; font-weight:bold;}
@@ -198,8 +201,25 @@ label.field { display:block;}
 /* about page */
 #about_content_box { width:600px;}
 
-.bgwide { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_nk1 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position:right 20px; background-repeat:no-repeat;}
+.side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:right 10px; background-repeat:no-repeat;}
+.side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:right 10px; background-repeat:no-repeat;}
 
+
+
+/* GRANTS */
+#groups_content_box { width:600px; }
+
+#groups_content_box fieldset { width:70%;}
+
+/* EVENTS */
+#events_content_box { width:550px; margin-bottom:20px; }
+
+/* ACT NOW */
+#actnow_content_box { width:550px; margin-bottom:20px; }
+
+#act_options li { margin:0 0 10px 0; padding:20px; list-style:none; border:1px solid #c6c6c6;}
 
 
 /* FOOTER */

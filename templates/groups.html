@@ -6,14 +6,15 @@
 {% block body %}
 
 <div class="column span-24 last">
-	<div id="contentpage">
+	<div id="contentpage" class="side_nk2">
 		<h3 class="page_header">Local Groups</h3>
+		
+		<div id="groups_content_box">
+		
 		<p>Local groups are collections of humans with a similar interest in Transparency and Accountability in Government</p>
 
-<h3>Start a Group</h3>
+<h4 class="subhead">Start a Group</h4>
 <form action="http://local.publicequalsonline.com/page/group_create" method="get">
-<p>Use the form below to start your own group.</p>
-
 <fieldset>
 Group Name
 <input id="start_group_name" type="text" name="name" size="20" maxlength="100" class="form_input_text" />
@@ -21,9 +22,8 @@ Group Name
 </fieldset>
 </form>	
 	
-<h3>Search for a Group</h3>
+<h4 class="subhead">Search for a Group</h4>
 <form action="http://local.publicequalsonline.com/page/group" method="get">
-<p>Use the form below to search for groups by keyword or enter a 5 digit zip code to search for groups near a zip code.</p>
 
 	<fieldset>
 	<p>By Keyword: <input type="text" name="q" id="search_display_name" value="" size="15" maxlength="100" /><input type="submit" value="Search"/></p>		
