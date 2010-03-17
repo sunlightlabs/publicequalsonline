@@ -221,4 +221,7 @@ a#option4:hover { height:74px; width:320px; background-image:url('http://assets.
 #featured ul.ui-tabs-nav li.ui-tabs-selected a{ }
 
 
+/* FRONT CAROUSEL DIVS */
 
+#front_carousel_groups { margin:10px 20px 10px 20px;}
+#front_carousel_events { margin:10px 20px 10px 20px;}
