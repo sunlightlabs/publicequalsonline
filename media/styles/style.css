@@ -194,7 +194,7 @@ h4.subhead_lite { margin:0; font-weight:thin;}
 label.field { display:block;}
 
 /* DONATE */
-#donate_box { width:300px; background-color:#ffffff;}
+
 #donate_box_front { width:300px; background-color:#ffffff; padding:15px; border:1px solid #c6c6c6;}
 
 
@@ -204,9 +204,13 @@ label.field { display:block;}
 .side_nk1 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position:right 20px; background-repeat:no-repeat;}
 .side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:right 10px; background-repeat:no-repeat;}
-.side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:right 10px; background-repeat:no-repeat;}
+.side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
+
+#about_subnav { margin:0; padding:0; }
+#about_subnav li { margin:0; padding:0 20px 0 0; list-style-type:none; float:left; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:14px; color:#5a5a5a;}
 
 
+#about_header { margin:0 0 20px 0; border-top:1px solid #c6c6c6; padding:10px 0 10px 0; border-bottom:1px solid #c6c6c6; }
 
 /* GRANTS */
 #groups_content_box { width:600px; }
@@ -221,8 +225,16 @@ label.field { display:block;}
 
 #act_options li { margin:0 0 10px 0; padding:20px; list-style:none; border:1px solid #c6c6c6;}
 
+/* DONATE*/
+#donate_content_box { width:550px; margin-bottom:20px; }
+#donate_box { width:250px; background-color:#ffffff; margin-right:auto; margin-left:auto;}
+
+.side_donate { background:url(http://assets.publicequalsonline.com/media/images/donate_tag.jpg); background-position:right 100px; background-repeat:no-repeat; }
 
 /* FOOTER */
+#footer_content_box { }
+#footer_disclaimer { font-size:10px; color:#c6c6c6;}
+#license { text-align:center;}
 
 
 #sflogo_sprite{ width: 105px;}	
