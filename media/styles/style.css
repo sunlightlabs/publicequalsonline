@@ -14,7 +14,7 @@
 
 h1.technique-three { width:475px; height:100px; background: url("http://assets.publicequalsonline.com/media/images/peo_logo_header.png"); text-indent: -9999px; }
 
-#joinbox { width:300px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
+#joinbox { width:350px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
 
 
 a.join_us:link { color:#669933; text-decoration:none;}
@@ -45,8 +45,8 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 /* FRONT MAIN CONTENT AREA
 
-this might be deprecated as of now.  maybe remove?
-
+this might be deprecated...
+*/
 #main_graphic_box { background-color:#e6e6e6; float:left; height:300px; width:629px; margin:0; padding:0;}
 
 #main_nav_box {margin-left:630px; width:320px; }
@@ -66,7 +66,7 @@ this might be deprecated as of now.  maybe remove?
 
 #main_nav li a.option_4 {background-position:0px -225px; display:block;}
 #main_nav li a:hover.option_4 {background-position:0px -525px;}
-*/
+
 
 
 /*social icons */
@@ -111,7 +111,7 @@ this might be deprecated as of now.  maybe remove?
 #front_blog_posts p { color:#4d4d4d;}
 
 #front_blog_posts a:link { color:#000000; text-decoration:none;}
-#front_blog_posts a:visited { color:#c6c6c6; text-decoration:none;}
+#front_blog_posts a:visited { color:#656565; text-decoration:none;}
 #front_blog_posts a:hover { color:#3465c0; text-decoration:none;}
 #front_blog_posts a:active { color:#000000; text-decoration:none;}
 
@@ -124,7 +124,7 @@ this might be deprecated as of now.  maybe remove?
 
 #mission_front { padding:0 30px 0 0; }
 #mission_front h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:20px;}
-.front_mission { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; font-size:18px; color:#c6c6c6;}
+.front_mission { font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; font-size:18px; color:#656565;}
 
 /* UPCOMING FRONT */
 

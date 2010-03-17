@@ -1,24 +1,22 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from equals.feeds import LabsLatestComments, LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
+# from equals.feeds import LabsLatestComments, LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 
 admin.autodiscover()
 
 
-blog_feeds = {
-    'latest': LabsLatestPosts, 'comments': LabsLatestComments,
-    'tag': LabsLatestForTag, 'author': LabsLatestForAuthor,
-}
-
+# blog_feeds = {
+#    'latest': LabsLatestPosts, 'comments': LabsLatestComments,
+#    'tag': LabsLatestForTag, 'author': LabsLatestForAuthor,
+# }
 
 urlpatterns = patterns('',
-    # blog/blogdor
-    url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    url(r'^blog/$', 'publicequalsonline.equals.views.blog_wrapper'),
-    url(r'^blog/', include('blogdor.urls')), 
+# blog/blogdor
+#    url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
+#    url(r'^blog/$', 'publicequalsonline.equals.views.blog_wrapper'),
+#    url(r'^blog/', include('blogdor.urls')), 
     url(r'^', include('publicequalsonline.equals.urls')),    
-    
     
 #schedule
 #    url(r'^schedule/$', 'equalsonline.equals.views.meeting', name='meeting'),
@@ -32,9 +30,8 @@ urlpatterns = patterns('',
 #    url(r'^admin/', include(admin.site.urls)),
 #    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'index.html'}, name='index'),    
 #    url(r'^', include('equalsonline.equals.urls')),
-
-
 #    url(r'^(?P<url>.+)(/?)', 'flatpage_wrapper'),
+
 )
 
 
