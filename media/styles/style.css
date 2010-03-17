@@ -161,6 +161,13 @@ this might be deprecated...
 
 #sidebox { margin-top:20px;}
 
+#centeredpage { margin-top:50px; margin-right:auto; margin-left:auto; width:600px;}
+
+h3.red {font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:24px; text-transform:uppercase; margin:0; padding:0; }
+
+#error_box { padding:30px; border:1px solid #73341c; background-color:#d9ad9d;}
+
+.right { text-align:right;}
 
 /* pledge page */
 
