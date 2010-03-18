@@ -4,7 +4,11 @@
 {% block title %}{{ flatpage.title }}{% endblock %}
 
 {% block body %}
-
-{{ flatpage.content }}
-
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">		
+			{{ flatpage.content }}
+		</div>
+	</div>
+</div>
 {% endblock %}

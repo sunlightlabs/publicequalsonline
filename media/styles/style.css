@@ -162,11 +162,9 @@ this might be deprecated...
 
 #contentpage { margin-top:20px; margin-left:20px;}
 
-
-
-
-
 #contentpage p { font-size:15px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; line-height:22px;}
+
+#flat_contentpage { width:650px;}
 
 .page_header { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
 
@@ -253,7 +251,7 @@ label.field { display:block;}
 #footer_links a:hover {text-decoration:none; color:#3465c0; }
 #footer_links a:active {text-decoration:none; color:#b0b0b0;}
 
-.footer_header { margin:5px 0 0 0 ; padding:0; font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:14px;}
+.footer_header { margin:5px 0 0 0 ; padding:0; font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#868686; font-size:14px;}
 
 
 
