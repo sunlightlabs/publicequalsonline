@@ -197,16 +197,18 @@ label.field { display:block;}
 
 /* DONATE */
 #front_donate_header { margin-top:20px; }
-#front_donate_box { width:300px; background-color:#ffffff; padding:15px; border:1px solid #c6c6c6;}
+#front_donate_box { width:300px; background-color:#ffffff; padding:10px; border:1px solid #c6c6c6;}
 #front_donate_disclaimer { width:300px; margin-top:40px;}
 
 /* about page */
 #about_content_box { width:600px;}
 
 .side_nk1 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
-.side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position:right 20px; background-repeat:no-repeat;}
+.side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position: bottom right; background-repeat:no-repeat;}
 .side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_jc { background:url(http://assets.publicequalsonline.com/media/images/sidebar_jc.jpg); background-position:right 40px; background-repeat:no-repeat;}
+
 
 #about_subnav { margin:0; padding:0; }
 #about_subnav li { margin:0; padding:0 20px 0 0; list-style-type:none; float:left; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:14px; color:#5a5a5a;}
@@ -225,7 +227,7 @@ label.field { display:block;}
 /* ACT NOW */
 #actnow_content_box { width:550px; margin-bottom:20px; }
 
-#act_options li { margin:0 0 10px 0; padding:20px; list-style:none; border:1px solid #c6c6c6;}
+#act_options li { margin:0 0 10px 0; padding:5px; list-style:square;}
 .side_actnow {  background:url(http://assets.publicequalsonline.com/media/images/sidebar_peo_circle.png); background-position:550px 200px; background-repeat:no-repeat; }
 
 /* DONATE*/
@@ -236,8 +238,19 @@ label.field { display:block;}
 
 /* FOOTER */
 #footer_content_box { }
-#footer_disclaimer { font-size:10px; color:#c6c6c6;}
-#license { text-align:center;}
+#footer_disclaimer { font-size:10px; color:#c6c6c6; margin-top:30px;}
+#license { text-align:center; margin-top:30px;}
+
+#footer_links { padding:0; margin:0;}
+#footer_links li { list-style-type:none; padding:0; margin:0; }
+
+#footer_links a:link { text-decoration:none; color:#b0b0b0; }
+#footer_links a:visited { text-decoration:none; color:#c0c0c0;}
+#footer_links a:hover {text-decoration:none; color:#3465c0; }
+#footer_links a:active {text-decoration:none; color:#b0b0b0;}
+
+.footer_header { margin:5px 0 0 0 ; padding:0; font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:14px;}
+
 
 
 #sflogo_sprite{ width: 105px;}	
