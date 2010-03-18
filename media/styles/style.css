@@ -176,7 +176,6 @@ this might be deprecated...
 
 h3.red {font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:24px; text-transform:uppercase; margin:0; padding:0; }
 
-#error_box { padding:30px; border:1px solid #73341c; background-color:#d9ad9d;}
 
 .right { text-align:right;}
 
@@ -242,11 +241,23 @@ label.field { display:block;}
 /* DONATE*/
 #donate_content_box { width:550px; margin-bottom:20px; }
 #donate_box { width:250px; background-color:#ffffff; margin-right:auto; margin-left:auto;}
-
 .side_donate { background:url(http://assets.publicequalsonline.com/media/images/donate_tag.jpg); background-position:right 100px; background-repeat:no-repeat; }
 
+
+/* ERROR */
+#error_content_box {float:left; width:500px;}
+.side_error { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nm.jpg); background-position:right 100px; background-repeat:no-repeat; }
+#error_image { margin-left:550px;}
+
+#error_list li { font-size:20px; list-style-type:none; padding:5px; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px;}
+
+#error_list a:link { text-decoration:none; color:#b0b0b0; }
+#error_list a:visited { text-decoration:none; color:#c0c0c0;}
+#error_list a:hover {text-decoration:none; color:#3465c0; }
+#error_list a:active {text-decoration:none; color:#b0b0b0;}
+
 /* FOOTER */
-#footer_content_box { }
+#footer_content_box {width:550px; margin-bottom:20px;  }
 #footer_disclaimer { font-size:10px; color:#c6c6c6; margin-top:30px;}
 #license { text-align:center; margin-top:30px;}
 
