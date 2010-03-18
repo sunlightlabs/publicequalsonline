@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}Act Now{% endblock %}
+{% block title %}Error{% endblock %}
 
 {% block body %}
 <div class="column span-24">
-	<div id="centeredpage">
-		<h3 class="page_header">Whoops! An Error has occurred.</h3>
-		<p>Looks like there's nothing here. <a href="/">Try again?</a></p>
+<div id="contentpage">
+	<div id="error_content_box">
+	<h3 class="page_header">An Error Has Occurred</h3>
+<p>Looks like there's nothing here.</p>
+<p>Try one of these options:</p>
+<ul id="error_list">
+	<li><a href="/pledge/">Sign the Pledge</a></li>
+	<li><a href="http://local.publicequalsonline.com/page/invite/peo">Share the Pledge</a></li>
+	<li><a href="http://local.publicequalsonline.com/page/dashboard/view/private">Join the Campaign</a></li>
+	<li><a href="/groups/">Start or join a group</a></li>
+	<li><a href="/events/">Attend or host an Event</a></li>
+</ul>
+
+		
+	
 	</div>
+	
+	<div id="error_image"><img src="http://assets.publicequalsonline.com/media/images/sidebar_nm.jpg"></div>
 </div>	
+</div>
 {% endblock %}
