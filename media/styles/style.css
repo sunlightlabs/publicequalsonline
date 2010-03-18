@@ -213,7 +213,12 @@ label.field { display:block;}
 
 
 #about_subnav { margin:0; padding:0; }
-#about_subnav li { margin:0; padding:0 20px 0 0; list-style-type:none; float:left; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:14px; color:#5a5a5a;}
+#about_subnav li { margin:0; padding:0 20px 0 0; list-style-type:none; float:left; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; font-size:14px; color:#5a5a5a;}
+
+#about_subnav a:link { text-decoration:none; color:#b0b0b0; }
+#about_subnav a:visited { text-decoration:none; color:#c0c0c0;}
+#about_subnav a:hover {text-decoration:none; color:#3465c0; }
+#about_subnav a:active {text-decoration:none; color:#b0b0b0;}
 
 
 #about_header { margin:0 0 20px 0; border-top:1px solid #c6c6c6; padding:10px 0 10px 0; border-bottom:1px solid #c6c6c6; }
