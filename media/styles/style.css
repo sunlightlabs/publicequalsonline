@@ -164,7 +164,7 @@ this might be deprecated...
 
 #contentpage p { font-size:15px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; line-height:22px;}
 
-#flat_contentpage { width:650px;}
+#flat_contentpage { width:650px; margin-bottom:50px;}
 
 .page_header { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
 

@@ -31,7 +31,8 @@ font-size:12px;
 #SKIN .odd { background:#ffffff;}
 
 /* widgets */
-#SKIN #widget_group_1 { display:none;}
+#SKIN #widget_group_1 { background:none;}
+#SKIN #widget_group_1 .group_last { background:none; }
 #SKIN #control_set { display:none;}
 #SKIN #widget_circle_find_a_group { width:700px;}
 #SKIN #widget_circle_start_a_group .group_last { background:none; }
@@ -39,6 +40,9 @@ font-size:12px;
 
 #SKIN.module_circle .widget_groups_container #widget_group_2 { background:none;}
 #SKIN.module_circle .widget_groups_container #widget_group_2 .group_last { background:none;}
+#SKIN.module_circle .widget_groups_container #widget_group_1 { background:none;}
+#SKIN.module_circle .widget_groups_container #widget_group_1 .group_last { background:none;}
+
 #SKIN #widget_group_2 { background:none; width:100%;}
 #SKIN #widget_group_2 .group_last { background:none;}
 
