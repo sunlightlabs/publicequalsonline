@@ -316,7 +316,8 @@ a#option4:hover { height:74px; width:320px; background-image:url('http://assets.
 #front_carousel_events { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_events.jpg); width:629px; height:299px;}
 #front_carousel_donate { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_donate.jpg); width:629px; height:299px;}
 
-
+#front_carousel_video { padding:0; background-color:#333333; width:629px; height:299px;}
+#video_container { margin-right:auto; margin-left:auto; width:480px;}
 
 #front_find_event { border:1px solid #9fad57; padding:15px; width:300px; background-color:#cdd69b; margin-left:20px; }
 
