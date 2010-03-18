@@ -208,6 +208,8 @@ label.field { display:block;}
 .side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
 .side_jc { background:url(http://assets.publicequalsonline.com/media/images/sidebar_jc.jpg); background-position:right 40px; background-repeat:no-repeat;}
+.side_gs { background:url(http://assets.publicequalsonline.com/media/images/sidebar_gs.jpg); background-position:bottom right; background-repeat:no-repeat;}
+
 
 
 #about_subnav { margin:0; padding:0; }
@@ -223,6 +225,8 @@ label.field { display:block;}
 
 /* EVENTS */
 #events_content_box { width:550px; margin-bottom:20px; }
+#map_wrap { padding:15px; border:1px solid #c6c6c6; background-color:#f4f4f4;}
+#map_container { border:1px solid #4d4d4d; margin:auto;}
 
 /* ACT NOW */
 #actnow_content_box { width:550px; margin-bottom:20px; }
@@ -315,4 +319,4 @@ a#option4:hover { height:74px; width:320px; background-image:url('http://assets.
 /* WRAPPER STUFF */
 #hor_dot_bottom_wrapper { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
 #wrapper_sidebar { }
-#contentpage_wrapper { margin:0;}
+#contentpage_wrapper { margin-top:20px; margin-left:20px;}
