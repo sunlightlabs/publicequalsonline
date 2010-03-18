@@ -5,7 +5,7 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-handler404 = 'publicequalsonline.equals.views.page_not_found'
+# handler404 = 'publicequalsonline.equals.views.page_not_found'
 
 # blog_feeds = {
 #    'latest': LabsLatestPosts, 'comments': LabsLatestComments,

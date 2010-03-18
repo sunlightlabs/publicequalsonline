@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^toolkit/$', 'django.views.generic.simple.direct_to_template', {"template": "toolkit.html"}),
     url(r'^local/$', 'django.views.generic.simple.direct_to_template', {"template": "local.html"}),           
 # TEMPORARILY
-    url(r'^error/$', 'django.views.generic.simple.direct_to_template', {"template": "404.html"}), 
+#    url(r'^error/$', 'django.views.generic.simple.direct_to_template', {"template": "404.html"}), 
 
     url(r'^$','publicequalsonline.equals.views.index'),
 )
