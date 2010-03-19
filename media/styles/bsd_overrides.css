@@ -5,9 +5,13 @@
 font-size:12px;
 }
 
-#SKIN { width:900px;}
+#SKIN { width:920px;}
+
+#constituent_content { width:800px; }
 
 #SKIN #blue_hat { background:#ffffff; padding:0; margin:0 0 10px 0; border-bottom:1px solid #c6c6c6;}
+
+#SKIN #blue_hat a:hover { background:none; color:#3465c0; }
 
 #SKIN .container { width:100%;}
 #SKIN .widget_groups_container { }
@@ -45,6 +49,7 @@ font-weight:bold;
 #SKIN #widget_group_1 { background:none; padding-right:20px;}
 #SKIN #widget_group_1 .group_last { background:none; }
 #SKIN #control_set { }
+#SKIN .basic #control_set { background:none;}
 #SKIN #widget_circle_find_a_group { }
 #SKIN #widget_circle_start_a_group .group_last { background:none; }
 
@@ -69,12 +74,12 @@ border-top:1px solid #c6c6c6; }
 
 
 #SKIN .widget_group { overflow:hidden;}
-
-
+#SKIN .widget_tabs li.active_tab { background:none;}
+#SKIN .widget_tabs li.inactive_tab {background:none;}
 
 #SKIN #widget_socialnet_widget { display:none; }
 
-#SKIN .main { border:0px solid; width:800px; margin:0;}
+#SKIN .main { border:0px solid; width:100%; margin:0;}
 
 
 /* LOG IN PAGE styles */
