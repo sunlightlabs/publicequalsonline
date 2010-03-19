@@ -7,13 +7,13 @@ font-size:12px;
 
 #SKIN { width:920px;}
 
-#constituent_content { width:800px; }
+#constituent_content { width:700px; }
 
 #SKIN #blue_hat { background:#ffffff; padding:0; margin:0 0 10px 0; border-bottom:1px solid #c6c6c6;}
 
 #SKIN #blue_hat a:hover { background:none; color:#3465c0; }
 
-#SKIN .container { width:100%;}
+/* #SKIN .container { width:100%;} */
 #SKIN .widget_groups_container { }
 #SKIN .basic { }
 

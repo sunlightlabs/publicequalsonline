@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
-from publicequalsonline.equals.models import FeaturedPost
+from publicequalsonline.equals.models import FeaturedPost, PledgeCount
 import datetime
 
 
@@ -16,6 +16,8 @@ class FeedEntryAdmin(admin.ModelAdmin):
 admin.site.unregister(FeedEntry)    
 admin.site.register(FeedEntry, FeedEntryAdmin)
 
+
+admin.site.register(PledgeCount)
 
 
 #

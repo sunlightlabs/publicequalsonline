@@ -9,9 +9,11 @@
 #stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
 
+#bsd_header_image { height:100px; margin-bottom:50px;}
+
 h1.technique-three { width:475px; height:100px; background: url("http://assets.publicequalsonline.com/media/images/peo_logo_header.png"); text-indent: -9999px; }
 
-#joinbox { width:350px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
+#joinbox { width:340px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
 
 
 a.join_us:link { color:#669933; text-decoration:none;}
@@ -32,12 +34,12 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 #topnav { margin:0 0 0 0; padding:0; }
 #topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;
- font-size:16px; margin:0; padding:0 30px 0 0;}
+ font-size:14px; margin:0; padding:0 30px 0 0;}
 
-#topnav a:link { text-decoration:none; color:#b0b0b0; }
-#topnav a:visited { text-decoration:none; color:#c0c0c0;}
+#topnav a:link { text-decoration:none; color:#575757; }
+#topnav a:visited { text-decoration:none; color:#575757;}
 #topnav a:hover {text-decoration:none; color:#3465c0; }
-#topnav a:active {text-decoration:none; color:#b0b0b0;}
+#topnav a:active {text-decoration:none; color:#575757;}
 
 
 /* FRONT MAIN CONTENT AREA

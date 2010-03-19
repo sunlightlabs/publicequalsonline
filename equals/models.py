@@ -50,3 +50,16 @@ class FeaturedPost(Feature):
     image = models.URLField(blank=True, null=True, verify_exists=False)
     source = models.CharField(max_length=255)
     category = models.IntegerField(blank=True, null=True, choices=CATEGORIES)
+
+class PledgeCountManager(models.Manager):
+    def current_count(self):
+        try:
+            return PledgeCount.objects.get(pk=1)
+        except PledgeCount.DoesNotExist:
+            p = PledgeCount()
+            p.save()
+            return p
+
+class PledgeCount(models.Model):
+    objects = PledgeCountManager()
+    count = models.IntegerField(default=0)

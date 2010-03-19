@@ -5,8 +5,9 @@ from django.shortcuts import render_to_response
 from django.contrib.flatpages.views import flatpage
 # from blogdor.models import Post
 # from blogdor.views import archive
-from publicequalsonline.equals.models import FeaturedPost
+from publicequalsonline.equals.models import FeaturedPost, PledgeCount
 from feedinator.models import FeedEntry
+from django.db.models import F
 
 
 def index(request):
@@ -56,7 +57,13 @@ def page_not_found(request):
             return defaults.page_not_found(request)
 
 
+def increment_count(request):
+    PledgeCount.objects.all().update(count=F('count') + 1)
+    return HttpResponseRedirect("http://local.publicequalsonline.com/page/invite/peo")
 
+def get_count(request):
+    pc = PledgeCount.objects.current_count()
+    return HttpResponse("updateCount(%d);" % pc.count, content_type="application/json")
 
 #def meeting(request):
 #    return render_to_response("schedule.html")
