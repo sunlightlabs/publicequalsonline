@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^groups/$', 'django.views.generic.simple.direct_to_template', {"template": "groups.html"}),
     url(r'^donate/$', 'django.views.generic.simple.direct_to_template', {"template": "donate.html"}),   
     url(r'^toolkit/$', 'django.views.generic.simple.direct_to_template', {"template": "toolkit.html"}),
-    url(r'^local/$', 'django.views.generic.simple.direct_to_template', {"template": "local.html"}),   
+    url(r'^local/$', 'django.views.generic.simple.direct_to_template', {"template": "local.html"}),       
     url(r'^pledge/count/$', 'publicequalsonline.equals.views.get_count'),
     url(r'^pledge/2983gsoidfhd289dh/$', 'publicequalsonline.equals.views.increment_count'),
     

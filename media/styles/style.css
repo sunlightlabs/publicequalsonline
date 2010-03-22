@@ -45,7 +45,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 /* FRONT MAIN CONTENT AREA
 
 this might be deprecated...
-*/
+
 #main_graphic_box { background-color:#e6e6e6; float:left; height:300px; width:629px; margin:0; padding:0;}
 
 #main_nav_box {margin-left:630px; width:320px; }
@@ -56,6 +56,7 @@ this might be deprecated...
 #main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat;}
 #main_nav li a.option_1 {background-position:0px 0px; display:block;}
 #main_nav li a:hover.option_1 {background-position:0px -300px;}
+#main_nav li .option_1 .selected {background-position:0px -300px;}
 
 #main_nav li a.option_2 {background-position:0px -75px; display:block;}
 #main_nav li a:hover.option_2 {background-position:0px -375px;}
@@ -65,7 +66,7 @@ this might be deprecated...
 
 #main_nav li a.option_4 {background-position:0px -225px; display:block;}
 #main_nav li a:hover.option_4 {background-position:0px -525px;}
-
+*/
 
 
 /*social icons */
@@ -292,6 +293,11 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/i
 
 a#option1 { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; }
 a#option1:hover { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; background-position:0px -300px;}
+
+a#default_nav { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; }
+a#default_nav:hover { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; background-position:0px -300px;}
+
+
 
 a#option2 { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; background-position:0 -75px;}
 a#option2:hover { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite.png'); background-repeat:no-repeat; background-position:0px -375px;}

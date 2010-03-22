@@ -16,8 +16,8 @@ def index(request):
         except FeedEntry.DoesNotExist:
             featured_blog = None
 
-        feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:3]
 
+        feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:3]
         context = {
         'feature_post': feature_post,
          }
@@ -48,14 +48,13 @@ def index(request):
     #
     # utility views to make life easier
     #
-
-
+    
+    
 def page_not_found(request):
             subject = "[404] publicequalsonline.com%s" % request.path 
             message = "See subject for error"
             #mail_admins(subject, message)
             return defaults.page_not_found(request)
-
 
 def increment_count(request):
     PledgeCount.objects.all().update(count=F('count') + 1)
@@ -64,6 +63,7 @@ def increment_count(request):
 def get_count(request):
     pc = PledgeCount.objects.current_count()
     return HttpResponse("updateCount(%d);" % pc.count, content_type="application/json")
+
 
 #def meeting(request):
 #    return render_to_response("schedule.html")
