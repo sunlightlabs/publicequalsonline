@@ -193,6 +193,10 @@ h4.subhead_lite { margin:0; font-weight:thin;}
 
 #pledge_page_pledge h3 {font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px; font-weight:bold;}
 
+#pledge_list { list-style:square; margin:0 0 0 20px; padding:0;}
+#pledge_list li { margin-bottom:10px; padding-bottom:5px; }
+
+
 
 /* form */
 label.field { display:block;}
@@ -263,6 +267,11 @@ label.field { display:block;}
 #footer_content_box {width:550px; margin-bottom:20px;  }
 #footer_disclaimer { font-size:10px; color:#c6c6c6; margin-top:30px;}
 #license { text-align:center; margin-top:30px;}
+#license a:link { text-decoration:none; color:#b0b0b0; }
+#license a:visited { text-decoration:none; color:#c0c0c0;}
+#license a:hover {text-decoration:none; color:#3465c0; }
+#license a:active {text-decoration:none; color:#b0b0b0;}
+
 
 #footer_links { padding:0; margin:0;}
 #footer_links li { list-style-type:none; padding:0; margin:0; }
@@ -337,6 +346,14 @@ a#option4:hover { height:74px; width:320px; background-image:url('http://assets.
 
 #front_carousel_pledge { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px;}
 
+#front_carousel_pledge_1 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px;}
+#front_carousel_pledge_2 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge2.jpg); width:629px; height:299px;}
+#front_carousel_pledge_3 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge3.jpg); width:629px; height:299px;}
+#front_carousel_pledge_4 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge4.jpg); width:629px; height:299px;}
+
+
+
+
 #front_pledge { margin:10px 0 20px 0; width:380px; font-size:18px; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;  font-weight:bold; line-height:27px;}
 
 #front_pledge_buttons { margin-top:20px; width:450px; margin-right:auto; margin-left:auto; border:1px solid;}
@@ -348,6 +365,19 @@ a#option4:hover { height:74px; width:320px; background-image:url('http://assets.
 #video_container { margin-right:auto; margin-left:auto; width:480px;}
 
 #front_find_event { border:1px solid #9fad57; padding:15px; width:300px; background-color:#cdd69b; margin-left:20px; }
+
+/* NEWS PAGE */
+#news_content_box { width:550px; margin-bottom:20px; }
+#news_posts { margin:0; padding:0;}
+#news_posts li {list-style:none; margin:0 0 30px 20px; }
+
+#news_posts h4 { margin:0; padding:0; font-weight:bold; font-size:14px;}
+#news_posts p { color:#4d4d4d; font-size:13px;}
+
+#news_posts a:link { color:#000000; text-decoration:none;}
+#news_posts a:visited { color:#656565; text-decoration:none;}
+#news_posts a:hover { color:#3465c0; text-decoration:none;}
+#news_posts a:active { color:#000000; text-decoration:none;}
 
 
 /* WRAPPER STUFF */

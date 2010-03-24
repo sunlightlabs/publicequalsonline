@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}From the blogs{% endblock %}
+
+{% block body %}
+<div class="column span-24">
+		<div id="contentpage">
+			<div id="news_content_box">
+				<h3 class="page_header">From the Blogs</h3>
+
+					
+					{% for feature_post in feature_post %} 
+					<ul id="news_posts">
+						<li>
+							<h4><a href="{{ feature_post.url }}">{{ feature_post.title }}</a></h4>
+							<p><span class="front_blog_source">{{ feature_post.source }}</span> &mdash; {{ feature_post.summary }}</p>
+							
+						</li>
+					</ul>
+					{% endfor %}	
+		</div>
+</div>	
+{% endblock %}

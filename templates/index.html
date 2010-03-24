@@ -6,6 +6,10 @@
 
 {% block body %}
 
+
+
+
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" ></script>
 <div class="column span-24">
@@ -37,7 +41,7 @@
 	<!--uncomment this if there is a feature (see above)-->
 	<div id="feature-1" class="ui-tabs-panel ui-tabs-hide">
 		
-		<div id="front_carousel_pledge">
+		<div id="front_carousel_pledge_{{ 1234|make_list|random }}">
 		<div id="front_pledge">&#8220;Government transparency is critical to creating a better democracy, and of highest importance in how I cast my vote. I pledge, through my sustained engagement, to hold public officials accountable for being open and transparent.&#8221;
 		</div>
 		
@@ -234,7 +238,7 @@ $(document).ready(function(){
 
 			</li>
 			{% endfor %}
-		
+		<p class="right"><a href="/news/">Read more from the Blogs</a></p>
 		</ul>			
 	</div>	
 </div>

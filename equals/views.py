@@ -65,9 +65,20 @@ def get_count(request):
     return HttpResponse("updateCount(%d);" % pc.count, content_type="application/json")
 
 
+def news(request):      
+    feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[:20]
+    data = { "feature_post": feature_post }
+    return render_to_response("news.html", data)
+
+
 #def meeting(request):
 #    return render_to_response("schedule.html")
 
 #def event_detail(request, id):
 #    return render_to_response("event.html")
+       
+       
+# WHERE AM I?
+     
+       
        
