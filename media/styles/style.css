@@ -3,7 +3,10 @@
 
 /* USEFUL STUFF */
 #clearfix { clear:both;}
-
+a.grey:link { color:#575757;}
+a.grey:visited { color:#575757;}
+a.grey:hover { color:#3465c0;}
+a.grey:active { color:#575757;}
 
 /* front page */
 #stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
@@ -195,7 +198,34 @@ h4.subhead_lite { margin:0; font-weight:thin;}
 
 #pledge_list { list-style:square; margin:0 0 0 20px; padding:0;}
 #pledge_list li { margin-bottom:10px; padding-bottom:5px; }
+#pledge_right { margin-left:580px; width:300px;}
 
+#pledge_right .required { color:#73341c; font-size:10px;}
+
+#pledge_page_desc { width:550px; float:left; }
+
+#pledge_right fieldset legend { color:#3f6819;}
+
+#pledge_submit_box { }
+#pledge_button_box { margin-right:auto;
+margin-left:auto; width:190px; margin-top:20px;}
+
+.pledge_disclaimer { display:block; font-size:10px; padding-top:15px;}
+
+
+
+button.pledge_page_button  {
+background:url("http://assets.publicequalsonline.com/media/images/pledge_sign.png") no-repeat scroll right bottom transparent;
+height:42px;
+width:189px;
+
+}
+
+button {
+cursor:pointer;
+text-indent:-9999em;
+border:medium none;
+}
 
 
 /* form */
