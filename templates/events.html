@@ -31,7 +31,19 @@
 			</form>
 			
 			
-			<iframe width="525" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://bsd.sunlightfoundation.com/page/event/search_results?mime=text/xml&format=geo_rss&wrap=no&db_alias=cp_read&event_type=2&radius_unit=miles&date_start=2010-03-25+13%3A03%3A36&order[0]=&event_count=5&event_attendee_count=1&tableName=reference.ref_zip_details&tablePrimary=ref_zip_details_id&tableFields[0]=city&tableFields[1]=state_cd&tableFields[2]=state_name&tableFields[3]=zip&tableFields[4]=zpre&tableFields[5]=area_code&tableFields[6]=county_fips&tableFields[7]=county_name&tableFields[8]=is_preferred&tableFields[9]=time_zone&tableFields[10]=has_dst&tableFields[11]=latitude&tableFields[12]=longitude&tableFields[13]=msa&tableFields[14]=pmsa&tableFields[15]=city_abbreviation&tableFields[16]=market_area&tableFields[17]=zip_type&tableFields[18]=cong_dist&tableFields[19]=cong_dist_text&tableFields[20]=cd_split&tableFields[21]=cd_percent"></iframe>
+			<div id="pre_loader" style="display: none; text-align:center;background-color:#ddd;">
+				<img src="/images/indicator.gif" width="16" height="16" style="margin-top: 15%; margin-bottom: 4px;" /><br />
+				<span style="font-size: 80%;color:#333;">Loading Map. . .</span>
+			</div>
+
+			<div id="map_wrap">
+			<div id="map_container" style="width: 500px; height: 275px;"></div>
+			</div>
+
+		<script type="text/javascript">
+		    new BSD.event.maps.event_map("html", "http://bsd.sunlightfoundation.com/page/event/search_results?mime=text/xml&format=geo_rss&wrap=no&db_alias=cp_read&radius_unit=miles&country=US",null,null,"United States","map_container","pre_loader",null);
+		</script>
+
 
 		</div>		
 	</div>
