@@ -17,6 +17,8 @@ font-size:12px;
 #SKIN .widget_groups_container { }
 #SKIN .basic { }
 
+#redirect .box { background-color:#eeeeee; border:1px solid #c6c6c6;}
+.box {border:1px solid #c6c6c6; }
 
 #SKIN #blue_hat #hat_dashboard { background:#ffffff;}
 #SKIN #blue_hat #hat_logout { background:#ffffff;}
