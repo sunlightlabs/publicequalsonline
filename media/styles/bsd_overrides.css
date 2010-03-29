@@ -57,6 +57,24 @@ font-weight:bold;
 
 #SKIN #widget_event2_widget { }
 
+#SKIN #circle_edit_is_private .form_label { width:200px; }
+#SKIN #circle_edit_is_private .form_input { padding-left:210px; }
+
+#SKIN #circle_edit_event_is_moderated .form_label { width:200px; }
+#SKIN #circle_edit_event_is_moderated .form_input { padding-left:210px; }
+
+#SKIN #circle_edit_blog_is_moderated .form_label { width:200px; }
+#SKIN #circle_edit_blog_is_moderated .form_input { padding-left:210px; }
+
+#SKIN #circle_edit_listserv_is_moderated .form_label { width:200px; }
+#SKIN #circle_edit_listserv_is_moderated .form_input { padding-left:210px; }
+
+#SKIN #circle_edit_listserv_replyall .form_label { width:200px; }
+#SKIN #circle_edit_listserv_replyall .form_input { padding-left:210px; }
+
+#SKIN .basic .main h2, #SKIN .basic .main h2.header, #SKIN .basic .main h2#sectionheader { margin-bottom:10px;}
+
+
 #SKIN .widget_actions {
 float:left;;
 line-height:24px;
