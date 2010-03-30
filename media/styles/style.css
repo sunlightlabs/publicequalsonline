@@ -170,7 +170,7 @@ this might be deprecated...
 
 #contentpage p { font-size:15px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; line-height:22px;}
 
-#flat_contentpage { width:650px; margin-bottom:50px;}
+#flat_contentpage { margin-bottom:50px;}
 #flat_contentpage h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
 
 
@@ -258,6 +258,11 @@ label.field { display:block;}
 
 
 #about_header { margin:0 0 20px 0; border-top:1px solid #c6c6c6; padding:10px 0 10px 0; border-bottom:1px solid #c6c6c6; }
+
+/* MISC */
+#resources_logo_box { margin-bottom:50px; }
+
+
 
 /* GRANTS */
 #groups_content_box { width:600px; }
