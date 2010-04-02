@@ -2,7 +2,6 @@
 {% load media %}
 {% load pledge %}
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -47,7 +46,16 @@
 
 	</script>
 	<div id="stripe">&nbsp;</div>
-
+	<ul>
+	{% if user.is_authenticated %}
+    <li>Hi, logged in person named {{ user }}. Good to see you!</li>
+	<li>Link to <a href="/logout/">log out</a>.</li>
+    {% else %}
+    <li>Join Us</li>
+    <li><a href="/accounts/login/">Sign In</a></li>
+    {% endif %}
+	</ul>
+	
 	<div class="container">
 		<div class="column span-12">
 			

@@ -18,7 +18,9 @@ urlpatterns = patterns('',
 #    url(r'^blog/$', 'publicequalsonline.equals.views.blog_wrapper'),
 #    url(r'^blog/', include('blogdor.urls')), 
     url(r'^admin/(.*)', admin.site.root),   
-    url(r'^', include('publicequalsonline.equals.urls')),    
+    url(r'^', include('publicequalsonline.equals.urls')),        
+    url(r'^', include('socialregistration.urls')),
+    
     
 #schedule
 #    url(r'^schedule/$', 'equalsonline.equals.views.meeting', name='meeting'),
@@ -28,13 +30,14 @@ urlpatterns = patterns('',
 #   url(r'^member/(?P<username>\w+)/$', 'user_view', name='user_view'),
    
 #registration
-#    (r'^accounts/', include('registration.backends.default.urls')),
+    (r'^accounts/', include('registration.backends.default.urls')),
 #    url(r'^admin/', include(admin.site.urls)),
 #    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'index.html'}, name='index'),    
-#    url(r'^', include('equalsonline.equals.urls')),
+#    url(r'^', include('publicequalsonline.equals.urls')),
 #    url(r'^(?P<url>.+)(/?)', 'flatpage_wrapper'),
 
 )
+
 
 
     

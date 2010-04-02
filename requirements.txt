@@ -7,6 +7,20 @@ markdown
 textile
 feedparser
 
+# for django social reg
+# oauth
+# python-openid
+# pyfacebook
+
+-e git://github.com/leah/python-oauth.git#egg=oauth
+-e git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook
+-e git://github.com/openid/python-openid.git#egg=python-openid
+-e git://github.com/flashingpumpkin/django-socialregistration.git#egg=django-socialregistration
+
+-e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
+
+
+
 # third party apps
 django-tagging
 # -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
