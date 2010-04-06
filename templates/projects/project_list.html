@@ -1,0 +1,50 @@
+{% extends "brainstorm/base.html" %}
+{% load projects %}
+
+{% block title %}
+Sunlight Labs:
+{% ifequal projects "official" %} Official {% endifequal %}
+{% ifequal projects "community" %} Community {% endifequal %}
+Projects
+{% endblock title %}
+
+{% block content %}
+<div class="contentHeader">
+    <h2 class="projects projectHeader">
+        {% ifequal projects "official" %} Official {% endifequal %}
+        {% ifequal projects "community" %} Community {% endifequal %}
+        Projects
+        {% if tag %} tagged {{tag}} {% endif %}
+    </h2>
+    <a class="tip rss" href="/projects/feeds/latest/">Subscribe to this feed</a>
+    <a id="projectCreate" href="{% url new_project %}">Create A New Project</a>
+    <div class="clear"></div>
+</div>
+<div id="projects" class="module">
+    <div id="projectNav" class="projectList_nav">
+        <ul>
+            <li id="allProjects">
+            <a {% ifequal projects "all" %}class="active"{% endifequal %} href="{% url all_projects %}">All Projects</a>
+            </li>
+            <li id="labsProjects">
+                <a {% ifequal projects "official" %}class="active"{% endifequal %} href="{% url official_projects %}">Labs Projects</a>
+            </li>
+            <li id="communityProjects">
+                <a {% ifequal projects "community" %}class="active"{% endifequal %} href="{% url community_projects %}">Community Projects</a>
+            </li>
+        </ul>
+    </div>
+    {% for project in project_list %}
+        {% include "projects/project_summary.html" %}
+    {% endfor %}
+</div>
+{% include "pagination_div.html" %}
+{% endblock %}
+
+{% block sidebar %}
+<h3 class="space">Project Statistics</h3>
+<div class="module">
+    {% project_skills_piechart 190x140 python:82964f ruby:bd2915 php:a5b6c9 %}
+    {% project_official_piechart 190x140 official:bf920b community:bfc7ba %}
+</div>
+{% endblock %}

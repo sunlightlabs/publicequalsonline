@@ -1,0 +1,23 @@
+{% load people %}
+
+<div class="project">
+    {% if project.official %}
+        <a href="{% url official_projects %}">
+            <span class="sunlightProject">Sunlight Project</span>
+        </a>
+    {% else %}
+        <span class=""></span>
+    {% endif %}
+
+    <div class="projectContent">
+        <h3><a href="{{project.get_absolute_url}}">{{project}}</a></h3>
+        <dl class="entryMetadata">
+            <dt>Lead by</dt>
+            <dd><a class="seperationBlock" href="{{project.lead.get_absolute_url}}">{% display_name project.lead %}</a></dd>
+            <dt>Added</dt>
+            <dd>{{project.creation_date|date}}</dd>
+        </dl>
+        <div class="short_desc">{{project.description|truncatewords_html:50}}</div>
+        <p><a class="viewAll more" href="{{project.get_absolute_url}}">More Details</a></p>
+    </div>
+</div>

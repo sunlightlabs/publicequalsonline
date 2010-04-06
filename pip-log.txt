@@ -139,3 +139,23 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 3971, in parse_editable
     '--editable=%s should be formatted with svn+URL, git+URL, hg+URL or bzr+URL' % editable_req)
 InstallationError: --editable=requirements.txt should be formatted with svn+URL, git+URL, hg+URL or bzr+URL
+------------------------------------------------------------
+/usr/local/bin/pip run on Tue Apr  6 15:52:28 2010
+Requirement already satisfied: markdown in /Users/kerry/.virtualenvs/publicequals/lib/python2.6/site-packages (from -r requirements.txt (line 6))
+Exception:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 479, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1926, in install_files
+    if req_to_install.check_if_exists():
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1768, in check_if_exists
+    dist = pkg_resources.get_distribution(self.req)
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 311, in get_distribution
+    if isinstance(dist,Requirement): dist = get_provider(dist)
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 197, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 464, in find
+    raise VersionConflict(dist,req)     # XXX add more info
+VersionConflict: (django-tagging 0.4.dev1 (/Users/kerry/.virtualenvs/publicequals/src/tagging), Requirement.parse('django-tagging==0.3'))

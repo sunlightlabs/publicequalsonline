@@ -39,6 +39,12 @@ urlpatterns = patterns('',
 )
 
 
+# anthill
+url(r'^people/', include('anthill.people.urls')),
+url(r'^projects/', include('anthill.projects.urls')),
+url(r'^events/', include('anthill.events.urls')),
+
+
 
     
 if (settings.DEBUG):

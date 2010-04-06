@@ -1,0 +1,26 @@
+{% extends "brainstorm/base.html" %}
+
+{% block title %}
+Sunlight Labs: Create Project
+{% endblock title %}
+
+{% block extrahead %}
+    {% include "projects/tags_js.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="join_project" class="module">
+    <div id="createHeader"class="contentHeader">
+        <h2 class="space">Create A Project</h2>
+    </div>
+    <div class="module">
+        <form id="projectForm" method="POST" action=".">
+            {% include "projects/base_form.html" %}
+
+            <button type="submit" class="submitBtn">
+                <span>Submit</span>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
