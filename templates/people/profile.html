@@ -1,9 +1,7 @@
 {% extends "people/base.html" %}
 {% load cache %}
-{% load blog %}
 {% load people %}
 {% load projects %}
-{% load twitter_tags %}
 {% load media %}
 
 {% block title %}{{block.super}} - {% display_name p_user %}{% endblock %}
@@ -17,7 +15,7 @@
 {% block content %}
 <div id="person" class="module vcard">
     <div id="personPic">
-        {% gravatar p_user.email %}
+        {# gravatar p_user.email #}
     </div>
     <div id="personDetails">
         <div id="personHeader">

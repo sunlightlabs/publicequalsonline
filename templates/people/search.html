@@ -15,12 +15,12 @@
 </script>
 {% endblock %}
 
-{% block content %}
+{% block body %}
 <div class="contentHeader">
     <h2>Search For People In Your Area</h2>
 </div>
 <div class="module" id="searchContent">
-    <a id="advancedBtn"href="#">Advanced Search</a> 
+    <a id="advancedBtn"href="#">Advanced Search</a>
         <form id="searchForm" method="GET" action=".">
             <ul id="peopleSearch">
                 <li>
@@ -107,8 +107,7 @@
 {% block sidebar %}
 <h3 class="space">Community Profile</h3>
 <div class="module" id="communityCharts">
-    {% people_skills_piechart 190x140 python:82964f ruby:bd2915 php:a5b6c9 %}
-    {% people_roles_piechart 190x140 des:bf6e0b both:bfc7ba dev:2a5955 %}
+   
 </div>
 <hr></hr>
 

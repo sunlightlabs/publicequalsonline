@@ -36,13 +36,15 @@ urlpatterns = patterns('',
 #    url(r'^', include('publicequalsonline.equals.urls')),
 #    url(r'^(?P<url>.+)(/?)', 'flatpage_wrapper'),
 
-)
-
 
 # anthill
-url(r'^people/', include('anthill.people.urls')),
-url(r'^projects/', include('anthill.projects.urls')),
-url(r'^events/', include('anthill.events.urls')),
+    url(r'^people/', include('anthill.people.urls')),
+    url(r'^projects/', include('anthill.projects.urls')),
+    url(r'^events/', include('anthill.events.urls')),
+
+
+
+)
 
 
 

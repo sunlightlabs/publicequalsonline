@@ -390,3 +390,67 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/i
 #hor_dot_bottom_wrapper { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
 #wrapper_sidebar { }
 #contentpage_wrapper { margin:20px 0 20px 10px;}
+
+
+/* STUFF FOR ANTHILL */
+/*buttons*/
+button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
+button.searchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
+form#searchForm ul#peopleSearch button.searchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left 20px no-repeat; width: 113px; margin-top: 0px; padding-bottom: 48px;}
+
+button.advsearchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
+button.submitBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_submit.png) left top no-repeat; width: 113px; }
+a.interestedBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
+a.learnBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_learnmore.png) right bottom no-repeat; width: 140px; }
+button.agreeBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_agree.png) right bottom no-repeat; width: 86px; margin-top: 20px;}
+button.leadBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_lead.png) right bottom no-repeat; width: 148px; float: left;  margin: 20px 30px 20px 10px;}
+button.helpBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_help.png) right bottom no-repeat; width: 171px;  float: left; margin-top: 20px;}
+button.postBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_post.png) right bottom no-repeat; width: 86px;}
+button#nonuser_postBtn{ margin-left: 200px;}
+button.addBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
+ul#projectForm_details button.addBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_addTags.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
+button.saveBtn{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
+a#joinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
+a#contactBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
+button.joinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
+button#voteBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_vote.png) right bottom no-repeat; width: 113px; margin-top: 20px; }
+button.siteSearchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_siteSearch.png) right bottom no-repeat; width: 94px; height: 25px; margin-top: 1px;}
+
+form#joinProjectForm button.signupBtn { margin-left: 120px;}
+button.signupBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+button.signinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+button.submit-send { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
+button.startnewBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
+button#resetPassword { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
+form#projectForm button.submitBtn { margin-left: 200px; margin-top: 20px;}
+button.updateProjectBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
+a#projectCreate{ background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_createNewProject.png) right top no-repeat; width: 180px; float: right; margin-right: 10px; margin-top:3px;}
+
+form#searchForm button.searchBtn_events { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left bottom no-repeat; width: 113px; margin-top: 0px; padding-top: 47px;}
+
+form#openid_signinForm button.signinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signinOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
+form#google_signinForm button.signinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signinGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px; margin-top:0;}
+form#yahoo_signinForm button.signinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signinYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
+form#aol_signinForm button.signinBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signinAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
+
+form#openid_signupForm button.signupBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signupOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
+form#google_signupForm button.signupBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signupGoogle.png) right bottom no-repeat; width: 275px; margin-left: 0px; margin-top:0;}
+form#yahoo_signupForm button.signupBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signupYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
+form#aol_signupForm button.signupBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_signupAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
+
+
+a#advancedBtn{ float: right; padding-top: 3px;}
+div#advancedSearch{ border-top: 1px solid #c4bdbd; padding-top: 20px; margin-top: 20px;}
+
+div#siteSearch, div#events_results { margin-top: 40px; margin-bottom: 25px;}
+form#siteSearch div#advancedSearch label { font-weight: bold; margin-bottom:5px; display: block;}
+form#siteSearch div#advancedSearch li { float: left; margin-right: 35px; padding-top: 8px;}
+form#siteSearch div#advancedSearch ul label { float: none; font-weight: normal;}
+form#siteSearch div#advancedSearch ul input { display: block; margin-right: 8px; float: left;}
+
+
+
+div#searchContent, div#siteSearchContent{ background: #f0f0e5; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 20px; margin-left: 5px; border: 1px solid #d5d2c6; margin-right: 20px;}
+form#searchForm li{ float: left; margin-right: 20px;}
+form#searchForm label{ display: block; margin-bottom: 5px; font-weight: bold;}
+form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
