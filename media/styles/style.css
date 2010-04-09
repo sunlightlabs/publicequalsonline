@@ -8,6 +8,15 @@ a.grey:visited { color:#575757;}
 a.grey:hover { color:#3465c0;}
 a.grey:active { color:#575757;}
 
+
+.alertbox { display:block; border:1px solid #b2b2b2; padding:5px; margin-bottom:20px; text-align:center;}
+
+a.alertbox:link { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+a.alertbox:visited { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+a.alertbox:hover { text-decoration:none; color:#74341c; background-color:#c69683; border:1px solid #b17158;}
+a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+
+
 /* front page */
 #stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
