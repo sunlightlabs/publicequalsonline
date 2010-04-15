@@ -1,9 +1,8 @@
-{% load events %}
+{% block upcoming %}
+Is this supposed to be in Base?  How many will be listed?
 
-Where is this?
-
-<h3 class="page_header">Upcoming Events</h3>
-<div id="currentEvents" class="module">
+	<h3 class="page_header">Upcoming Events</h3>
+	<div>
     <dl>
         {% get_upcoming_events 2 as events %}
         {% for event in events %}
@@ -12,6 +11,6 @@ Where is this?
         <dd class="event_location">{{event.location}}</dd>
         {% endfor %}
     </dl>
-    <a class="center_viewall" href="{% url events_archive %}">View All Events »</a>
-</div>
-<div class="clear"></div>
+    <a class="center_viewall" href="{% url events_archive %}">View All Events</a>
+	</div>
+{% endblock %}
