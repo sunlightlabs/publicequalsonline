@@ -193,8 +193,7 @@ h4.subhead_lite { margin:0; font-weight:thin;}
 #pledge_right fieldset legend { color:#3f6819;}
 
 #pledge_submit_box { }
-#pledge_button_box { margin-right:auto;
-margin-left:auto; width:190px; margin-top:20px;}
+#pledge_button_box { margin-right:auto; margin-left:auto; width:190px; margin-top:20px;}
 
 .pledge_disclaimer { display:block; font-size:10px; padding-top:15px;}
 
