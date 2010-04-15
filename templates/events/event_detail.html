@@ -1,10 +1,9 @@
 {% extends "events/base.html" %}
-{% load blog %}
 {% load people %}
 
 {% block title %}{{block.super}} - {{event}}{% endblock title %}
 
-{% block content %}
+{% block body %}
 <div class="module vevent">
     <div id="eventDetail_Title" class="contentHeader">
         <h2 class="summary {% ifequal event.creator user %}addedEvent{% endifequal %}">{{event}}</h2>
@@ -67,10 +66,10 @@
                 <li>
                     <dl>
                         <dt>Photo</dt>
-                        <dd><a href="{% url user_profile att.user.username %}">{% gravatar att.user.email %}</a></dd>
+                        <dd>Check labs code.</dd>
 
                         <dt>Name of Attendee</dt>
-                        <dd><a href="{% url user_profile att.user.username %}">{% display_name att.user %}</a></dd>
+                        <dd>check Labs code</dd>
                 
                         <dt>Number of Guests</dt>
                         <dd id="eventGuests">{% ifnotequal att.guests 0 %}+{{att.guests}}{% else %}&nbsp;{% endifnotequal %}</dd>

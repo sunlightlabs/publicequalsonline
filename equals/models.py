@@ -1,6 +1,11 @@
 from django.contrib.auth.models import User
 from feedinator.models import FeedEntry
 # from blogdor.models import Post
+from anthill.events.models import Event
+from anthill.projects.models import Project, Role, Ask
+from anthill.people.signals import message_sent
+from brainstorm.models import Idea
+
 
 from django.db import models
 # from schedule.models.events import Event

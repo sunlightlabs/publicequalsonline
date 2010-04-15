@@ -9,7 +9,7 @@ from django.contrib.flatpages.views import flatpage
 from publicequalsonline.equals.models import FeaturedPost, PledgeCount
 from feedinator.models import FeedEntry
 from django.db.models import F
-
+from anthill.projects.models import Project
 
 def index(request):
         try:

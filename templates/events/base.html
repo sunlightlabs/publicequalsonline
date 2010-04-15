@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
-{% block bodyclass %}events{% endblock %}
+{% block body %}
 
-{% block sidebar %}
-{% include "events/events_box.html" %}
+{% load events %}
+<h2>Upcoming Events</h2>
+<div id="currentEvents" class="module">
+    <dl>
+        {% get_upcoming_events 2 as events %}
+        {% for event in events %}
+        <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
+        <dd class="event_date">{{event.start_date|date:"M d"}}</dd>
+        <dd class="event_location">{{event.location}}</dd>
+        {% endfor %}
+    </dl>
+    <a class="center_viewall" href="{% url events_archive %}">View All Events »</a>
+</div>
+<div class="clear"></div>
+
+
 {% endblock %}

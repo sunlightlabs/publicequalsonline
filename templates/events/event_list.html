@@ -1,12 +1,12 @@
 {% extends "events/base.html" %}
 
-{% block content %}
-<div class="contentHeader">
-    <h2 class="events">Events</h2>
-</div>
+{% block body %}
+<h2>Events</h2>
 
-<div id="eventsList" class="module">
+    <a href="{% url new_event %}">Plan An Event For Your Local Community.</a>
+<br />
 
+<div>
     <dl>
         {% for event in event_list %}
         <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
@@ -17,11 +17,11 @@
 
 </div>
 
+
+
+
 {% endblock %}
 
-{% block sidebar %}
-<div id="planEvent">
-    <a href="{% url new_event %}">Plan An Event For Your Local Community.</a>
-</div>
-<div class="clear"></div>
-{% endblock %}
+
+
+
