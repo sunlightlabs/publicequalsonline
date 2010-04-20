@@ -48,20 +48,24 @@
 
 	</script>
 	<div id="stripe">&nbsp;</div>
-	<ul>
-	{% if user.is_authenticated %}
-    <li>Hi, logged in person named {{ user }}. Good to see you!</li>
-	<li>Link to <a href="/logout/">log out</a>.</li>
-    {% else %}
-    <li>Join Us</li>
-    <li><a href="/accounts/login/">Sign In</a></li>
-    {% endif %}
-	</ul>
-	
-	<p>Nav for ANTHILL: <a href="/events/">Events</a> | <a href="/people/">People</a> | <a href="/projects/">Projects</a>
-	</p>
-	
 	<div class="container">
+		
+		<div class="column span-12">&nbsp;</div>
+		<div class="column span-12 last">
+			<div id="account_corner" style="text-align:right;">
+			{% if user.is_authenticated %}
+			Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a>
+			{% else %}
+			<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>
+			{% endif %}
+			</div>
+			
+			
+		</div>	
+			
+		
+		
+		
 		<div class="column span-12">
 			
 			

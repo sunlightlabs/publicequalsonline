@@ -159,3 +159,485 @@ Traceback (most recent call last):
   File "build/bdist.linux-i686/egg/pkg_resources.py", line 464, in find
     raise VersionConflict(dist,req)     # XXX add more info
 VersionConflict: (django-tagging 0.4.dev1 (/Users/kerry/.virtualenvs/publicequals/src/tagging), Requirement.parse('django-tagging==0.3'))
+------------------------------------------------------------
+/usr/local/bin/pip run on Tue Apr 20 11:35:35 2010
+Downloading/unpacking psycopg2
+  Getting page http://pypi.python.org/simple/psycopg2
+  URLs to search for versions for psycopg2:
+  * http://pypi.python.org/simple/psycopg2/
+  Getting page http://initd.org/projects/psycopg2
+  Skipping page http://initd.org/pub/software/psycopg/psycopg2-2.0b6.tar.gz (from http://pypi.python.org/simple/psycopg2/) because of Content-Type: 
+  Getting page http://initd.org/pub/software/psycopg/
+  Analyzing links from page http://pypi.python.org/simple/psycopg2/
+    Skipping link http://initd.org/projects/psycopg2 (from http://pypi.python.org/simple/psycopg2/); not a file
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0b6.tar.gz (from http://pypi.python.org/simple/psycopg2/), version: 2.0b6
+    Skipping link http://initd.org/pub/software/psycopg/ (from http://pypi.python.org/simple/psycopg2/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Analyzing links from page http://initd.org/projects/psycopg2/
+  Analyzing links from page http://initd.org/pub/software/psycopg/
+    Skipping link http://initd.org/pub/software/psycopg/?C=N;O=D (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=M;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=S;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/?C=D;O=A (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/BAH/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-1.1 (from http://initd.org/pub/software/psycopg/); unknown archive format: .1
+    Skipping link http://initd.org/pub/software/psycopg/ChangeLog-2.0 (from http://initd.org/pub/software/psycopg/); unknown archive format: .0
+    Skipping link http://initd.org/pub/software/psycopg/FAQ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-1-1/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/PSYCOPG-2-0/ (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/SUCCESS (from http://initd.org/pub/software/psycopg/); not a file
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming-0.0.20020413.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.pdf (from http://initd.org/pub/software/psycopg/); unknown archive format: .pdf
+    Could not parse version from link: http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/)
+    Skipping link http://initd.org/pub/software/psycopg/dbapi20programming.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/paco-20020213.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Skipping link http://initd.org/pub/software/psycopg/psycopg-1.1.21.tar.gz (from http://initd.org/pub/software/psycopg/); wrong project name (not psycopg2)
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.12
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.12.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.13
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.13.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14-rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14-rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.0.14
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.0.14.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Found link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/), version: 2.2.0rc1
+    Skipping link http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz.asc (from http://initd.org/pub/software/psycopg/); unknown archive format: .asc
+    Skipping link http://initd.org/pub/software/psycopg/rpm/ (from http://initd.org/pub/software/psycopg/); not a file
+  Using version 2.2.0rc1 (newest of versions: 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.2.0rc1, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.14-rc1, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.13, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0.12, 2.0b6)
+  Downloading from URL http://initd.org/pub/software/psycopg/psycopg2-2.2.0rc1.tar.gz (from http://initd.org/pub/software/psycopg/)
+  Running setup.py egg_info for package psycopg2
+    running egg_info
+    creating pip-egg-info/psycopg2.egg-info
+    writing pip-egg-info/psycopg2.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/psycopg2.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/psycopg2.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/psycopg2.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/psycopg2.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching 'TODO' under directory 'doc'
+    no previously-included directories found matching 'doc/src/_build'
+    writing manifest file 'pip-egg-info/psycopg2.egg-info/SOURCES.txt'
+  Source in ./build/psycopg2 has version 2.2.0, which satisfies requirement psycopg2
+Downloading/unpacking upgrade
+  Getting page http://pypi.python.org/simple/upgrade
+  Could not fetch URL http://pypi.python.org/simple/upgrade: HTTP Error 404: Not Found
+  Will skip URL http://pypi.python.org/simple/upgrade when looking for download links for upgrade
+  Getting page http://pypi.python.org/simple/
+  URLs to search for versions for upgrade:
+  * http://pypi.python.org/simple/upgrade/
+  Getting page http://pypi.python.org/simple/upgrade/
+  Could not fetch URL http://pypi.python.org/simple/upgrade/: HTTP Error 404: Not Found
+  Will skip URL http://pypi.python.org/simple/upgrade/ when looking for download links for upgrade
+  Could not find any downloads that satisfy the requirement upgrade
+No distributions at all found for upgrade
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 295, in main
+    self.run(options, args)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 479, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1961, in install_files
+    url = finder.find_requirement(req_to_install, upgrade=self.upgrade)
+  File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1146, in find_requirement
+    raise DistributionNotFound('No distributions at all found for %s' % req)
+DistributionNotFound: No distributions at all found for upgrade
