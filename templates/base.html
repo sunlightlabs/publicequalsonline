@@ -52,13 +52,17 @@
 	<div id="stripe">&nbsp;</div>
 	<div class="container">
 		
-		<div class="column span-12">&nbsp;</div>
-		<div class="column span-12 last">
-			<div id="account_corner" style="text-align:right;">
+		<div class="column span-13">&nbsp;</div>
+		<div class="column span-11 last">
+			<div id="account_corner" style="float:right;">
 			{% if user.is_authenticated %}
 			Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a>
 			{% else %}
-			<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>
+			<!--<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>-->
+			<div id="social_reg_box">
+				<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div>
+				<div id="tw_butt">{% twitter_button %}</div>
+			</div>
 			{% endif %}
 			</div>
 			
@@ -77,8 +81,8 @@
 			<div id="joinbox">
 				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
 				<br />
-				<!--<span class="already_member">ALREADY SIGNED?</span><a href="http://local.publicequalsonline.com/page/invite/peo" class="get_in_here">SHARE THE PLEDGE</a>-->
-			<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div><div id="tw_butt">{% twitter_button %}</div>
+				<span class="already_member">ALREADY SIGNED?</span><a href="http://local.publicequalsonline.com/page/invite/peo" class="get_in_here">SHARE THE PLEDGE</a>
+
 			</div>
 			
 			

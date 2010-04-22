@@ -27,14 +27,14 @@
 </script>
 {% endblock %}
 
-{% block content %}
+{% block body %}
 <div class="module">
     <div id="headerTip" class="contentHeader">
         <h2 id="accountHeader">Account Information</h2>
         <a id="accountProfile" href="{{user.get_absolute_url}}"> (view profile) </a>
     </div>
     <div class="module">
-        <p class="tip">Let the labs community know more about you.</p>
+        <p class="tip">Let the Public=Online community know more about you.</p>
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
             <ul>
 		<li><label>Current Avatar</label>{% gravatar user.email %}</li>

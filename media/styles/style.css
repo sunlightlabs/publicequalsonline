@@ -9,7 +9,7 @@ a.grey:hover { color:#3465c0;}
 a.grey:active { color:#575757;}
 
 /* front page */
-#stripe { background-color:#76a050; margin:0 0 30px 0; padding:0; height:3px;}
+#stripe { background-color:#76a050; margin:0 0 15px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
 
 #bsd_header_image { height:100px; margin-bottom:50px;}
@@ -47,6 +47,8 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 #fb_butt { float:left;}
 #tw_butt { margin-left:200px;}
+
+#social_reg_box {width:360px;}
 
 
 /*social icons */

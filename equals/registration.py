@@ -16,7 +16,7 @@ class CustomRegistrationConsumer(RegistrationConsumer):
     trust_root = settings.TRUST_ROOT
     on_complete_url = '/accounts/complete/'
     after_registration_url = '/people/edit_profile/'
-    recovery_email_subject = 'Recover Your SunlightLabs.com Account'
+    recovery_email_subject = 'Recover Your PublicEqualsOnline Account'
 
     def redirect_if_valid_next(self, request):
         "Logic for checking if a signed ?next= token is included in request"

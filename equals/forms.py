@@ -6,8 +6,8 @@ class LabsContactForm(ContactForm):
     attrs_dict = { 'class': 'required' }
 
     from_email = "bounce@sunlightfoundation.com"
-    recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
-    subject = "[SunlightLabs.com] Contact"
+    recipient_list = ['kmitchell@sunlightfoundation.com']
+    subject = "[PublicEqualsOnline.com] Contact"
 
     name = forms.CharField(max_length=100,
                 widget=forms.TextInput(attrs=attrs_dict),
