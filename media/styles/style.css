@@ -44,6 +44,11 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 #topnav a:hover {text-decoration:none; color:#3465c0; }
 #topnav a:active {text-decoration:none; color:#575757;}
 
+
+#fb_butt { float:left;}
+#tw_butt { margin-left:200px;}
+
+
 /*social icons */
 
 #social_bar {
@@ -145,6 +150,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 #flat_contentpage { margin-bottom:50px;}
 #flat_contentpage h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:18px; text-transform:uppercase; margin:0 0 10px 0;}
 #flat_contentpage h2 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
+
 
 
 

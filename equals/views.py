@@ -23,7 +23,7 @@ def index(request):
         'feature_post': feature_post,
          }
 
-        return render_to_response("index.html", context)
+        return render_to_response("index.html", context, context_instance=RequestContext(request))
  
  
 
@@ -91,7 +91,7 @@ def get_count(request):
 def news(request):      
     feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[:20]
     data = { "feature_post": feature_post }
-    return render_to_response("news.html", data)
+    return render_to_response("news.html", data, context_instance=RequestContext(request))
 
 
 #def meeting(request):

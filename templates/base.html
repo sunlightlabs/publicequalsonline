@@ -1,6 +1,8 @@
 {% load i18n %}
 {% load media %}
 {% load pledge %}
+{% load facebook_tags %}
+{% load twitter_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -75,8 +77,12 @@
 			<div id="joinbox">
 				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
 				<br />
-				<span class="already_member">ALREADY SIGNED?</span><a href="http://local.publicequalsonline.com/page/invite/peo" class="get_in_here">SHARE THE PLEDGE</a>
+				<!--<span class="already_member">ALREADY SIGNED?</span><a href="http://local.publicequalsonline.com/page/invite/peo" class="get_in_here">SHARE THE PLEDGE</a>-->
+			<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div><div id="tw_butt">{% twitter_button %}</div>
 			</div>
+			
+			
+			
 		</div>	
 	</div>
 

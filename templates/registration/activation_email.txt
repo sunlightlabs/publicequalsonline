@@ -1,5 +1,5 @@
 {% load i18n %}
-{% trans "Activate account at" %} {{ site.name }}:
+{% trans "Activate your Public=Online Account" %}
 
 http://{{ site.domain }}{% url registration_activate activation_key %}
 
