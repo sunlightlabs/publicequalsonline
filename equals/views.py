@@ -2,7 +2,6 @@ from django.contrib import auth
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
-from django.core.context_processors import csrf
 from django.shortcuts import render_to_response
 from django.contrib.flatpages.views import flatpage
 # from blogdor.models import Post
