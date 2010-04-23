@@ -14,6 +14,29 @@
 
 {% block content %}
 
+<div class="column span-12">
+	COPY GOES HERE
+</div>
+<div class="column span-12 last">
+	 <h3>Upcoming Events</h3>
+
+	
+	    <dl>
+	        {% for event in event_list %}
+	        <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
+	        <dd class="event_date">{{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}</dd>
+	        <dd class="event_location endEvent_list">{{event.location}}</dd>
+	        {% endfor %}
+	    </dl>
+
+</div>	
+
+
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+
+
     <h3 class="page_header">Search For Events In Your Area</h2>
 <div style="margin:20px;">
 
@@ -60,5 +83,7 @@
 {% endif %}
 </div>
 
-
+</div>
+</div>
+</div>
 {% endblock %}

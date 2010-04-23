@@ -43,29 +43,7 @@
 
                     <li>{{field.label_tag}} {{field}} 
 
-                    {% ifequal field.name "skills" %}
-                        <div id="fancy_tags_widget">
-                            <p><a id="show_common_tags" href="#">Show Common Skills List</a></p>
-                            <div id="commonTags_wrapper">
-                                <p class="tip">Click on the skills below to add them to your list.</p>
-                                <ul id="common_tags">
-                                    {% tag_cloud_for_model people.Profile as used_tags with min_count=3 %}
-                                    {% for tag in used_tags %}
-                                    <li class="common_tag"><a href="#">{{tag}}</a></li>
-                                    {% endfor %}
-                                </ul>
-                                <div class="clear"></div>
-                            </div>    
-                            <input id="skills" type="text"  />
-                            <button type="submit" class="addBtn">
-                                <span>Add Skill</span>
-                            </button>
-                            <div id="yourSkills">
-                                <ul class="tag_buttons"> </ul>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    {% endifequal %}
+                   
                     </li>
                 {% endfor %}
 
