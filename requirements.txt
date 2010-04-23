@@ -15,7 +15,11 @@ feedparser
 -e git://github.com/leah/python-oauth.git#egg=oauth
 -e git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook
 -e git://github.com/openid/python-openid.git#egg=python-openid
--e git://github.com/flashingpumpkin/django-socialregistration.git#egg=django-socialregistration==0.2
+#-e git://github.com/flashingpumpkin/django-socialregistration.git#egg=django-socialregistration==0.2
+
+django-socialregistration==0.2
+
+
 
 -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
 
