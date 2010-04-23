@@ -641,3 +641,233 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python/2.6.3/lib/python2.6/site-packages/pip-0.5.1-py2.6.egg/pip.py", line 1146, in find_requirement
     raise DistributionNotFound('No distributions at all found for %s' % req)
 DistributionNotFound: No distributions at all found for upgrade
+------------------------------------------------------------
+/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py run on Fri Apr 23 15:27:22 2010
+Requirement already satisfied: markdown in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 6))
+Requirement already satisfied: django-tagging in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 38))
+Requirement already satisfied: boto in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 4))
+Obtaining django-markupfield from git+git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield (from -r requirements.txt (line 39))
+  Running command git config remote.origin.url
+  git://github.com/jamesturk/django-markupfield.git
+  Clone in /home/upgrade/virt/src/django-markupfield exists, and has correct URL (git://github.com/jamesturk/django-markupfield.git)
+  Updating clone /home/upgrade/virt/src/django-markupfield
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package django-markupfield
+    running egg_info
+    writing django_markupfield.egg-info/PKG-INFO
+    writing top-level names to django_markupfield.egg-info/top_level.txt
+    writing dependency_links to django_markupfield.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_markupfield.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_markupfield.egg-info/SOURCES.txt'
+Obtaining django-registration from hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration (from -r requirements.txt (line 20))
+  Running command hg showconfig paths.default
+  https://bitbucket.org/ubernostrum/django-registration/
+  Clone in /home/upgrade/virt/src/django-registration exists, and has correct URL (https://bitbucket.org/ubernostrum/django-registration/)
+  Updating clone /home/upgrade/virt/src/django-registration
+  Running command hg pull -q
+  Running command hg update -q
+  Running setup.py egg_info for package django-registration
+    running egg_info
+    writing django_registration.egg-info/PKG-INFO
+    writing top-level names to django_registration.egg-info/top_level.txt
+    writing dependency_links to django_registration.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_registration.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_registration.egg-info/SOURCES.txt'
+Downloading/unpacking ngo (from -r requirements.txt (line 1))
+  Getting page http://pypi.python.org/simple/ngo
+  Could not fetch URL http://pypi.python.org/simple/ngo: HTTP Error 404: Not Found
+  Will skip URL http://pypi.python.org/simple/ngo when looking for download links for ngo (from -r requirements.txt (line 1))
+  Getting page http://pypi.python.org/simple/
+  URLs to search for versions for ngo (from -r requirements.txt (line 1)):
+  * http://pypi.python.org/simple/ngo/
+  Getting page http://pypi.python.org/simple/ngo/
+  Could not fetch URL http://pypi.python.org/simple/ngo/: HTTP Error 404: Not Found
+  Will skip URL http://pypi.python.org/simple/ngo/ when looking for download links for ngo (from -r requirements.txt (line 1))
+  Could not find any downloads that satisfy the requirement ngo (from -r requirements.txt (line 1))
+No distributions at all found for ngo (from -r requirements.txt (line 1))
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 274, in main
+    self.run(options, args)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 431, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 1813, in install_files
+    url = finder.find_requirement(req_to_install, upgrade=self.upgrade)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 1086, in find_requirement
+    raise DistributionNotFound('No distributions at all found for %s' % req)
+DistributionNotFound: No distributions at all found for ngo (from -r requirements.txt (line 1))
+------------------------------------------------------------
+/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py run on Fri Apr 23 16:07:39 2010
+Requirement already satisfied: markdown in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 6))
+Requirement already satisfied: django-tagging in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 38))
+Requirement already satisfied: boto in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 4))
+Obtaining django-markupfield from git+git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield (from -r requirements.txt (line 39))
+  Running command git config remote.origin.url
+  git://github.com/jamesturk/django-markupfield.git
+  Clone in /home/upgrade/virt/src/django-markupfield exists, and has correct URL (git://github.com/jamesturk/django-markupfield.git)
+  Updating clone /home/upgrade/virt/src/django-markupfield
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package django-markupfield
+    running egg_info
+    writing django_markupfield.egg-info/PKG-INFO
+    writing top-level names to django_markupfield.egg-info/top_level.txt
+    writing dependency_links to django_markupfield.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_markupfield.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_markupfield.egg-info/SOURCES.txt'
+Obtaining django-registration from hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration (from -r requirements.txt (line 20))
+  Running command hg showconfig paths.default
+  https://bitbucket.org/ubernostrum/django-registration/
+  Clone in /home/upgrade/virt/src/django-registration exists, and has correct URL (https://bitbucket.org/ubernostrum/django-registration/)
+  Updating clone /home/upgrade/virt/src/django-registration
+  Running command hg pull -q
+  Running command hg update -q
+  Running setup.py egg_info for package django-registration
+    running egg_info
+    writing django_registration.egg-info/PKG-INFO
+    writing top-level names to django_registration.egg-info/top_level.txt
+    writing dependency_links to django_registration.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_registration.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_registration.egg-info/SOURCES.txt'
+Obtaining django-brainstorm from git+git://github.com/sunlightlabs/django-brainstorm.git#egg=django-brainstorm (from -r requirements.txt (line 40))
+  Running command git config remote.origin.url
+  git://github.com/sunlightlabs/django-brainstorm.git
+  Clone in /home/upgrade/virt/src/django-brainstorm exists, and has correct URL (git://github.com/sunlightlabs/django-brainstorm.git)
+  Updating clone /home/upgrade/virt/src/django-brainstorm
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package django-brainstorm
+    running egg_info
+    writing django_brainstorm.egg-info/PKG-INFO
+    writing top-level names to django_brainstorm.egg-info/top_level.txt
+    writing dependency_links to django_brainstorm.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_brainstorm.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'django_brainstorm.egg-info/SOURCES.txt'
+Requirement already satisfied: Django in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 1))
+Requirement already satisfied: textile in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 7))
+Requirement already satisfied: python-twitter in /var/lib/python-support/python2.5 (from -r requirements.txt (line 5))
+Requirement already satisfied: feedparser in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 8))
+Obtaining django-feedinator from git+git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator (from -r requirements.txt (line 31))
+  Running command git config remote.origin.url
+  git://github.com/sunlightlabs/django-feedinator.git
+  Clone in /home/upgrade/virt/src/django-feedinator exists, and has correct URL (git://github.com/sunlightlabs/django-feedinator.git)
+  Updating clone /home/upgrade/virt/src/django-feedinator
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package django-feedinator
+    running egg_info
+    writing django_feedinator.egg-info/PKG-INFO
+    writing top-level names to django_feedinator.egg-info/top_level.txt
+    writing dependency_links to django_feedinator.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_feedinator.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching 'LICENSE'
+    warning: no files found matching 'README.rst'
+    warning: no files found matching 'templates'
+    writing manifest file 'django_feedinator.egg-info/SOURCES.txt'
+Obtaining pyfacebook from git+git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook (from -r requirements.txt (line 16))
+  Running command git config remote.origin.url
+  git://github.com/sciyoshi/pyfacebook.git
+  Clone in /home/upgrade/virt/src/pyfacebook exists, and has correct URL (git://github.com/sciyoshi/pyfacebook.git)
+  Updating clone /home/upgrade/virt/src/pyfacebook
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package pyfacebook
+    running egg_info
+    writing pyfacebook.egg-info/PKG-INFO
+    writing top-level names to pyfacebook.egg-info/top_level.txt
+    writing dependency_links to pyfacebook.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pyfacebook.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pyfacebook.egg-info/SOURCES.txt'
+Obtaining oauth from git+git://github.com/leah/python-oauth.git#egg=oauth (from -r requirements.txt (line 15))
+  Running command git config remote.origin.url
+  git://github.com/leah/python-oauth.git
+  Clone in /home/upgrade/virt/src/oauth exists, and has correct URL (git://github.com/leah/python-oauth.git)
+  Updating clone /home/upgrade/virt/src/oauth
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package oauth
+    running egg_info
+    writing oauth.egg-info/PKG-INFO
+    writing top-level names to oauth.egg-info/top_level.txt
+    writing dependency_links to oauth.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'oauth.egg-info/SOURCES.txt'
+    writing manifest file 'oauth.egg-info/SOURCES.txt'
+Obtaining python-openid from git+git://github.com/openid/python-openid.git#egg=python-openid (from -r requirements.txt (line 17))
+  Running command git config remote.origin.url
+  git://github.com/openid/python-openid.git
+  Clone in /home/upgrade/virt/src/python-openid exists, and has correct URL (git://github.com/openid/python-openid.git)
+  Updating clone /home/upgrade/virt/src/python-openid
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package python-openid
+    running egg_info
+    writing python_openid.egg-info/PKG-INFO
+    writing top-level names to python_openid.egg-info/top_level.txt
+    writing dependency_links to python_openid.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'python_openid.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching 'CHANGELOG'
+    warning: no files found matching '*.css' under directory 'doc'
+    warning: no files found matching '*.html' under directory 'doc'
+    writing manifest file 'python_openid.egg-info/SOURCES.txt'
+Obtaining django-blogdor from git+git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor (from -r requirements.txt (line 30))
+  Running command git config remote.origin.url
+  git://github.com/sunlightlabs/django-blogdor.git
+  Clone in /home/upgrade/virt/src/django-blogdor exists, and has correct URL (git://github.com/sunlightlabs/django-blogdor.git)
+  Updating clone /home/upgrade/virt/src/django-blogdor
+  Running command git fetch -q
+  Running command git checkout -q -f master
+  Running setup.py egg_info for package django-blogdor
+    running egg_info
+    writing django_blogdor.egg-info/PKG-INFO
+    writing top-level names to django_blogdor.egg-info/top_level.txt
+    writing dependency_links to django_blogdor.egg-info/dependency_links.txt
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'django_blogdor.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching 'README.markdown'
+    writing manifest file 'django_blogdor.egg-info/SOURCES.txt'
+Requirement already satisfied: django-mediasync in /home/upgrade/virt/lib/python2.5/site-packages (from -r requirements.txt (line 33))
+Obtaining django-socialregistration from git+git://github.com/flashingpumpkin/django-socialregistration.git@0.2#egg=django-socialregistration (from -r requirements.txt (line 18))
+  Running command git config remote.origin.url
+  git://github.com/flashingpumpkin/django-socialregistration.git
+  Clone in /home/upgrade/virt/src/django-socialregistration exists, and has correct URL (git://github.com/flashingpumpkin/django-socialregistration.git)
+  Updating clone /home/upgrade/virt/src/django-socialregistration (to revision 0.2)
+  Running command git fetch -q
+  Running command git checkout -q -f 0.2
+  Complete output from command git checkout -q -f 0.2:
+  
+----------------------------------------
+Command git checkout -q -f 0.2 failed with error code 1
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 274, in main
+    self.run(options, args)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 431, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 1804, in install_files
+    req_to_install.update_editable()
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 1544, in update_editable
+    version_control(self.url).obtain(self.source_dir)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 2851, in obtain
+    [GIT_CMD, 'checkout', '-q', '-f'] + rev_options, cwd=dest)
+  File "/usr/lib/python2.5/site-packages/pip-0.4-py2.5.egg/pip.py", line 3643, in call_subprocess
+    % (command_desc, proc.returncode))
+InstallationError: Command git checkout -q -f 0.2 failed with error code 1

@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^local/$', 'django.views.generic.simple.direct_to_template', {"template": "local.html"}),       
     url(r'^pledge/count/$', 'publicequalsonline.equals.views.get_count'),
     url(r'^pledge/2983gsoidfhd289dh/$', 'publicequalsonline.equals.views.increment_count'),
+    url(r'^pledge/.*$', 'django.views.generic.simple.direct_to_template', {"template": "pledge.html"}),    
     url(r'^news/$', 'publicequalsonline.equals.views.news', name="news"),
     
     

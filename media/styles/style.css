@@ -8,13 +8,22 @@ a.grey:visited { color:#575757;}
 a.grey:hover { color:#3465c0;}
 a.grey:active { color:#575757;}
 
+
+.alertbox { display:block; border:1px solid #b2b2b2; padding:5px; margin-bottom:20px; text-align:center;}
+
+a.alertbox:link { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+a.alertbox:visited { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+a.alertbox:hover { text-decoration:none; color:#74341c; background-color:#c69683; border:1px solid #b17158;}
+a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
+
+
 /* front page */
 #stripe { background-color:#76a050; margin:0 0 15px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
 
 #bsd_header_image { height:100px; margin-bottom:50px;}
 
-h1.technique-three { width:475px; height:100px; background: url("http://assets.publicequalsonline.com/media/images/peo_logo_header.png"); text-indent: -9999px; }
+h1.technique-three { width:475px; height:100px; background: url("http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_logo_header.png"); text-indent: -9999px; }
 
 #joinbox { width:340px; margin-top:20px; margin-right:0; margin-left:auto;  text-align:right;}
 
@@ -65,27 +74,27 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 #social_bar li, #social_bar a { height:16px; display: block;}
 
-#panel1b {left:0; width:16px; background:url(http://assets.publicequalsonline.com/media/images/peo_social_icons.png) 0 0; background-repeat:no-repeat;}
-#panel2b {left:25px; width:16px; background:url(http://assets.publicequalsonline.com/media/images/peo_social_icons.png) -20px 0; background-repeat:no-repeat;}
-#panel3b {left:50px; width:16px; background:url(http://assets.publicequalsonline.com/media/images/peo_social_icons.png) -40px 0; background-repeat:no-repeat;}
-#panel4b {left:75px; width:16px; background:url(http://assets.publicequalsonline.com/media/images/peo_social_icons.png) -60px 0; background-repeat:no-repeat;}
-#panel5b {left:100px; width:16px; background:url(http://assets.publicequalsonline.com/media/images/peo_social_icons.png) -80px 0; background-repeat:no-repeat;}
+#panel1b {left:0; width:16px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_social_icons.png) 0 0; background-repeat:no-repeat;}
+#panel2b {left:25px; width:16px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_social_icons.png) -20px 0; background-repeat:no-repeat;}
+#panel3b {left:50px; width:16px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_social_icons.png) -40px 0; background-repeat:no-repeat;}
+#panel4b {left:75px; width:16px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_social_icons.png) -60px 0; background-repeat:no-repeat;}
+#panel5b {left:100px; width:16px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_social_icons.png) -80px 0; background-repeat:no-repeat;}
 
 
 /* HORIZONTAL BARS */
-#hor_dot { background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; margin:10px 0 20px 0; }
-#hor_dot_top { background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; margin:5px 0 20px 0; position:top; }
+#hor_dot { background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted.png); background-repeat:repeat-x; margin:10px 0 20px 0; }
+#hor_dot_top { background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted.png); background-repeat:repeat-x; margin:5px 0 20px 0; position:top; }
 .collapsed {height:15px;}
 
-#hor_dot_bottom_front { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
-#hor_dot_bottom { margin-top:0px; height:10px; background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
+#hor_dot_bottom_front { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
+#hor_dot_bottom { margin-top:0px; height:10px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
 
 
 
 
 
 /* FRONT BLOG AREA */
-#front_blogs {padding:0 20px 0 10px; background:url(http://assets.publicequalsonline.com/media/images/dotted_vert.png); background-repeat:repeat-y; background-position:right;}
+#front_blogs {padding:0 20px 0 10px; background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted_vert.png); background-repeat:repeat-y; background-position:right;}
 #front_blogs h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:20px;}
 
 #front_blog_posts { margin:0; padding:0;}
@@ -106,7 +115,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 /* FRONT MISSION */
 
-.mission_line { background:url(http://assets.publicequalsonline.com/media/images/dotted_vert.png); background-repeat:repeat-y; background-position:right; }
+.mission_line { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted_vert.png); background-repeat:repeat-y; background-position:right; }
 
 #mission_front { padding:0 30px 0 0; }
 #mission_front h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:20px;}
@@ -192,15 +201,14 @@ h4.subhead_lite { margin:0; font-weight:thin;}
 #pledge_right fieldset legend { color:#3f6819;}
 
 #pledge_submit_box { }
-#pledge_button_box { margin-right:auto;
-margin-left:auto; width:190px; margin-top:20px;}
+#pledge_button_box { margin-right:auto; margin-left:auto; width:190px; margin-top:20px;}
 
 .pledge_disclaimer { display:block; font-size:10px; padding-top:15px;}
 
 
 
 button.pledge_page_button  {
-background:url("http://assets.publicequalsonline.com/media/images/pledge_sign.png") no-repeat scroll right bottom transparent;
+background:url("http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/pledge_sign.png") no-repeat scroll right bottom transparent;
 height:42px;
 width:189px;
 
@@ -224,12 +232,12 @@ label.field { display:block;}
 /* about page */
 #about_content_box { width:600px;}
 
-.side_nk1 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
-.side_nk2 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk2.jpg); background-position: bottom right; background-repeat:no-repeat;}
-.side_nk3 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk3.jpg); background-position:bottom right; background-repeat:no-repeat;}
-.side_nk4 { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
-.side_jc { background:url(http://assets.publicequalsonline.com/media/images/sidebar_jc.jpg); background-position:bottom right; background-repeat:no-repeat;}
-.side_gs { background:url(http://assets.publicequalsonline.com/media/images/sidebar_gs.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_nk1 { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nk.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_nk2 { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nk2.jpg); background-position: bottom right; background-repeat:no-repeat;}
+.side_nk3 { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nk3.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_nk4 { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nk4.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_jc { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_jc.jpg); background-position:bottom right; background-repeat:no-repeat;}
+.side_gs { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_gs.jpg); background-position:bottom right; background-repeat:no-repeat;}
 
 
 
@@ -263,19 +271,19 @@ label.field { display:block;}
 #actnow_content_box { width:550px; margin-bottom:20px; }
 
 #act_options li { margin:0 0 10px 0; padding:5px; list-style:square;}
-.side_actnow {  background:url(http://assets.publicequalsonline.com/media/images/sidebar_peo_circle.png); background-position:550px 200px; background-repeat:no-repeat; }
+.side_actnow {  background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_peo_circle.png); background-position:550px 200px; background-repeat:no-repeat; }
 
 #actnow_pledge { margin-bottom:30px; margin-left:30px;}
 
 /* DONATE*/
 #donate_content_box { width:550px; margin-bottom:20px; }
 #donate_box { width:250px; background-color:#ffffff; margin-right:auto; margin-left:auto;}
-.side_donate { background:url(http://assets.publicequalsonline.com/media/images/donate_tag.jpg); background-position:right 100px; background-repeat:no-repeat; }
+.side_donate { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/donate_tag.jpg); background-position:right 100px; background-repeat:no-repeat; }
 
 
 /* ERROR */
 #error_content_box {float:left; width:500px;}
-.side_error { background:url(http://assets.publicequalsonline.com/media/images/sidebar_nm.jpg); background-position:right 100px; background-repeat:no-repeat; }
+.side_error { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nm.jpg); background-position:right 100px; background-repeat:no-repeat; }
 #error_image { margin-left:550px;}
 
 #error_list li { font-size:20px; list-style-type:none; padding:5px; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px;}
@@ -309,8 +317,8 @@ label.field { display:block;}
 
 #sflogo_sprite{ width: 105px;}	
 #sflogo_sprite a {float: left; width: 105px; height: 50px; display: block; }
-a#sfsprite { background: url('http://assets.publicequalsonline.com/media/images/sf_logo_sprite.png') 0px 0px no-repeat; }
-a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/images/sf_logo_sprite.png') 0px -50px no-repeat; }
+a#sfsprite { background: url('http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sf_logo_sprite.png') 0px 0px no-repeat; }
+a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sf_logo_sprite.png') 0px -50px no-repeat; }
 
 #footer_box { margin-bottom:100px;}
 
@@ -329,7 +337,7 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/i
 
 #main_nav li { margin:0; padding:0; height:74px; width:320px; list-style:none;  border-bottom:1px solid #ffffff;}
 
-#main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com/media/images/peo_right_nav_sprite2.png'); background-repeat:no-repeat;  border-bottom:1px solid #ffffff;}
+#main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_right_nav_sprite2.png'); background-repeat:no-repeat;  border-bottom:1px solid #ffffff;}
 
 #main_nav li a.option_1 {background-position:0px 0px; display:block;}
 #main_nav li a:hover.option_1 {background-position:0px -300px;}
@@ -351,17 +359,17 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/i
 
 #front_event_header { margin-top:30px; margin-left:20px;}
 
-#front_carousel_pledge { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px; background-repeat:no-repeat;}
 
-#front_carousel_pledge_1 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_2 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge2.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_3 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge3.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_4 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge4.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_5 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge5.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_6 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge6.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_7 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge7.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_8 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge8.jpg); width:629px; height:299px; background-repeat:no-repeat;}
-#front_carousel_pledge_9 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com/media/images/feature_bg_pledge9.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_1 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_2 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge2.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_3 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge3.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_4 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge4.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_5 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge5.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_6 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge6.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_7 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge7.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_8 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge8.jpg); width:629px; height:299px; background-repeat:no-repeat;}
+#front_carousel_pledge_9 { padding:20px 20px 10px 20px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/feature_bg_pledge9.jpg); width:629px; height:299px; background-repeat:no-repeat;}
 
 
 
@@ -395,7 +403,7 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com/media/i
 
 
 /* WRAPPER STUFF */
-#hor_dot_bottom_wrapper { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
+#hor_dot_bottom_wrapper { margin-top:10px; height:10px; background-image:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/dotted.png); background-repeat:repeat-x; position:top;}
 #wrapper_sidebar { }
 #contentpage_wrapper { margin:20px 0 20px 10px;}
 
