@@ -14,19 +14,23 @@
 <div class="column span-12">
 		<div id="contentpage">
 
-
         <div style="border:1px solid #000000;width:64px; height:64px; float:left;">{% gravatar p_user.email %}</div>
-		<div style="margin-left:80px;">
+		<div style="margin-left:90px;">
             {% if p_user.first_name %}
              	<h3>{{p_user.first_name}}</h3>
             {% else %}
               	<h3>{{p_user.username}}</h3>
             {% endif %}
 
+			{% ifequal user.id p_user.id %}
+                <a href="{% url edit_profile %}">(edit profile)</a>
+            {% endifequal %}
+
+
             {{p_user.profile.get_role_display|safe}}
     		<ul>
-				<li>Website:<a class="url" rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></li>
-				<li>Location:{{p_user.profile.location|default:"n/a"}</li>
+				<li>Website: <a class="url" rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></li>
+				<li>Location: {{p_user.profile.location|default:"n/a"}</li>
 				<li><p>{{p_user.profile.about}}</p></li>
 			</ul>
 			</div>
