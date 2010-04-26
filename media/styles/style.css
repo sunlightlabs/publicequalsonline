@@ -19,6 +19,12 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 .edit { float:right;}
 .edit_this { font-size:10px; font-family:"arial","helvetica",sans-serif;}
 
+/* tables? */
+
+tr .titles { background-color:#f0f0f0;}
+
+
+
 /* front page */
 #stripe { background-color:#76a050; margin:0 0 15px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
@@ -278,6 +284,14 @@ label.field { display:block;}
 #generic_form { margin:0; padding:0;}
 #generic_form li { list-style:none; }
 #generic_form label {display:block;}
+
+#id_message { width:400px; height:50px;}
+
+#event_interested { border:1px solid #c6c6c6; background-color:#f0f0f0; padding:20px; margin-right:100px; }
+
+#event_attending { margin:0; padding:0;}
+#event_attending li { list-style:none; padding:10px; border-bottom:1px solid #c6c6c6;}
+
 
 /* ACT NOW */
 #actnow_content_box { width:550px; margin-bottom:20px; }
