@@ -1,102 +1,110 @@
 {% extends "events/base.html" %}
+{% load blog %}
 {% load people %}
 
-{% block title %}{{block.super}} - {{event}}{% endblock title %}
+{% block title %}{{block.super}}{{event}}{% endblock title %}
 
 {% block body %}
-<div class="module vevent">
-    <div id="eventDetail_Title" class="contentHeader">
-        <h2 class="summary {% ifequal event.creator user %}addedEvent{% endifequal %}">{{event}}</h2>
-        {% ifequal event.creator user %}
-            <a class="projectEdit" href="{% url edit_event event.id %}">edit event</a>
-        {% endifequal %}
-        <div class="clear"></div>
-    </div>
-    <div id="eventDetails" class="module">
-        <dl class="eventAuthorMetadata">
-            <dt>This event was added by</dt>
-            <dd><a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a></dd>
-        </dl>
-        <div id="eventMetaData">
-            {% if finished %}
-            <p class="tip">This event has already taken place.</p>
-            {% endif %}
-            <dl>
-                <dt>Start Date:</dt>
-                <dd>
-                    <abbr class="dtstart" title="{{ event.start_date.isoformat }}">
+<div class="column span-16">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="summary {% ifequal event.creator user %}addedEvent{% endifequal %}">{{event}} <sup><span class="edit_this"><a class="projectEdit" href="{% url edit_event event.id %}">(edit this event)</a></sup></span></h2>
+        	
+        
+    	
+            <p>This event was added by <a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a> {% ifequal event.creator user %}
+            
+        	{% endifequal %}</p>
+        
+            	{% if finished %}
+            	<p>This event has already taken place.</p>
+            	{% endif %}
+            	<ul>
+				<li>Start Date: 
+						<abbr class="dtstart" title="{{ event.start_date.isoformat }}">
                         {{ event.start_date|date}}
-                    </abbr>
-                </dd>
+                    	</abbr>
+					</li>
+					<li>
 
-                <dt>End Date:</dt>
-                <dd>
+                End Date:
                     <abbr class="dtend" title="{{ event.end_date.isoformat }}">
                         {{ event.end_date|date}}
                     </abbr>
-                </dd>
-                <div class="clear"></div>
-
-                <dt class="eventLocation">Location:</dt>
-                <dd class="location eventLocation">{{ event.location }}</dd>
-
-                <dt>URL:</dt>
-                <dd class="url">{{ event.url|urlize }}</dd>
-
+                </li>
+				
+				<li>	Location:{{ event.location }}</li>
+				{% if event.url %}
+				<li>URL:{{ event.url|urlize }}</li>
+				{% else %}
+				&nbsp;
+				{% endif %}	
+					
                 {% with event.related_projects.all as projects %}
                 {% if projects %}
-                    <dt class="relatedProjects">Related Projects:</dt>
+                    Related Projects:
                     {% for project in projects %}
-                        <dd class="project"><a href="{{project.get_absolute_url}}">{{project}}</a></dd>
+                       <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
                     {% endfor %}
                 {% endif %}
                 {% endwith %}
-            </dl>
-            <div class="clear"></div>
-        </div>
-        <span class="description">{{ event.description }}</span>
+				</ul>
+        
+		<span class="description">{{ event.description }}</span>
 
-        {% if not finished %}
-        {% with event.attendances.all as attendances %}
-        <div id="attend_event">
-            {% if attendances %}
-            <h3 id="attendeesTitle">Attendees</h3>
-            <ul id="attendeeList">
-                {% for att in attendances %}
-                <li>
-                    <dl>
-                        <dt>Photo</dt>
-                        <dd>Check labs code.</dd>
-
-                        <dt>Name of Attendee</dt>
-                        <dd>check Labs code</dd>
-                
-                        <dt>Number of Guests</dt>
-                        <dd id="eventGuests">{% ifnotequal att.guests 0 %}+{{att.guests}}{% else %}&nbsp;{% endifnotequal %}</dd>
-                        
-                        <dt>Attendees Message</dt>
-                        <dd id="eventMessage">{{att.message}}</dd>
-                    </dl>
-                </li>
-                {% endfor %}
+		<h4>I'm Interested</h4>
+        {% if user.is_authenticated %}
+        <form id="joinProjectForm" method="POST" action=".">
+            <ul id="generic_form">
+                {{ form.as_ul }}
+                	<input type="submit" value="Join Us" />
+                </button>
             </ul>
-            {% endif %}
-            <h3>I'm Interested</h3>
-            {% if user.is_authenticated %}
-            <form id="joinProjectForm" method="POST" action=".">
-                <ul>
-                    {{ form.as_ul }}
-                    <button type="submit" class="signupBtn">
-                        <span>Sign Up</span>
-                    </button>
-                </ul>
-            </form>
-            {% else %}
-            Please <a href="{% url openid-register %}">Create an Account</a> to RSVP
-            {% endif %}
-        </div>
-        {% endwith %}
+        </form>
+        {% else %}
+        Please <a href="{% url openid-register %}">Create an Account</a> to RSVP
         {% endif %}
     </div>
+
+
+</div>
+</div>
+
+<div class="column span-8 last">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			
+    {% if not finished %}
+    {% with event.attendances.all as attendances %}
+
+
+        {% if attendances %}
+        <h4>Attendees</h4>
+        <ul>
+            {% for att in attendances %}
+		
+                 <li> <a href="{% url user_profile att.user.username %}">{% display_name att.user %}</a>
+					{% ifnotequal att.guests 0 %}(+{{att.guests}} guests) {% else %}&nbsp;{% endifnotequal %} {% if att.message %}
+					
+				"{{att.message}}"
+				
+				{% else %}
+					&nbsp;
+				{% endif %}
+				
+            	</li>
+            {% endfor %}
+        </ul>
+		    
+        {% endif %}
+{% endwith %}
+	    {% endif %}
+
+
+
+
+            
+    </div>
+</div>
 </div>
 {% endblock %}

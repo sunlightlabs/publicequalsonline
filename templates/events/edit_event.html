@@ -1,6 +1,8 @@
 {% extends "events/base.html" %}
 {% load media %}
 
+{% block title %} Add an Event {% endblock %}
+
 {% block extrahead %}
 <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
 {% css "ui.multiselect.css" %}
@@ -19,18 +21,20 @@
 {% endblock %}
 
 {% block body %}
-    <div class="contentHeader">
-        {% if event %}
-            <h2>Edit Your Event</h2>
-        {% else %}
-        <h2>Add An Event</h2>
-    </div>
-    <div class="module">
-        <p>COPY GOES HERE ABOUT EVENTS.</p>
-        <p id="eventDescription"> Use the form below to tell the community about your event. Then other people will be able to <a href="{% url event_search %}">search for your event</a> and sign up for it.</p>
+<div class="column span-24 last">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+		  {% if event %}
+	            <h2 class="page_header">Edit Your Event</h2>
+	        {% else %}
+				<h2 class="page_header">Add an Event</h2>
+
+
+       
+        <p> Use the form below to tell the community about your event.</p>
         {% endif %}
         <form id="eventForm" method="POST" action="." enctype="multipart/form-data">
-            <ul>
+            <ul id="generic_form">
                 {% for field in form %}
                     {% ifnotequal field.name "start_date" %}
                     {% ifnotequal field.name "end_date" %} 
@@ -54,11 +58,12 @@
                         </li>
                     {% endifnotequal %}
                 {% endfor %}
-                <button type="submit" class="saveBtn">
-                    <span>Save Changes</span>
+              <input type="submit" value="Add Your Event" />
+  
                 </button>
             </ul>
-            <div class="clear"></div>
         </form>
-    </div>
+		</div>
+	</div>
+</div>
 {% endblock %}

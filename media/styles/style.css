@@ -16,6 +16,8 @@ a.alertbox:visited { text-decoration:none; color:#4d4d4d; background-color:#d9d9
 a.alertbox:hover { text-decoration:none; color:#74341c; background-color:#c69683; border:1px solid #b17158;}
 a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d9;}
 
+.edit { float:right;}
+.edit_this { font-size:10px; font-family:"arial","helvetica",sans-serif;}
 
 /* front page */
 #stripe { background-color:#76a050; margin:0 0 15px 0; padding:0; height:3px;}
@@ -165,6 +167,7 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
 
 
+
 .page_header { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
 
 #sidebox { margin-top:20px;}
@@ -266,6 +269,15 @@ label.field { display:block;}
 #events_content_box { width:550px; margin-bottom:20px; }
 #map_wrap { padding:15px; border:1px solid #c6c6c6; background-color:#f4f4f4;}
 #map_container { border:1px solid #4d4d4d; margin:auto;}
+
+#upcoming_events { background-color:#ffffff;}
+
+#events { margin:0; padding:0; }
+#events li { list-style:none; padding:10px; border-bottom:1px solid #c6c6c6;}
+
+#generic_form { margin:0; padding:0;}
+#generic_form li { list-style:none; }
+#generic_form label {display:block;}
 
 /* ACT NOW */
 #actnow_content_box { width:550px; margin-bottom:20px; }
@@ -470,3 +482,25 @@ div#searchContent, div#siteSearchContent{ background: #f0f0e5; -moz-border-radiu
 form#searchForm li{ float: left; margin-right: 20px;}
 form#searchForm label{ display: block; margin-bottom: 5px; font-weight: bold;}
 form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
+
+div#personPic { float: left;}
+div#personDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ float: left; font-weight: bold; margin-right: 8px; }
+div#personDetails dd a { float: left; border: none;}
+div#personDetails dl, div#eventDetails dl, dl.moderationMetadata{ line-height: 25px; margin-bottom: 20px;}
+div#eventDetails dt{ width: 110px;}
+dl.moderationMetadata dt{ width: 85px;}
+div#eventDetails dd.project { float: none; margin-left: 118px;}
+
+div#personDetails { margin-left: 85px; background: url(../images/line_space_short.png) bottom left no-repeat; padding-bottom: 1px; margin-bottom: 25px;}
+div#personDetails h2 { float: left;}
+div#personProject { float: left; margin-left: 85px; width: 285px; margin-right: 20px;}
+div#sunlightPost{ margin-left: 395px;}
+dd#userWebsite a, div#eventDetails dd, dl.moderationMetadata dd{ width: 200px; margin-right: 20px;}
+dl.moderationMetadata dd { width: 223px;}
+div#eventDetails dd, dl.moderationMetadata dd { float: left; margin-bottom: 2px;}
+div#userDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ padding-top: 1px;}
+dl.moderationMetadata dd { padding-bottom: 2px;}
+dl.moderationMetadata dd#ideaReason { width: 550px;}
+
+
+ul#attendeeList dd { line-height: 20px;}
