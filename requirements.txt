@@ -15,6 +15,9 @@ feedparser
 -e git://github.com/leah/python-oauth.git#egg=oauth
 -e git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook
 -e git://github.com/openid/python-openid.git#egg=python-openid
+
+
+# github version of social registration wouldn't give us .2, so we opted for pypi.
 #-e git://github.com/flashingpumpkin/django-socialregistration.git#egg=django-socialregistration==0.2
 
 django-socialregistration==0.2
