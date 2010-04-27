@@ -19,6 +19,11 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 .edit { float:right;}
 .edit_this { font-size:10px; font-family:"arial","helvetica",sans-serif;}
 
+
+.errorlist li { font-size: 95%; color: #de4205; font-style: oblique;}
+
+
+
 /* tables? */
 
 tr .titles { background-color:#f0f0f0;}
