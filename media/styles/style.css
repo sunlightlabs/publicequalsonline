@@ -439,7 +439,61 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #contentpage_wrapper { margin:20px 0 20px 10px;}
 
 
-/* STUFF FOR ANTHILL */
+/* DEFAULT FORM STUFF */
+#default_form { margin:0; padding:0;}
+#default_form input {  font-size:18px; }
+#default_form li { list-style:none; margin:0; padding-bottom:10px;}
+#default_form label { width:150px; display:block; float:left; padding-top:5px; font-size:18px;}
+#default_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:80%; font-size:14px;}
+
+#default_form .required, .button { 	
+	width:200px;
+	border:1px solid #999;
+	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+	margin:0;
+	padding:5px;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+#reg .button {
+
+	width:auto;
+	text-align:center;
+	background: #b1d096;
+	background: -webkit-gradient(linear, left top, left 25, from(#b1d096), color-stop(6%, #efefef), to(#b1d096));
+	background: -moz-linear-gradient(top, #b1d096, #efefef 2px, #b1d096 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+}
+#reg .button:hover, #reg .button:focus { background:#98b87c;}
+
+
+#default_form .required:hover,#default_form .required:hover, #default_form .button:hover, #default_form .button:hover
+{
+border-color: #76a050;
+background:#dde7d3;
+
+}
+
+#reg { margin:20px 20px 50px 30px;}
+
+#reg .button_right {padding-left:150px;}
+
+
+/*forms*/
+#signin { margin-bottom:30px;}
+#signin li { list-style:none; margin:0; padding-bottom:10px;}
+
+#event_simple_search_form input {  font-size:18px; }
+
+
+
+/* Ali's STUFF FOR ANTHILL */
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
