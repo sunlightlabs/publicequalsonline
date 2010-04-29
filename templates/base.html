@@ -81,11 +81,17 @@
 			<div id="logo_topleft"><a href="/"><h1 class="technique-three">Public Equals Online</h1></a></div>
 		</div>
 		<div class="column span-12 last">
+			{% if user.is_authenticated %}
+			&nbsp;
+			{% else %}
+			
 			<div id="joinbox">
 				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
 				<br />
 				<a href="/accounts/login/" class="get_in_here">SIGN IN</a> | <a href="/accounts/register/" class="get_in_here">GET AN ACCOUNT</a>
 			</div>
+				{% endif %}
+			
 		</div>		
 	</div>
 
