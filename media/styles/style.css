@@ -20,7 +20,8 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 .edit_this { font-size:10px; font-family:"arial","helvetica",sans-serif;}
 
 
-.errorlist li { font-size: 95%; color: #de4205; font-style: oblique;}
+.errorlist ul { margin:0; padding:0;}
+.errorlist li {color: #de4205; font-style: oblique; margin:0; }
 
 
 
@@ -174,6 +175,9 @@ a.get_in_here:active { color:#3465c0; text-decoration:none;}
 #flat_contentpage { margin-bottom:50px;}
 #flat_contentpage h3 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:18px; text-transform:uppercase; margin:0 0 10px 0;}
 #flat_contentpage h2 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
+
+#sidebar_space { margin-top:60px; margin-left:20px;}
+#sidebar_space p { font-size:15px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; line-height:22px;}
 
 
 
@@ -440,18 +444,85 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
 
 /* DEFAULT FORM STUFF */
-#default_form { margin:0; padding:0;}
-#default_form input {  font-size:18px; }
-#default_form li { list-style:none; margin:0; padding-bottom:10px;}
-#default_form label { width:150px; display:block; float:left; padding-top:5px; font-size:18px;}
-#default_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:80%; font-size:14px;}
+#form_ul { margin:0; padding:0;}
+#form_ul li { margin:0; padding:0;}
 
-#default_form .required, .button { 	
-	width:200px;
+
+#registration_form input { font-size:16px; padding:3px;}
+#registration_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+#registration_form li { list-style:none; margin:0 0 0 50px; padding:0 0 10px 0; }
+#registration_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:50%; font-size:14px;
+    border:1px solid #999;
+	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+    background: #fff;
+	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    
+    }
+
+
+    #login_form input { font-size:16px; padding:3px;}
+    #login_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+    #login_form li { list-style:none; margin:0 0 0 0; padding:0 0 10px 0; }
+    #login_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:90%; font-size:14px;
+        border:1px solid #999;
+    	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+        background: #fff;
+    	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+    	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+    	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#event_form input { font-size:16px; padding:3px;}
+#event_form .button { 
+    border:1px solid #999;
+	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+	margin:0;
+	padding:5px 20px 5px 20px;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    font-size:14px; }
+
+
+
+
+    #default_form { margin:0; padding:0;}
+    #default_form input {  font-size:18px; padding:3px;}
+    #default_form li { list-style:none; margin:0; padding:0 0 10px 0; }
+    #default_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+    #default_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:80%; font-size:14px;}
+
+
+
+#unused .button { 	
+
 	border:1px solid #999;
 	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
 	margin:0;
-	padding:5px;
+	padding:5px 20px 5px 20px;
 	background: #fff;
 	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
 	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
@@ -473,7 +544,7 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #reg .button:hover, #reg .button:focus { background:#98b87c;}
 
 
-#default_form .required:hover,#default_form .required:hover, #default_form .button:hover, #default_form .button:hover
+#default_form .button:hover, #default_form .button:hover
 {
 border-color: #76a050;
 background:#dde7d3;

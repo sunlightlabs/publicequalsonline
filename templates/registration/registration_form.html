@@ -2,27 +2,30 @@
 {% load i18n %}
 {% load facebook_tags %}
 {% load twitter_tags %}
+
+{% block title %}Register{% endblock %}
+
 {% block body %}
 
 
 <div class="column span-24">
 	<div id="contentpage">
-		<h3 class="page_header">Create an Account</h3>
-	</div>
-</div>	
-
-<div class="column span-12">	
-		<form method="post" action="." id="reg">
-			<ul id="default_form">	
+		<div id="flat_contentpage">
+		<h2 class="page_header">Create an Account</h2>
+	
+		<form method="post" action="." id="registration_form">
+			<ul id="form_ul">	
 				{{ form.as_ul }}
+				
+			<li><input type="submit" value="{% trans 'Create Your Account' %}" class="button"/></li>	
+				
 			</ul>
-			<div class="button_right"><input type="submit" value="{% trans 'Create an Account' %}" class="button right"/></div>
+	
 		</form>
+	</div>
+	</div>
 </div>
 
-<div class="column span-12 last">
-	<h4 class="goudy">Something here about why you are creating an account.  The importance of joining groups and attending events.</h4>
-</div>
 	
 		
 {% endblock %}

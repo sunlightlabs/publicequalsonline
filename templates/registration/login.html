@@ -11,13 +11,12 @@
 	<div id="contentpage">
 		<div id="flat_contentpage">
 				<h2 class="page_header">Sign in</h2>
-				<form method="post" action="." id="default_form">
-					<ul>
+				<form method="post" action="." id="login_form">
+					<ul id="form_ul">
 					{{ form.as_ul }}
-					
   					<li><input type="submit" value="{% trans 'Sign in to Public=Online' %}" class="button" /></li>
   					<li><input type="hidden" name="next" value="{{ next }}" /></li>
-				</ul>	
+					</ul>	
 				</form>
 				
 				
@@ -31,7 +30,7 @@
 </div>
 
 <div class="column span-12 last">
-	<div id="contentpage">	
+	<div id="sidebar_space">	
 	
 						<p>{% trans "Don't have an account yet" %}? <a href="{% url registration_register %}">{% trans "Sign up" %}</a>!</p>
 	

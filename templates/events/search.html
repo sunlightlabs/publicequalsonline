@@ -22,11 +22,11 @@
 				<p>Across the nation, bloggers, activists, web developers, technologists and more are coming together to work toward greater government transparency in our city halls, state legislatures and in Washington, D.C.</p><p> This is the portal to find out where and how you can make government more open. Don’t see an event to attend in your area? Don’t see an activity you’d like to do? <a href="{% url new_event %}">Plan an event for your local community</a>. Or check back regularly to see what new events will be taking place in your community.
 					</p>
 					
-			<h4 class="subhead_lite">Search for an Event</h4>
-			<form id="searchForm" method="GET" action="." name="event_simple_search_form" id="event_simple_search_form">
+			<form id="event_form" method="GET" action="." name="event_simple_search_form">
 				<fieldset>
-			 {{form.location.label_tag}} {{form.location}}
-			<input type="submit" value="Find Events" />
+			 		<input type="text" name="location" id="id_location" value="City, State or Zipcode" size="30" />
+			
+			<input type="submit" value="Find Local Events" class="button" />
 			</fieldset>
 			</form>
 			</div>
