@@ -38,10 +38,7 @@ thisfield.value = defaulttext;
 					
 			<form id="event_form" method="GET" action="." name="event_simple_search_form">
 				<fieldset>
-					
-					
-					
-			 		<input type="text" name="location" value="City, State or Zipcode" id="id_location" size="30" onclick="clickclear(this, 'City, State or Zipcode')" onblur="clickrecall(this,'City, State or Zipcode')"/>
+				<input type="text" name="location" value="City, State or Zipcode" id="id_location" size="30" onclick="clickclear(this, 'City, State or Zipcode')" onblur="clickrecall(this,'City, State or Zipcode')"/>
 			
 			<input type="hidden" name="name">
 			<input type="hidden" name="location_range" value="50">
@@ -53,7 +50,7 @@ thisfield.value = defaulttext;
 
 {% if searched %}
 <div id="events_results">
-<h3 class="goudy">{{search_results|length}} Events Found {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h3>
+<h4 class="goudy">{{search_results|length}} Events Found {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h4>
     <table id="events_table">
         <thead>
             <tr id="titles">
