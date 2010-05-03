@@ -18,13 +18,15 @@
 			
             
         
-        
+
 		<span class="description">{{ event.description }}</span>
 
             	{% if finished %}
             	<p>This event has already taken place.</p>
             	{% endif %}
-            	<ul>
+
+  		<p class="subtitle">Location: <a href="/events/?location={{ event.location }}&name=&location_range=50">{{ event.location }}</a></p>      
+            	<ul id="event_detail">
 				<li>Start Date: 
 						<abbr class="dtstart" title="{{ event.start_date.isoformat }}">
                         {{ event.start_date|date}}
@@ -38,7 +40,7 @@
                     </abbr>
                 </li>
 				
-				<li>	Location: <a href="/events/?location={{ event.location }}&name=&location_range=50">{{ event.location }}</a></li>
+				
 				{% if event.url %}
 				<li>URL:{{ event.url|urlize }}</li>
 				{% else %}
@@ -73,7 +75,7 @@
         </form>
         {% else %}
 		<h4>Interested in attending this event?</h4>
-        Please <a href="/accounts/login/">Create an Account</a> to RSVP
+        Please <a href="/accounts/login/">sign in</a> or <a href="/accounts/register/">create an account</a> to RSVP
         {% endif %}
 </div>
 

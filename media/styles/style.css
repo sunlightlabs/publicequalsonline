@@ -301,6 +301,11 @@ label.field { display:block;}
 #event_attending { margin:0; padding:0;}
 #event_attending li { list-style:none; padding:10px; border-bottom:1px solid #c6c6c6;}
 
+#event_detail { margin:0 0 20px 20px; padding:0;}
+#event_detail li { list-style:none; padding-bottom:10px; float:left; padding-right:40px;}
+
+.subtitle p { font-size:10px;}
+
 
 /* ACT NOW */
 #actnow_content_box { width:550px; margin-bottom:20px; }
@@ -448,11 +453,11 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #project_summary_box_old { background-color:#b0cf95; width:260px; height:150px; float:left; margin:0 20px 10px 0; padding:10px;}
 
 #project_summary_box { margin:0; padding:0;}
-#project_summary_box li { background-color:#dce6d3; width:260px; height:150px; float:left; margin:0 20px 10px 0; padding:10px; display:block; list-style:none;}
+#project_summary_box li { background-color:#dce6d3; width:260px; height:160px; float:left; margin:0 20px 20px 0; padding:10px; display:block; list-style:none;}
 
 #project_summary_box li:hover { background-color:#bbd0a8;}
 
-#project_summary_summary { overflow:hidden; height:120px;}
+#project_summary_summary { overflow:hidden;}
 
 #project_summary_box h4 { font-size:18px; font-weight:bold; margin:0; padding:0; color:#59783c;}
 
@@ -528,6 +533,21 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
             }
 
 
+.buttonEventSearch { 
+                width:200px;
+                border:1px solid #999;
+            	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+
+            	padding:5px 20px 5px 20px;
+            	background: #fff;
+            	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+            	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+            	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+            	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+            	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+                font-size:14px; }
+
+
 
 #event_form input { font-size:16px; padding:3px;}
 #event_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
@@ -548,12 +568,10 @@ display:block; margin-top:30px; margin-right:auto; margin-left:150px; width:400p
 
 
 #event_form #startTitle {  margin-bottom:30px; float:none;}
-
 #event_form #endTitle {  margin-bottom:30px; float:none;}
 .timeDetails { margin:20px 0 0 0;}
 
 #event_form #timebox { margin-top:20px;}
-
 #event_form #timebox label { width:50px; display:block; margin-left:50px;}
 
 
@@ -610,7 +628,7 @@ background:#dde7d3;
 #projectMembers th {background-color:#ecdcd5;}
 #events_table th {background-color:#ecdcd5;}
 
-tr .even { background-color:#ebdbd4; }
+tr.even td { background-color:#ebdbd4; }
 
 
 /*forms*/
