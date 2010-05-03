@@ -445,19 +445,36 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 /* PROJECT PAGES */
 
 #project_list_box { margin:20px 0 50px 20px;}
-#project_summary_box { background-color:#ececec; width:280px; height:150px; float:left; margin:0 20px 10px 0; padding:10px;}
+#project_summary_box_old { background-color:#b0cf95; width:260px; height:150px; float:left; margin:0 20px 10px 0; padding:10px;}
 
-#project_summary_summary { overflow:hidden; height:110px;}
+#project_summary_box { margin:0; padding:0;}
+#project_summary_box li { background-color:#dce6d3; width:260px; height:150px; float:left; margin:0 20px 10px 0; padding:10px; display:block; list-style:none;}
 
-#project_summary_box h4 { font-size:18px; font-weight:bold; margin:0; padding:0;}
+#project_summary_box li:hover { background-color:#bbd0a8;}
+
+#project_summary_summary { overflow:hidden; height:120px;}
+
+#project_summary_box h4 { font-size:18px; font-weight:bold; margin:0; padding:0; color:#59783c;}
 
 #project_summary_box a:link { text-decoration:none; color:#000;}
 #project_summary_box a:visited { text-decoration:none; color:#000;}
 #project_summary_box a:hover { text-decoration:none; color:#000;}
 #project_summary_box a:active { text-decoration:none; color:#000;}
 
+.project_summary_date { color:#648844; font-size:10px;}
 
 
+
+
+
+
+
+#project_meta_info { margin-bottom:20px;}
+
+#project_tags { margin:0; padding:0;}
+
+#project_tags li { list-style:none; float:left; margin:0; padding:0;}
+#project_links li { }
 
 /* DEFAULT FORM STUFF */
 #form_ul { margin:0; padding:0;}
@@ -495,10 +512,10 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
         }
 
-        #project_form input { font-size:16px; padding:3px;}
-        #project_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+        #project_form input, select { font-size:16px; padding:3px;}
+        #project_form label { width:250px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
         #project_form li { list-style:none; margin:0 0 0 0; padding:0 0 10px 0; }
-        #project_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:90%; font-size:14px;
+        #project_form .buttonProject { display:block; margin-top:50px; margin-right:auto; margin-left:250px; width:400px; font-size:14px;
             border:1px solid #999;
         	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
             background: #fff;
@@ -512,21 +529,14 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
 
 
-
-
-
-
-
-
-
-
-
-
 #event_form input { font-size:16px; padding:3px;}
-#event_form .button { 
+#event_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+#event_form li { list-style:none; margin:0 0 0 0; padding:0 0 10px 0; }
+#event_form .buttonEvent { 
+display:block; margin-top:30px; margin-right:auto; margin-left:150px; width:400px;
     border:1px solid #999;
 	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
-	margin:0;
+
 	padding:5px 20px 5px 20px;
 	background: #fff;
 	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
@@ -537,12 +547,20 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
     font-size:14px; }
 
 
+#event_form #startTitle {  margin-bottom:30px; float:none;}
+
+#event_form #endTitle {  margin-bottom:30px; float:none;}
+.timeDetails { margin:20px 0 0 0;}
+
+#event_form #timebox { margin-top:20px;}
+
+#event_form #timebox label { width:50px; display:block; margin-left:50px;}
 
 
     #default_form { margin:0; padding:0;}
     #default_form input {  font-size:18px; padding:3px;}
     #default_form li { list-style:none; margin:0; padding:0 0 10px 0; }
-    #default_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+    /* #default_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;} */
     #default_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:80%; font-size:14px;}
 
 
@@ -586,6 +604,12 @@ background:#dde7d3;
 #reg .button_right {padding-left:150px;}
 
 
+/* tables */
+#linksTable th {background-color:#ecdcd5;}
+#feedstable th {background-color:#ecdcd5;}
+#projectMembers th {background-color:#ecdcd5;}
+
+
 /*forms*/
 #signin { margin-bottom:30px;}
 #signin li { list-style:none; margin:0; padding-bottom:10px;}
@@ -594,7 +618,7 @@ background:#dde7d3;
 
 
 
-/* Ali's STUFF FOR ANTHILL */
+/* Ali's STUFF FOR ANTHILL. Remove eventually. */
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(http://assets.sunlightlabs.com.s3.amazonaws.com/site3/images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
@@ -678,3 +702,12 @@ dl.moderationMetadata dd#ideaReason { width: 550px;}
 
 
 ul#attendeeList dd { line-height: 20px;}
+
+
+
+/*HIDING STUFF FROM USERS */
+#hidefeedform { display:none;}
+
+
+
+

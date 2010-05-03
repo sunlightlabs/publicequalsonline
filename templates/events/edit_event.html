@@ -28,7 +28,7 @@
        
         <p> Use the form below to tell the community about your event.</p>
         {% endif %}
-        <form id="eventForm" method="POST" action="." enctype="multipart/form-data">
+        <form id="event_form" method="POST" action="." enctype="multipart/form-data">
             <ul id="generic_form">
                 {% for field in form %}
                     {% ifnotequal field.name "start_date" %}
@@ -40,23 +40,24 @@
 
                         <li>
                             {{ field.errors }}
-                            <label id="endTitle" >End</label>
-                            <ul class="timeDetails">{{ field }}</ul>
+                            <label id="endTitle">Event End</label>
+                            <ul class="timeDetails" id="timebox">{{ field }}</ul>
                         </li>
 
                         {% endifnotequal %}
                     {% else %} {# start_date #}
                         <li>
                         {{ field.errors }}
-                        <label id="startTitle">Start</label>
-                        <ul class="timeDetails"> {{ field }} </ul>
+                        <label id="startTitle">Event Start</label>
+                        <ul class="timeDetails" id="timebox"> {{ field }} </ul>
                         </li>
                     {% endifnotequal %}
                 {% endfor %}
-              <input type="submit" value="Add Your Event" />
-  
-                </button>
+
+				<li><input type="submit" value="Create Your Project" class="buttonEvent" /></li>
             </ul>
+
+
         </form>
 		</div>
 	</div>

@@ -5,57 +5,50 @@
 
 {% block body %}
 
-<div class="column span-24">
+<div class="column span-16">
 	<div id="contentpage">
 		<div id="flat_contentpage">
-
-    {% ifequal project.lead user %}
-		<h2 class="page_header">{{project.name}}</h2> <a href="{% url edit_project project.slug %}">edit project</a> | <a href="{% url all_projects %}">View All Projects</a>
-    {% else %}
-<h2 class="page_header">{{project.name}}</h3> 
-<p><a href="{% url all_projects %}">View All Projects</a></p>
-    {% endifequal %}
-	<p>{{project.description}}</p>
-
-        <dl class="entryMetadata">
-            {% if project.official %}
-			This project is funded by <a class="seperationBlock" class="seperationBlock" href="{% url official_projects %}">Sunlight</a>
-            {% endif %}
-
-			<p>Became a project on {{project.creation_date|date}}</p>
-
-            {% if project.idea %}
-            <p>Project began as an implementation of idea</p>
-            <p>"<a href="{{project.idea.get_absolute_url}}">{{project.idea}}</a>"</p>
-            {% endif %}
-
-            {% with project.related_events.future as events %}
-            {% if events %}
-                <p>Upcoming hackathons working on this project:</p>
-                {% for event in events %}
-                    <p><a href="{{event.get_absolute_url}}">{{event}}</a></p>
-                {% endfor %}
-            {% endif %}
-            {% endwith %}
-
-
-
+<h2 class="page_header">{{project.name}}</h2> 
+    
+<div id="project_meta_info">
         {% tags_for_object project as tags %}
-            <h4>Tags</h4>
-            <ul>
-                {% for tag in tags %}
-                <li><a href="{% url projects_tagged tag %}">{{tag}}</a></li>
+          <span>Tag(s):</span> 
+               {% for tag in tags %}
+                	<a href="{% url projects_tagged tag %}">{{tag}}</a>, 
                 {% endfor %}
-            </ul>
 
 
-            <ul>
+</div>
+
+	<p>{{project.description}}</p>
+	<p>Launched {{project.creation_date|date}}</p>
+
+	
+
+        
+
+
+<div id="project_meta_info">
+            <ul id="project_links">
                 {% for link in project.links.all %}
                 <li class="{{link.get_link_type_display}}_link">
                     <a title="{{link.get_link_type_display}}" href="{{link.url}}">{{link.name}}</a>
                 </li>
                 {% endfor %}
             </ul>
+</div>
+
+<div id="clear">&nbsp;</div>
+
+
+
+			{% ifequal project.lead user %}
+				<a href="{% url edit_project project.slug %}"><img src="/media/images/project_edit.png" border="0"></a> <a href="{% url all_projects %}"><img src="/media/images/projects_view.png" border="0"></a>
+			    {% else %}
+
+			<p><a href="{% url all_projects %}"><img src="/media/images/projects_view.png" border="0"></a></p>
+			    {% endifequal %}
+
 
 
         {% with project.asks.all as asks %}
@@ -75,6 +68,10 @@
         {% endwith %}
 	</div>
   </div>      
+</div>
+
+<div class="column span-8 last">
+&nbsp;
 </div>
 
 {% endblock %}

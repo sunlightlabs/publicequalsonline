@@ -13,6 +13,20 @@
 {% endblock %}
 
 {% block body %}
+<script type="text/javascript">
+function clickclear(thisfield, defaulttext) {
+if (thisfield.value == defaulttext) {
+thisfield.value = "";
+}
+}
+function clickrecall(thisfield, defaulttext) {
+if (thisfield.value == "") {
+thisfield.value = defaulttext;
+}
+}
+</script>
+
+
 <div class="column span-16 last">
 	<div id="contentpage">
 		<div id="flat_contentpage">
@@ -24,8 +38,13 @@
 					
 			<form id="event_form" method="GET" action="." name="event_simple_search_form">
 				<fieldset>
-			 		<input type="text" name="location" id="id_location" value="City, State or Zipcode" size="30" />
+					
+					
+					
+			 		<input type="text" name="location" value="City, State or Zipcode" id="id_location" size="30" onclick="clickclear(this, 'City, State or Zipcode')" onblur="clickrecall(this,'City, State or Zipcode')" />
 			
+			<input type="hidden" name="name">
+			<input type="hidden" name="location_range" value="50">
 			<input type="submit" value="Find Local Events" class="button" />
 			</fieldset>
 			</form>

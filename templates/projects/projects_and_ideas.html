@@ -8,8 +8,18 @@
 	<div id="contentpage">
     		<h2 class="page_header">Community Projects</h2>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
-    		<a href="/projects/new/">Create A New Project</a>
-			<a href="{% url all_projects %}">View All</a></p>
+    		<a href="/projects/new/">
+    			<img src="/media/images/project_start.png" border="0">
+    		</a>
+
+
+
+			<a href="{% url all_projects %}">
+				<img src="/media/images/projects_view.png" border="0">
+			</a>
+			
+			
+			</p>
 	</div>
 </div>
 
@@ -20,10 +30,12 @@
 <div class="column span-24">
 	<div id="project_list_box">
 		<p>These are some of the projects currently being worked on by the community.</p>
+		<ul id="project_summary_box">
     		{% for project in projects %}
-        	{% include "projects/project_summary.html" %}
+        		{% include "projects/project_summary.html" %}
     		{% endfor %}
-    	</p>
+    	</ul>
+		</p>
 	</div>
 	<div style="clear:both;">&nbsp;</div>
 	
