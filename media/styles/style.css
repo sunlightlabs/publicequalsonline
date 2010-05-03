@@ -20,8 +20,7 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 .edit_this { font-size:10px; font-family:"arial","helvetica",sans-serif;}
 
 
-.errorlist ul { margin:0; padding:0;}
-.errorlist li {color: #de4205; font-style: oblique; margin:0; }
+
 
 
 
@@ -731,4 +730,5 @@ ul#attendeeList dd { line-height: 20px;}
 
 
 
-
+.errorlist { margin:0; padding:0;}
+.errorlist li {color: #74341c; font-weight:bold;}
