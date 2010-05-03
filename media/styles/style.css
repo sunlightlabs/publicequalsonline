@@ -623,10 +623,10 @@ background:#dde7d3;
 
 
 /* tables */
-#linksTable th {background-color:#ecdcd5;}
-#feedstable th {background-color:#ecdcd5;}
-#projectMembers th {background-color:#ecdcd5;}
-#events_table th {background-color:#ecdcd5;}
+#linksTable th {background-color:#d9b9ad;}
+#feedstable th {background-color:#d9b9ad;}
+#projectMembers th {background-color:#d9b9ad;}
+#events_table th {background-color:#d9b9ad;}
 
 tr.even td { background-color:#ebdbd4; }
 
