@@ -1,7 +1,7 @@
 {% extends "brainstorm/base.html" %}
 
 {% block title %}
-Sunlight Labs: Create Project
+Public Equals Online: Create Project
 {% endblock title %}
 
 {% block extrahead %}
@@ -9,18 +9,21 @@ Sunlight Labs: Create Project
 {% endblock %}
 
 {% block body %}
-<div id="join_project" class="module">
-    <div id="createHeader"class="contentHeader">
-        <h2 class="space">Create A Project</h2>
-    </div>
-    <div class="module">
-        <form id="projectForm" method="POST" action=".">
-            {% include "projects/base_form.html" %}
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
 
-            <button type="submit" class="submitBtn">
-                <span>Submit</span>
-            </button>
+
+        <h2 class="space">Create A Project</h2>
+
+
+        <form  method="POST" action="." id="project_form">
+			<ul id="default_form">
+            {% include "projects/base_form.html" %}
+			<li><input type="submit" value="Create Project" class="button" /></li>
+			</ul>
         </form>
-    </div>
+    	</div>
+	</div>
 </div>
 {% endblock %}

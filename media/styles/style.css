@@ -442,6 +442,22 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #wrapper_sidebar { }
 #contentpage_wrapper { margin:20px 0 20px 10px;}
 
+/* PROJECT PAGES */
+
+#project_list_box { margin:20px 0 50px 20px;}
+#project_summary_box { background-color:#ececec; width:280px; height:150px; float:left; margin:0 20px 10px 0; padding:10px;}
+
+#project_summary_summary { overflow:hidden; height:110px;}
+
+#project_summary_box h4 { font-size:18px; font-weight:bold; margin:0; padding:0;}
+
+#project_summary_box a:link { text-decoration:none; color:#000;}
+#project_summary_box a:visited { text-decoration:none; color:#000;}
+#project_summary_box a:hover { text-decoration:none; color:#000;}
+#project_summary_box a:active { text-decoration:none; color:#000;}
+
+
+
 
 /* DEFAULT FORM STUFF */
 #form_ul { margin:0; padding:0;}
@@ -479,6 +495,20 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
         }
 
+        #project_form input { font-size:16px; padding:3px;}
+        #project_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+        #project_form li { list-style:none; margin:0 0 0 0; padding:0 0 10px 0; }
+        #project_form .button { margin-top:20px; margin-right:auto; margin-left:auto; width:90%; font-size:14px;
+            border:1px solid #999;
+        	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+            background: #fff;
+        	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+        	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+        	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+        	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+        	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+            }
 
 
 

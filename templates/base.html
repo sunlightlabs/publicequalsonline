@@ -60,7 +60,7 @@
 		<div class="column span-11 last">
 			<div id="account_corner" style="float:right;">
 			{% if user.is_authenticated %}
-			Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a>
+		&nbsp;
 			{% else %}
 			<!--<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>-->
 			<div id="social_reg_box">
@@ -87,7 +87,7 @@
 				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
 				<br />
 				{% if user.is_authenticated %}
-				&nbsp;
+				Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a>
 				{% else %}
 				<a href="/accounts/login/" class="get_in_here">SIGN IN</a> | <a href="/accounts/register/" class="get_in_here">GET AN ACCOUNT</a>
 			</div>
@@ -101,11 +101,10 @@
 
 	<div class="container">
 		<div class="column span-21">
-			<ul id="topnav">
-				<li><a href="/">HOME</li>			
+			<ul id="topnav">			
 				<li><a href="/actnow/">ACT NOW</a></li>
 				<li><a href="/events/">EVENTS</a></li>
-				<li><a href="/projects/">GET INVOLVED</a></li>				
+				<li><a href="/projects/">PROJECTS</a></li>				
 				<li><a href="/about/">ABOUT</a></li>
 				<li><a href="/logos/">SPREAD THE WORD</a></li>
 				<li><a href="http://wiki.publicequalsonline.com/">WIKI</a></li>

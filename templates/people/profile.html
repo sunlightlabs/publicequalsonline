@@ -5,21 +5,24 @@
 {% load projects %}
 {% load media %}
 
-{% block title %}{{block.super}} - {% display_name p_user %}{% endblock %}
+{% block title %}{% display_name p_user %}{% endblock %}
 
 
 
 {% block body %}
 
 <div class="column span-12">
-		<div id="contentpage">
-
-        <div style="border:1px solid #000000;width:64px; height:64px; float:left;">{% gravatar p_user.email %}</div>
-		<div style="margin-left:90px;">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="page_header">Community Member</h2>
+			
+			
+        	<div style="border:1px solid #000000;width:64px; height:64px; float:left;">{% gravatar p_user.email %}</div>
+			<div style="margin-left:90px;">
             {% if p_user.first_name %}
-             	<h3>{{p_user.first_name}}</h3>
+             	<h4>{{p_user.first_name}}</h4>
             {% else %}
-              	<h3>{{p_user.username}}</h3>
+              	<h4>{{p_user.username}}</h4>
             {% endif %}
 
 			{% ifequal user.id p_user.id %}
@@ -34,15 +37,15 @@
 				<li><p>{{p_user.profile.about}}</p></li>
 			</ul>
 			</div>
-
-
 		</div>
+	</div>
 </div>
 
 
 <div class="column span-12 last">
-		<div id="contentpage">
-<h3>{% possessive p_user %} Projects</h3>
+	<div id="contentpage">
+		<div id="sidebar_space">
+			<h4>{% possessive p_user %} Projects</h4>
         
                 <h4>Lead</h4>
                 {% if p_user.projects_lead_on.all %}
@@ -73,7 +76,8 @@
                     <p>{{p_user.first_name}} hasn't helped on any projects just yet.</p>
                 {% endif %}
                 {% endwith %}
- </div>
+		</div>
+	</div>
 </div>           
     
 {% endblock %}

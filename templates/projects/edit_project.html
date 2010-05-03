@@ -1,8 +1,6 @@
 {% extends "brainstorm/base.html" %}
 
-{% block title %}
-Sunlight Labs: Edit Project
-{% endblock title %}
+{% block title %}Edit Project{% endblock title %}
 
 {% block extrahead %} 
 {% include "projects/tags_js.html" %}
@@ -22,11 +20,11 @@ $(document).ready(function(){
 {% endblock %}
 
 {% block body %}
-<div id="join_project" class="module">
-    <div id="createHeader" class="contentHeader">
-        <h2>Editing Project {{project}}</h2>
-    </div>
-    <div class="module">
+<div class="column span-16">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="page_header">Edit a Project</h2>
+<h4>Editing {{project}}</h4>
         <form id="projectForm" method="POST" action=".">
             {% include "projects/base_form.html" %}
             {{ link_formset.management_form }}
@@ -126,33 +124,4 @@ $(document).ready(function(){
         </form>
     </div>
 </div>
-{% endblock %}
-
-{% block sidebar %}
-<h3>Ask For Help</h3>
-<div class="module">
-    <p class="tip">Let the community know what you need from them to make your project great.</p>
-    <form method="POST" action="{% url new_project_ask project.slug %}">
-        <textarea id="helpMessage" rows="5" cols="32" name="message" maxlength="200"></textarea>
-        <p class="charsRemaining">200 characters remaining</p>
-       <button type="submit" class="submitBtn" name="post">
-            <span>Submit</span>
-       </button>
-   </form>
-</div>
-<h3 class="space">Current Asks</h3>
-<div id="currentAsks" class="module">
-    <ul>
-        {% for ask in project.asks.all %}
-        <li>
-            <form action="{% url delete_ask ask.id %}" method="POST">
-                <button type="submit" value="Delete">X</button>
-             </form>
-             <p>{{ask}}</p>
-             <div class="clear"></div>
-         </li>
-         
-        {% endfor %}
-     </ul>
- </div>
 {% endblock %}

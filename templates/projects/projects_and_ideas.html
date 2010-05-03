@@ -1,18 +1,32 @@
 {% extends "brainstorm/base.html" %}
 
-{% block title %}Projects &amp; Ideas
-{% endblock title %}
+{% block title %}Projects{% endblock title %}
 
 {% block body %}
 
-    <h3 class="page_header">Community Projects</h3>
-    <a href="/projects/new/">Create A New Project</a>
+<div class="column span-16">
+	<div id="contentpage">
+    		<h2 class="page_header">Community Projects</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+    		<a href="/projects/new/">Create A New Project</a>
+			<a href="{% url all_projects %}">View All</a></p>
+	</div>
+</div>
 
-<div id="projects" class="module">
-    <p>These are active projects that are currently being worked on in the community.</p>
-    {% for project in projects %}
-        {% include "projects/project_summary.html" %}
-    {% endfor %}
-    	<p class="arrow"><a class ="viewAll" href="{% url all_projects %}">View All</a></p>
+<div class="column span-8 last">
+&nbsp;
+</div>
+
+<div class="column span-24">
+	<div id="project_list_box">
+		<p>These are some of the projects currently being worked on by the community.</p>
+    		{% for project in projects %}
+        	{% include "projects/project_summary.html" %}
+    		{% endfor %}
+    	</p>
+	</div>
+	<div style="clear:both;">&nbsp;</div>
+	
+	
 </div>
 {% endblock %}
