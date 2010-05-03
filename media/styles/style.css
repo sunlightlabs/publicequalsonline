@@ -610,6 +610,9 @@ background:#dde7d3;
 #projectMembers th {background-color:#ecdcd5;}
 #events_table th {background-color:#ecdcd5;}
 
+.even { background-color:#ebdbd4; }
+
+
 /*forms*/
 #signin { margin-bottom:30px;}
 #signin li { list-style:none; margin:0; padding-bottom:10px;}
