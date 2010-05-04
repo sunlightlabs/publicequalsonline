@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block content %}
+{% block body %}
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+				<h2 class="page_header">Activation</h2>
+
 
 {% if account %}
 
@@ -14,5 +19,9 @@
 <p>{% trans "Account activation failed" %}</p>
 
 {% endif %}
+
+		</div>
+	</div>
+</div>
 
 {% endblock %}

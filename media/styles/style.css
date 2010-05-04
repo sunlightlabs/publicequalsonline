@@ -582,8 +582,7 @@ display:block; margin-top:30px; margin-right:auto; margin-left:150px; width:400p
 
 
 
-#unused .button { 	
-
+#default_form .button { 	
 	border:1px solid #999;
 	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
 	margin:0;
@@ -595,6 +594,8 @@ display:block; margin-top:30px; margin-right:auto; margin-left:150px; width:400p
 	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 }
+
+
 
 #reg .button {
 
