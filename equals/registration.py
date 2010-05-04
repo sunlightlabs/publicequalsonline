@@ -7,7 +7,7 @@ from django.conf import settings
 
 class RegistrationForm(RegistrationFormPasswordConfirm):
     extra_required = ('email',)
-    email_opt_in = forms.BooleanField(label='Keep me posted about other Sunlight news and information', 
+    email_opt_in = forms.BooleanField(label='Keep me posted about Public=Online news and information', 
                                       required=False)
 
 class CustomRegistrationConsumer(RegistrationConsumer):

@@ -5,9 +5,7 @@
 {% load projects %}
 {% load media %}
 
-{% block title %}{% display_name p_user %}{% endblock %}
-
-
+{% block title %}Community Member: {% display_name p_user %}{% endblock %}
 
 {% block body %}
 
@@ -17,25 +15,50 @@
 			<h2 class="page_header">Community Member</h2>
 			
 			
-        	<div style="border:1px solid #000000;width:64px; height:64px; float:left;">{% gravatar p_user.email %}</div>
-			<div style="margin-left:90px;">
+        	<div id="gravatar">{% gravatar p_user.email %}</div>
+			
+			<div id="profile_box">
             {% if p_user.first_name %}
-             	<h4>{{p_user.first_name}}</h4>
+             	<h4 class="profile">{{p_user.first_name}}</h4>
             {% else %}
-              	<h4>{{p_user.username}}</h4>
+              	<h4 class="profile">{{p_user.username}}</h4>
             {% endif %}
 
-			{% ifequal user.id p_user.id %}
-                <a href="{% url edit_profile %}">(edit profile)</a>
-            {% endifequal %}
 
-
-            {{p_user.profile.get_role_display|safe}}
-    		<ul>
-				<li>Website: <a class="url" rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></li>
-				<li>Location: {{p_user.profile.location|default:"n/a"}}</li>
-				<li><p>{{p_user.profile.about}}</p></li>
+            
+    		<ul id="profile_meta">
+				<li>Status: {{p_user.profile.get_role_display|safe}}</li>
+				
+				{% if p_user.profile.url %}
+				<li>Site: <a class="url" rel="me" href="{{p_user.profile.url}}">URL</a></li>
+				{% endif %}
+					
+				{% if p_user.profile.twitter_id %}
+				<li>Twitter: <a href="http://www.twitter.com/{{p_user.profile.twitter_id}}">{{p_user.profile.twitter_id}}</a></li>	
+				{% endif %}
+				
+				{% if p_user.profile.location %}	
+				<li>Location: {{p_user.profile.location}}</li>
+				{% endif %}
+				
+				
+				{% if p_user.profile.about %}
+				<li>
+					<div id="profile_about">
+					<h4>About {% display_name p_user %}:</h4>
+					<p>{{p_user.profile.about}}</p>
+					</div>
+				</li>
+				{% endif %}
+				
+				
+			
 			</ul>
+			
+			{% ifequal user.id p_user.id %}
+                <a href="{% url edit_profile %}"><img src="/media/images/profile_edit.png"></a>
+            {% endifequal %}
+			
 			</div>
 		</div>
 	</div>
@@ -46,16 +69,17 @@
 	<div id="contentpage">
 		<div id="sidebar_space">
 			<h4>{% possessive p_user %} Projects</h4>
-        
-                <h4>Lead</h4>
+       
                 {% if p_user.projects_lead_on.all %}
                     <ul>
                     {% for project in p_user.projects_lead_on.all %}
-                    <li><a class="projectName" href="{{project.get_absolute_url}}">{{project}}</a>
+                    <li>
+						<a href="{{project.get_absolute_url}}">{{project}}</a>
+						
 
                     {# only show link if user==p_user==project.lead #}
                     {% ifequal user p_user %}
-                    {% ifequal user project.lead %}<a class="projectEdit" href="{% url edit_project project.slug %}">edit project</a>{% endifequal %}
+                    {% ifequal user project.lead %} (<a class="projectEdit" href="{% url edit_project project.slug %}">edit</a>){% endifequal %}
                     {% endifequal %}
                     </li>
                     {% endfor %}
@@ -64,16 +88,17 @@
                     <p>{{p_user.first_name}} hasn't lead any projects just yet.</p>
                 {% endif %}
             
-                <h4>Helped</h4>
+
                 {% with p_user.project_roles.active.select_related as helped_projects %}
                 {% if helped_projects %}
+                <h4>{% possessive p_user %} helped out with:</h4>
                 <ul>
                     {% for r in helped_projects %}
                         <li><a href="{{r.project.get_absolute_url}}">{{r.project}}</a></li>
                     {% endfor %}
                 </ul>
                 {% else %}
-                    <p>{{p_user.first_name}} hasn't helped on any projects just yet.</p>
+                    
                 {% endif %}
                 {% endwith %}
 		</div>

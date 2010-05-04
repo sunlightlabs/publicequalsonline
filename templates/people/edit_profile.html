@@ -3,70 +3,38 @@
 {% load media %}
 {% load tagging_tags %}
 
-{% block title %}
-{{block.super}} - Edit Profile
+{% block title %} - Edit Profile
 {% endblock %}
 
-{% block extrahead %} 
-{% js "fancytags.js" %}
-<script type="text/javascript">
-    $(document).ready(function() {
-        var ftctl = fancytags('#id_skills');
 
-        $('.common_tag a').click(function(event) {
-            event.preventDefault();
-            ftctl.add_tag(($(this).text()));
-        });
-
-        $('#show_common_tags').click(function(event) {
-            event.preventDefault();
-            $('div#commonTags_wrapper').toggle();
-        });
-        $('div#commonTags_wrapper').hide();
-    });
-</script>
-{% endblock %}
 
 {% block body %}
-<div class="module">
-    <div id="headerTip" class="contentHeader">
-        <h2 id="accountHeader">Account Information</h2>
-        <a id="accountProfile" href="{{user.get_absolute_url}}"> (view profile) </a>
-    </div>
-    <div class="module">
-        <p class="tip">Let the Public=Online community know more about you.</p>
-        <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
-            <ul>
-		<li><label>Current Avatar</label>{% gravatar user.email %}</li>
-		<p class="tip">To edit your avatar visit <a href="http://gravatar.com">gravatar.com</a></p>
-                {% for field in form %}
+<div class="column span-18">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+        	<h2 class="page_header">Edit Account Information</h2>
 
-                    <li>{{field.label_tag}} {{field}} 
+        	<p>Let the Public=Online community know more about you. (<a href="{{user.get_absolute_url}}">view your profile</a>)</p>
 
-                   
-                    </li>
-                {% endfor %}
+        	<form id="account_form" method="POST" action="." enctype="multipart/form-data">
+            	<ul>
+                	{% for field in form %}
+                    <li>{{field.label_tag}} {{field}}</li>
+                	{% endfor %}
+					<li><input type="submit" value="Submit Your Account Changes" class="buttonAccount" /></li>
+            	</ul>
+        	</form>
+    	</div>
+	</div>
+</div>
 
-                <button type="submit" class="saveBtn">
-                    <span>Save Changes</span>
-                </button>
-            </ul>
-        </form>
-    </div>
+<div class="column span-6 last">
+	<div id="sidebar_space">
+		<div id="gravatar_edit">{% gravatar user.email %}</div>
+		
+		<p>To edit your avatar visit <a href="http://gravatar.com">gravatar.com</a></p>
+	</div>	
 </div>
 {% endblock %}
 
-{% block sidebar %}
-<h3 class="space">Log In Information</h3>
-<div class="module">
-    <form method="POST" action="{% url change_password %}">
-        <ul>
-            {{ password_form.as_ul }}
-            <button type="submit" class="submitBtn">
-                <span>Save Changes</span>
-            </button>
-        </ul>
-    </form>
-</div>
-<div class="clear"></div>
-{% endblock %}
+

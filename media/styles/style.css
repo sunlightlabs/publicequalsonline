@@ -21,7 +21,19 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 
 
 
+/* PROFILE PAGES */
 
+#profile_meta { margin:0; padding:0;}
+#profile_meta li { padding:0; list-style:none;}
+#profile_box { margin-left:90px; }
+
+h4.profile  { margin:0; padding:0;}
+
+#gravatar { padding:3px; border:1px solid #c6c6c6; float:left;}
+#gravatar_edit { padding:3px; border:1px solid #c6c6c6; float:left; margin-right:10px;}
+
+#profile_about { margin-top:20px;}
+#profile_about h4 {}
 
 
 /* tables? */
@@ -500,6 +512,20 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
     
     }
 
+    #account_form input { font-size:16px; padding:3px;}
+    #account_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
+    #account_form li { list-style:none; margin:0 0 0 50px; padding:0 0 10px 0; }
+    #account_form .buttonAccount { margin-top:20px; margin-left:150px; width:400px; font-size:14px;
+        border:1px solid #999;
+    	-webkit-border-radius: 3px;-khtml-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+        background: #fff;
+    	background: -webkit-gradient(linear, left top, left 25, from(#fff), color-stop(6%, #eee), to(#fff));
+    	background: -moz-linear-gradient(top, #fff, #bbd0a8 2px, #fff 25px);
+    	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+        }
 
     #login_form input { font-size:16px; padding:3px;}
     #login_form label { width:150px; text-align:right; display:block; float:left; padding-right:10px; font-size:16px; padding-top:9px;}
@@ -627,6 +653,8 @@ background:#dde7d3;
 #feedstable th {background-color:#dde7d3;}
 #projectMembers th {background-color:#dde7d3;}
 #events_table th {background-color:#dde7d3;}
+#users_table th {background-color:#dde7d3;}
+
 
 tr.even td { background-color:#f2f6ee; }
 

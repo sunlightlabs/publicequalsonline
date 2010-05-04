@@ -31,11 +31,15 @@ thisfield.value = defaulttext;
 	<div id="contentpage">
 		<div id="flat_contentpage">
 			<h2 class="page_header">Local Events</h2>
-			
+
 			<div id="events_content_box">
-				<p>Across the nation, bloggers, activists, web developers, technologists and more are coming together to work toward greater government transparency in our city halls, state legislatures and in Washington, D.C.</p><p> This is the portal to find out where and how you can make government more open. Don’t see an event to attend in your area? Don’t see an activity you’d like to do? <a href="{% url new_event %}">Plan an event for your local community</a>. Or check back regularly to see what new events will be taking place in your community.
+{% if searched %}
+&nbsp;
+{% else %}			
+
+				<p>Across the nation, bloggers, activists, web developers, technologists and more are coming together to work toward greater government transparency in our city halls, state legislatures and in Washington, D.C.</p><p> This is the portal to find out where and how you can make government more open. Don’t see an event to attend in your area? Don’t see an activity you’d like to do? <a href="{% url new_event %}">Plan an event</a> for your local community. Or check back regularly to see what new events will be taking place in your community.
 					</p>
-					
+{% endif %}					
 			<form id="event_form" method="GET" action="." name="event_simple_search_form">
 				<fieldset>
 				<input type="text" name="location" value="City, State or Zipcode" id="id_location" size="30" onclick="clickclear(this, 'City, State or Zipcode')" onblur="clickrecall(this,'City, State or Zipcode')"/>
