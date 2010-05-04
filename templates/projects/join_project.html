@@ -6,15 +6,21 @@ Public Equals Online: Join Project
 
 {% block body %}
 
-        <h2>Request to Join {{project}}</h2>
+<div class="column span-12">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			
+        <h2 class="page_header">Request to Join</h2>
 
-        <p>Ask the project lead to add you to the project.</p>
+        <p>Ask the project lead to add you to the project "{{project}}"</p>
 
-        <form id="joinProjectForm" method="POST" action=".">
+        <form id="login_form" method="POST" action=".">
             <ul>
              {{ form.message }}
-			<li><input type="submit" value="{% trans 'Send Request' %}" class="button" /></li>
+			<li><input type="submit" value="Send Request to Join" class="button" /></li>
             </ul>
         </form>
-
+		</div>
+	</div>
+</div>
 {% endblock %}

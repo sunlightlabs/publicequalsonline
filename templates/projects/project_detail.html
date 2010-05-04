@@ -5,7 +5,7 @@
 
 {% block body %}
 
-<div class="column span-16">
+<div class="column span-15">
 	<div id="contentpage">
 		<div id="flat_contentpage">
 <h2 class="page_header">{{project.name}}</h2> 
@@ -14,8 +14,10 @@
         {% tags_for_object project as tags %}
           <span>Tag(s):</span> 
                {% for tag in tags %}
-                	<a href="{% url projects_tagged tag %}">{{tag}}</a>, 
+                	<a href="{% url projects_tagged tag %}">{{tag}}</a> 
                 {% endfor %}
+
+
 
 
 </div>
@@ -25,10 +27,10 @@
 
 	
 
-        
-
-
-<div id="project_meta_info">
+ 	
+{% if project.links.all %}
+<div id="project_links_box">
+	<h3>Project Links:</h3>
             <ul id="project_links">
                 {% for link in project.links.all %}
                 <li class="{{link.get_link_type_display}}_link">
@@ -37,8 +39,10 @@
                 {% endfor %}
             </ul>
 </div>
+{% endif %}
 
-<div id="clear">&nbsp;</div>
+
+
 
 
 
@@ -70,8 +74,38 @@
   </div>      
 </div>
 
+<div class="column span-1">&nbsp;</div>
+
+
 <div class="column span-8 last">
-&nbsp;
+	<div id="sidebar_space">
+		<h3>Want to Join This Project?</h3>
+		<p>If you're interested in helping out on this project, you should contact the leader:</p>
+	    <a href="{% url join_project project.slug %}">
+	    <img src="/media/images/project_join.png" border="0">
+	    </a>
+	
+		{% with project.get_members as members %}
+		  {% if members %}
+		<div id="project_team_box">
+		  <h3>The Project Team</h3>
+		  <ul id="team">
+		      {% for member in members %}
+		          <li>
+		              <a href="{{member.get_absolute_url}}">
+		                  <span>{% display_name member %}</span>
+		              </a>
+		          </li>
+		      {% endfor %}
+		      <div class="clear"></div>
+		  </ul>
+		</div>
+		  {% endif %}
+		  {% endwith %}
+	
+	
+	
+	</div>
 </div>
 
 {% endblock %}
