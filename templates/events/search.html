@@ -92,13 +92,25 @@ thisfield.value = defaulttext;
 			<ul id="events">
 	        {% for event in event_list %}
 	        <li>
-				<a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a>
-	        {{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}
-	        {{event.location}}
+			<a href="{{event.get_absolute_url}}">
+				<div id="event_listing">
+					<span class="upcoming_event_title">{{event.title}}</span>
+	        		<span class="upcoming_event_location">{{event.location}}</span>
+	        		<span class="upcoming_event_date">{{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}</span>
+				</div>
+			</a>
 			</li>
 	        {% endfor %}
 			</ul>
 		</div>
+		
+		<div id="plan_event_button">
+		<a href="{% url new_event %}">
+			<img src="/media/images/events_plan.png" border="0">
+		</a>
+		</div>
+		
+		
 	</div>
 </div>
 

@@ -302,10 +302,10 @@ label.field { display:block;}
 #map_wrap { padding:15px; border:1px solid #c6c6c6; background-color:#f4f4f4;}
 #map_container { border:1px solid #4d4d4d; margin:auto;}
 
-#upcoming_events { background-color:#ffffff;}
+#upcoming_events { background-color:#ffffff; margin-bottom:30px;}
 
 #events { margin:0; padding:0; }
-#events li { list-style:none; padding:10px; border-bottom:1px solid #c6c6c6;}
+#events li { list-style:none; padding:0; margin:0;}
 
 #generic_form { margin:0; padding:0;}
 #generic_form li { list-style:none; }
@@ -322,6 +322,34 @@ label.field { display:block;}
 #event_detail li { list-style:none; padding-bottom:10px; float:left; padding-right:40px;}
 
 .subtitle p { font-size:10px;}
+
+#plan_event_button { margin:30px 0 50px 0; width:190px; margin-left:auto; margin-right:auto;}
+
+
+
+#upcoming_event_list_box { }
+
+#upcoming_event_list_box a:link {text-decoration:none;  }
+#upcoming_event_list_box a:visited {text-decoration:none;  }
+#upcoming_event_list_box a:hover {text-decoration:none;  }
+#upcoming_event_list_box a:active {text-decoration:none;  }
+
+
+.upcoming_event_title { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#333333; font-size:14px; display:block; text-transform:uppercase; }
+
+.upcoming_event_date { font-family:"arial","helvetica",sans-serif; font-size:12px; color:#c6c6c6; display:block; text-align:right; float:right; width:150px;}
+.upcoming_event_location { font-family:"arial","helvetica",sans-serif;  font-size:12px; color:#c6c6c6; }
+
+#event_listing {
+font-family:Helvetica Neue,Helvetica,Corbel,Tahoma,Arial,Trebuchet MS,sans-serif;
+font-size:108%;
+padding:10px;
+border-bottom:1px solid #d9d9d9;
+}
+
+#event_listing:hover { background-color:#f0f0f0;}
+
+
 
 
 /* ACT NOW */

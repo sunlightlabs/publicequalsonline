@@ -89,7 +89,9 @@
                     {% endfor %}
                     </ul>
                 {% else %}
-                    <p>{% display_name p_user %} hasn't started any projects just yet.</p>
+                    <p>{% display_name p_user %} hasn't started any projects just yet. 
+					<!--You could <a href="{% url contact_user p_user.username %}">contact</a> {% display_name p_user %} about starting something together.-->
+					</p>
                 {% endif %}
             
 
