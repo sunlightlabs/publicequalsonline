@@ -497,21 +497,22 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #project_list_box { margin:20px 0 50px 20px;}
 #project_summary_box_old { background-color:#b0cf95; width:260px; height:150px; float:left; margin:0 20px 10px 0; padding:10px;}
 
-#project_summary_box { margin:0; padding:0;}
-#project_summary_box li { background-color:#dce6d3; width:260px; height:160px; float:left; margin:0 20px 20px 0; padding:10px; display:block; list-style:none;}
+#project_summary_box { margin:0 0 0 20px; padding:0;}
+#project_summary_box li { background-color:#f1f5ed;  width:280px; height:160px; float:left; margin:0 20px 20px 0; display:block; list-style:none;}
 
 #project_summary_box li:hover { background-color:#bbd0a8;}
 
-#project_summary_summary { overflow:hidden;}
+#project_summary_summary { overflow:hidden; padding:0; margin:10px; height:87px;}
+#project_summary_summary p { margin:0; padding:0;}
 
-#project_summary_box h4 { font-size:18px; font-weight:bold; margin:0; padding:0; color:#59783c;}
+#project_summary_box h4 { font-size:16px; font-weight:bold; margin:0; padding:5px; color:#3f6819; background-color:#a1bc8b;}
 
 #project_summary_box a:link { text-decoration:none; color:#000;}
 #project_summary_box a:visited { text-decoration:none; color:#000;}
 #project_summary_box a:hover { text-decoration:none; color:#000;}
 #project_summary_box a:active { text-decoration:none; color:#000;}
 
-.project_summary_date { color:#648844; font-size:10px;}
+.project_summary_date { color:#648844; font-size:10px; text-align:right; display:block; padding-right:10px;}
 
 #team { }
 #team li { list-style:square;}

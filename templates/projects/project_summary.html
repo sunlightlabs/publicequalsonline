@@ -2,10 +2,11 @@
 
 	<a href="{{project.get_absolute_url}}">
 	<li>
-		<h4>{{project}}</h4>
+		<h4>{{project|title|slice:":32"}}</h4>
 			<div id="project_summary_summary">
-					<p class="project_summary_date">Added {{project.creation_date|date}}</p>
-				<p>{{project.description|truncatewords_html:20}}</p>
+				<p>{{project.description|truncatewords_html:30}}</p>
 			</div>
+			<p class="project_summary_date">Added {{project.creation_date|date}}</p>
+			
 	</li>
 	</a>

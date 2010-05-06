@@ -14,10 +14,18 @@ Projects
 				<h2 class="page_header">
         			{% ifequal projects "official" %} Official {% endifequal %}
         			{% ifequal projects "community" %} Community {% endifequal %}
+					{% ifequal projects "all" %} All {% endifequal %}
+
         			Projects
         			{% if tag %} tagged "{{tag}}" {% endif %}
 				</h2>
+				<p>Content goes here about projects and stuff.</p>
+				
 				{% if tag %} {% else %}<a href="{% url new_project %}"><img src="/media/images/project_start.png" border="0"></a>{% endif %}
+				
+				
+				
+				
 		</div>
 	</div>
 </div>
