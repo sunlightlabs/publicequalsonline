@@ -2,6 +2,13 @@
 /* 950 */
 
 /* USEFUL STUFF */
+
+a:link {color:#575757;}
+a:visited {color:#5875b6;}
+a:hover {color:#3465c0; }
+a:active {color:#575757;}
+
+
 #clearfix { clear:both;}
 a.grey:link { color:#575757;}
 a.grey:visited { color:#575757;}
@@ -69,8 +76,22 @@ a.get_in_here:visited { color:#3465c0; text-decoration:none;}
 a.get_in_here:hover { color:#3465c0; text-decoration:underline;}
 a.get_in_here:active { color:#3465c0; text-decoration:none;}
 
+a.logout:link { color:#669933; text-decoration:none;}
+a.logout:visited { color:#669933; text-decoration:none;}
+a.logout:hover { color:#669933; text-decoration:underline;}
+a.logout:active { color:#669933; text-decoration:none;}
+
+a.logged_in:link { color:#669933; text-decoration:none;}
+a.logged_in:visited { color:#669933; text-decoration:none;}
+a.logged_in:hover { color:#669933; text-decoration:underline;}
+a.logged_in:active { color:#669933; text-decoration:none;}
+
 .join_strong { font-size:24px; padding-right:18px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
 .join_us { font-size:24px; color:#669933; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
+
+.logged_in {font-size:16px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
+
+
 .already_member { font-size:16px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
 .get_in_here { font-size:16px; color:#669933; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
 
@@ -422,7 +443,7 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
 #main_nav li { margin:0; padding:0; height:74px; width:320px; list-style:none;  border-bottom:1px solid #ffffff;}
 
-#main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_right_nav_sprite2.png'); background-repeat:no-repeat;  border-bottom:1px solid #ffffff;}
+#main_nav li a { height:74px; width:320px; background-image:url('http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/peo_right_nav_sprite3.png'); background-repeat:no-repeat;  border-bottom:1px solid #ffffff;}
 
 #main_nav li a.option_1 {background-position:0px 0px; display:block;}
 #main_nav li a:hover.option_1 {background-position:0px -300px;}
@@ -502,10 +523,10 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
 #project_summary_box li:hover { background-color:#bbd0a8;}
 
-#project_summary_summary { overflow:hidden; padding:0; margin:10px; height:87px;}
+#project_summary_summary { overflow:hidden; padding:0; margin:10px; height:120px;}
 #project_summary_summary p { margin:0; padding:0;}
 
-#project_summary_box h4 { font-size:16px; font-weight:bold; margin:0; padding:5px; color:#3f6819; background-color:#a1bc8b;}
+#project_summary_box h4 { font-size:16px; font-weight:bold; margin:0; padding:5px 5px 5px 0; color:#3f6819;}
 
 #project_summary_box a:link { text-decoration:none; color:#000;}
 #project_summary_box a:visited { text-decoration:none; color:#000;}

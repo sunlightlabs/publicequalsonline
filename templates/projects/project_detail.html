@@ -42,6 +42,16 @@
 {% endif %}
 
 
+{% ifequal project.lead user %}
+			
+{% else %}
+
+<h3>Want to Join This Project?</h3>
+<p>If you're interested in helping out on this project, you should contact the leader:</p>
+<a href="{% url join_project project.slug %}"><img src="/media/images/project_join.png" border="0"></a>
+{% endifequal %}
+
+
 
 
 
@@ -79,28 +89,27 @@
 
 <div class="column span-8 last">
 	<div id="sidebar_space">
-		<h3>Want to Join This Project?</h3>
-		<p>If you're interested in helping out on this project, you should contact the leader:</p>
-	    <a href="{% url join_project project.slug %}">
-	    <img src="/media/images/project_join.png" border="0">
-	    </a>
+		
 	
 		{% with project.get_members as members %}
-		  {% if members %}
+
 		<div id="project_team_box">
-		  <h3>The Project Team</h3>
-		  <ul id="team">
-		      {% for member in members %}
-		          <li>
-		              <a href="{{member.get_absolute_url}}">
-		                  <span>{% display_name member %}</span>
-		              </a>
-		          </li>
-		      {% endfor %}
-		      <div class="clear"></div>
+		 	<h3>Project Leader</h3>
+		 		<ul id="team">
+				<li><a href="{{project.lead.get_absolute_url}}">{% display_name project.lead %}</a></li>
+		 		</ul>
+			
+		{% if members %}
+		  	<h3>The Project Team</h3>
+		  		<ul id="team">
+		      
+					{% for member in members %}
+		       <li><a href="{{member.get_absolute_url}}">{% display_name member %}</a></li>
+		      		{% endfor %}
 		  </ul>
-		</div>
+
 		  {% endif %}
+				</div>
 		  {% endwith %}
 	
 	

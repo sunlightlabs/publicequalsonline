@@ -19,9 +19,9 @@
 			
 			<div id="profile_box">
             {% if p_user.first_name %}
-             	<h4 class="profile">{{p_user.first_name}}</h4>
+             	<h4 class="profile">{{p_user.first_name|title}}</h4>
             {% else %}
-              	<h4 class="profile">{{p_user.username}}</h4>
+              	<h4 class="profile">{{p_user.username|title}}</h4>
             {% endif %}
 
 
@@ -46,7 +46,7 @@
 				{% if p_user.profile.about %}
 				<li>
 					<div id="profile_about">
-					<h4>About {% display_name p_user %}:</h4>
+					<h4>About {{ p_user.username|title }}:</h4>
 					<p>{{p_user.profile.about}}</p>
 					</div>
 				</li>
@@ -72,7 +72,7 @@
 <div class="column span-11 last">
 	<div id="contentpage">
 		<div id="sidebar_space">
-			<h4>{% possessive p_user %} Projects</h4>
+			<h4>Projects</h4>
        
                 {% if p_user.projects_lead_on.all %}
                     <ul id="profile_projects">
