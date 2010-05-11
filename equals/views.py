@@ -3,13 +3,20 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.template.loader import render_to_string
 from django.contrib.flatpages.views import flatpage
 # from blogdor.models import Post
 # from blogdor.views import archive
 from publicequalsonline.equals.models import FeaturedPost, PledgeCount
 from feedinator.models import FeedEntry
 from django.db.models import F
+
 from anthill.projects.models import Project
+from anthill.events.models import Event
+from anthill.people.models import Profile
+
+from django.contrib.gis.shortcuts import render_to_kml
+
 
 def index(request):
         try:
@@ -100,8 +107,22 @@ def news(request):
 #def event_detail(request, id):
 #    return render_to_response("event.html")
        
-       
-# WHERE AM I?
-     
-       
+
+# THESE ARE FOR
+
+def generateEventKml(request):
+    locations = Event.objects.all().values('title','description','lat_long')
+#   return render_to_kml('events/events.kml',{'locations': locations})
+    return HttpResponse(render_to_string('events/events.kml',{'locations': locations}), mimetype="text/plain")
+
+def generatePeopleKml(request):
+    locations = Profile.objects.all().values('user','role','lat_long')
+#   return render_to_kml('people/people.kml',{'locations': locations})
+    return HttpResponse(render_to_string('people/people.kml',{'locations': locations}), mimetype="text/plain") 
+
+#Projects don't currently have location/geo data associated.
+#def generateProjectKml(request):
+#    locations = Project.objects.all().values('name','lat_long')
+#   return render_to_kml('projects/projects.kml',{'locations': locations})
+#    return HttpResponse(render_to_string('projects/projects.kml',{'locations': locations}), mimetype="text/plain") 
        

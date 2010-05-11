@@ -1,0 +1,18 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1";>
+
+<Document>
+<name>Upcoming Public=Online Events</name>
+<description>Events related to the Public=Online Campaign</description>
+{% for location in locations %}{% if location.lat_long %}
+  <Placemark>
+    <name>{% if location.title %}{{ location.title }}{% else %}{% endif %}</name>
+    <description>{% if location.description %}{{ location.description }}{% else %}{% endif %}</description>
+    <Point>
+        <coordinates>{{location.lat_long.x}},{{location.lat_long.y}}</coordinates>
+    </Point>
+  </Placemark>
+{% endif %}{% endfor %}
+</Document>
+</kml>

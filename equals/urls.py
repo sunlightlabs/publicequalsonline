@@ -14,6 +14,13 @@ urlpatterns = patterns('',
     url(r'^pledge/count/$', 'publicequalsonline.equals.views.get_count'),
     url(r'^pledge/2983gsoidfhd289dh/$', 'publicequalsonline.equals.views.increment_count'),
     url(r'^pledge/.*$', 'django.views.generic.simple.direct_to_template', {"template": "pledge.html"}),    
+    
+    url(r'^events/events.kml', 'publicequalsonline.equals.views.generateEventKml'),
+    url(r'^people/people.kml', 'publicequalsonline.equals.views.generatePeopleKml'),
+
+# Projects don't have location/geo data.
+#    url(r'^projects/projects.kml', 'publicequalsonline.equals.views.generateProjectKml'),
+    
     url(r'^news/$', 'publicequalsonline.equals.views.news', name="news"),
     
     

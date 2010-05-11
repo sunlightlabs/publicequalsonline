@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1";>
+
+<Document>
+<name>The Public=Online Community</name>
+<description>Locations of Public=Online Members</description>
+{% for location in locations %}{% if location.lat_long %}
+<Placemark>
+<name>Public=Online Member</name>
+<description></description>
+<Point><coordinates>{{location.lat_long.x}},{{location.lat_long.y}}</coordinates></Point>
+</Placemark>{% endif %}{% endfor %}
+</Document>
+</kml>

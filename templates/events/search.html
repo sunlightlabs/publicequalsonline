@@ -10,6 +10,9 @@
         $('#events_table').tablesorter({widgets: ['zebra'] });
     });
 </script>
+
+<body onload="initialize()">
+
 {% endblock %}
 
 {% block body %}
@@ -25,6 +28,8 @@ thisfield.value = defaulttext;
 }
 }
 </script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAARP92tEYvNClEJocHemRctxTBfUk9TZrBRaIteybtnU2KziHEpRQYzeKB4QhJ9W_qPCNEvvuF916EGw"></script>
+
 
 
 <div class="column span-15">
@@ -51,7 +56,6 @@ thisfield.value = defaulttext;
 			</form>
 			</div>
 
-
 {% if searched %}
 <div id="events_results">
 <h4 class="goudy">{{search_results|length}} Events Found {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h4>
@@ -76,7 +80,31 @@ thisfield.value = defaulttext;
         </tbody>
     </table>
 </div>
+{% else %}
+
+<script type="text/javascript">
+function initialize() {
+  if (GBrowserIsCompatible()) {
+    var map = new GMap2(document.getElementById("map_canvas"));
+    map.setCenter(new GLatLng(37.4419, -122.1419), 3);
+
+    
+      map.addOverlay(new GMarker(37.4419, -122.1419));
+    
+  }
+}
+</script>
+
+
+
+<div id="map_canvas" style="width:100%; height:400px;"></div>
 {% endif %}
+
+
+
+
+
+
 
 		</div>
 	</div>
@@ -95,6 +123,7 @@ thisfield.value = defaulttext;
 			<a href="{{event.get_absolute_url}}">
 				<div id="event_listing">
 					<span class="upcoming_event_title">{{event.title}}</span>
+					
 	        		<span class="upcoming_event_location">{{event.location}}</span>
 	        		<span class="upcoming_event_date">{{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}</span>
 				</div>
