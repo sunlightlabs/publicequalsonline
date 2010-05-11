@@ -5,8 +5,6 @@
 <description>Locations of Public=Online Members</description>
 {% for location in locations %}{% if location.lat_long %}
 <Placemark>
-<name>Public=Online Member</name>
-<description></description>
 <Point>
 <coordinates>{{location.lat_long.y}},{{location.lat_long.x}}</coordinates>
 </Point>
