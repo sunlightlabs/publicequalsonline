@@ -7,7 +7,9 @@
 <Placemark>
 <name>Public=Online Member</name>
 <description></description>
-<Point><coordinates>{{location.lat_long.x}},{{location.lat_long.y}}</coordinates></Point>
+<Point>
+<coordinates>{{location.lat_long.y}},{{location.lat_long.x}}</coordinates>
+</Point>
 </Placemark>{% endif %}{% endfor %}
 </Document>
 </kml>

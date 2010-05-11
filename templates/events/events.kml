@@ -8,7 +8,7 @@
     <name>{% if location.title %}{{ location.title }}{% else %}{% endif %}</name>
     <description>{% if location.description %}{{ location.description }}{% else %}{% endif %}</description>
     <Point>
-        <coordinates>{{location.lat_long.x}},{{location.lat_long.y}}</coordinates>
+        <coordinates>{{location.lat_long.y}},{{location.lat_long.x}}</coordinates>
     </Point>
   </Placemark>
 {% endif %}{% endfor %}

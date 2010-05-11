@@ -112,13 +112,13 @@ def news(request):
 
 def generateEventKml(request):
     locations = Event.objects.all().values('title','description','lat_long')    
-    return render_to_kml('events/events.kml',{'locations': locations})
-#   return HttpResponse(render_to_string('events/events.kml',{'locations': locations}), mimetype="text/plain")
+#    return render_to_kml('events/events.kml',{'locations': locations})
+    return HttpResponse(render_to_string('events/events.kml',{'locations': locations}), mimetype="application/vnd.google-earth.kml+xml")
 
 def generatePeopleKml(request):
     locations = Profile.objects.all().values('user','role','lat_long')
-    return render_to_kml('people/people.kml',{'locations': locations})
-#   return HttpResponse(render_to_string('people/people.kml',{'locations': locations}), mimetype="text/plain") 
+#    return render_to_kml('people/people.kml',{'locations': locations})
+    return HttpResponse(render_to_string('people/people.kml',{'locations': locations}), mimetype="application/vnd.google-earth.kml+xml") 
 
 #Projects don't currently have location/geo data associated.
 #def generateProjectKml(request):
