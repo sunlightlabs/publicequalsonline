@@ -6,6 +6,7 @@
 
 <div class="column span-16">
 	<div id="contentpage">
+		<div id="flat_contentpage">
     		<h2 class="page_header">Community Projects</h2>
 			<p>Local community projects are the backbone of the <span class="chunk">Public=Online</span> campaign. Our movement simply can't build a more open and transparent government without working together at the local level, and that's why we need to work together.
 </p>
@@ -24,9 +25,9 @@
 			<a href="{% url all_projects %}">
 				<img src="/media/images/projects_view.png" border="0">
 			</a>
-			
-			
-			</p>
+		
+
+		</div>
 	</div>
 </div>
 
@@ -34,18 +35,5 @@
 &nbsp;
 </div>
 
-<div class="column span-24">
-	<div id="project_list_box">
-		<p>These are some of the projects currently being worked on by the community.</p>
-		<ul id="project_summary_box">
-    		{% for project in projects %}
-        		{% include "projects/project_summary.html" %}
-    		{% endfor %}
-    	</ul>
-		</p>
-	</div>
-	<div style="clear:both;">&nbsp;</div>
-	
-	
-</div>
+
 {% endblock %}

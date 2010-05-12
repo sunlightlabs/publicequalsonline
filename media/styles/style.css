@@ -550,6 +550,24 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #project_tags li { list-style:none; float:left; margin:0; padding:0;}
 #project_links li { }
 
+.project_info { display:block;}
+
+td.project_date { width:100px; text-align:right; vertical-align:top;}
+td.project_title { width:300px; vertical-align:top; }
+td.project_description {vertical-align:top; }
+
+table.projects_table { color:#000000;}
+
+table.projects_table th { background-color:#dde7d3; }
+
+table.projects_table tr a { text-decoration:none; color:#000000; }
+table.projects_table tr:hover {background-color:#bbd0a8; }
+
+
+
+
+
+
 /* DEFAULT FORM STUFF */
 #form_ul { margin:0; padding:0;}
 #form_ul li { margin:0; padding:0;}

@@ -82,22 +82,12 @@ thisfield.value = defaulttext;
 </div>
 {% else %}
 
-<script type="text/javascript">
-function initialize() {
-  if (GBrowserIsCompatible()) {
-    var map = new GMap2(document.getElementById("map_canvas"));
-    map.setCenter(new GLatLng(37.4419, -122.1419), 3);
-
-    
-      map.addOverlay(new GMarker(37.4419, -122.1419));
-    
-  }
-}
-</script>
+ <div style="padding:20px 10px 20px 20px; border:1px solid #c6c6c6; width:520px;">
+<iframe width="500" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fupgrade.publicequalsonline.com%2Fevents%2Fevents.kml&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fupgrade.publicequalsonline.com%2Fevents%2Fevents.kml" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</div>
 
 
 
-<div id="map_canvas" style="width:100%; height:400px;"></div>
 {% endif %}
 
 

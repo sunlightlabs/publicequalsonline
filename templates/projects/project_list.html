@@ -21,7 +21,7 @@ Projects
 				</h2>
 				<p>Content goes here about projects and stuff.</p>
 				
-				{% if tag %} {% else %}<a href="{% url new_project %}"><img src="/media/images/project_start.png" border="0"></a>{% endif %}
+				
 				
 				
 				
@@ -29,22 +29,36 @@ Projects
 		</div>
 	</div>
 </div>
-<div class="column span-8 last">&nbsp;</div>
 
+<div class="column span-8 last">
+	<div id="sidebar_space">
+		{% if tag %} {% else %}<a href="{% url new_project %}"><img src="/media/images/project_start.png" border="0"></a>{% endif %}
+	</div>
+</div>
+		
 <div class="column span-24">
 
-            
-
-<ul id="project_summary_box">
+<div id="projects_results">           
+    <table class="projects_table">
+		<thead>
+            <tr id="titles">
+                <th class="" id="title_name">Project Title</th>
+                <th class="">Description</th>
+                <th class="">Added</th>
+            </tr>
+        </thead>
+	
+	
     {% for project in project_list %}
         {% include "projects/project_summary.html" %}
     {% endfor %}
-</ul>
+	</table>
+</div>
 
 
-	<div style="clear:both;">&nbsp;</div>
 
-{% include "pagination_div.html" %}
+
+
 
 </div>
 

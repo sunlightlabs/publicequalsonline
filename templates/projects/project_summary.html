@@ -1,12 +1,6 @@
 {% load people %}
-
-	<a href="{{project.get_absolute_url}}">
-	<li>
-	<div id="project_summary_summary">		
-		<h4>{{project|title}}</h4>
-				<p>{{project.description|truncatewords_html:20}}</p>
-		
-	</div>
-		<p class="project_summary_date">Added {{project.creation_date|date}}</p>	
-	</li>
-	</a>
+<tr class="{% cycle 'one' 'two' %}">
+<td class="project_title"><a href="{{project.get_absolute_url}}"><span class="project_info">{{project|title}}</span></a></td>
+<td class="project_description"><a href="{{project.get_absolute_url}}">{{project.description|truncatewords_html:20}}</a></td>
+<td class="project_date"><a href="{{project.get_absolute_url}}">{{project.creation_date|date}}</a></td>
+</tr>
