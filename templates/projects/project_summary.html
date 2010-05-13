@@ -1,6 +1,6 @@
 {% load people %}
 <tr class="{% cycle 'one' 'two' %}">
-<td class="project_title"><a href="{{project.get_absolute_url}}"><span class="project_info">{{project|title}}</span></a></td>
-<td class="project_description"><a href="{{project.get_absolute_url}}">{{project.description|truncatewords_html:20}}</a></td>
-<td class="project_date"><a href="{{project.get_absolute_url}}">{{project.creation_date|date}}</a></td>
+<td class="project_title"><a href="{{project.get_absolute_url}}" class="project_info">{{project|title}}</span></a></td>
+<td class="project_description"><a href="{{project.get_absolute_url}}" class="project_info">{{project.description|truncatewords_html:20}}</a></td>
+<td class="project_date"><a href="{{project.get_absolute_url}}" class="project_info">{{project.creation_date|date}}</a></td>
 </tr>
