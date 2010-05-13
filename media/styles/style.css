@@ -89,7 +89,7 @@ a.logged_in:active { color:#669933; text-decoration:none;}
 .join_strong { font-size:24px; padding-right:18px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
 .join_us { font-size:24px; color:#669933; font-family:Georgia, Cambria, "Times New Roman", Times, serif;}
 
-.logged_in {font-size:16px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
+.logged_in {font-size:12px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
 
 
 .already_member { font-size:16px; padding-right:10px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; color:#b3b3b3;}
