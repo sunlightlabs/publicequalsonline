@@ -1,9 +1,8 @@
-{% extends "brainstorm/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Edit Project{% endblock title %}
 
-{% block extrahead %} 
-{% include "projects/tags_js.html" %}
+{% block body %}
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -17,9 +16,7 @@ $(document).ready(function(){
 });
 
 </script>
-{% endblock %}
 
-{% block body %}
 <div class="column span-24">
 	<div id="contentpage">
 		<div id="flat_contentpage">

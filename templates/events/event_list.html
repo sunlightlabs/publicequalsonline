@@ -1,6 +1,13 @@
 {% extends "events/base.html" %}
 
-{% block content %}
+{% block title %}All Events{% endblock %}
+
+{% block body %}
+
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+
 <h2>Events</h2>
 
     <a href="{% url new_event %}">Plan An Event For Your Local Community.</a>
@@ -17,7 +24,9 @@
 
 </div>
 
-
+		</div>
+	</div>
+</div>
 
 
 {% endblock %}

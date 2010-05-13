@@ -1,11 +1,18 @@
 {% extends "events/base.html" %}
 
 {% block body %}
-
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			
         <h2>{{year}}</h2>
 
         {% for m in date_list %}
         <a href="{% url events_for_month m.year m|date:"m" %}">{{ m|date:"M y" }}</a>
         {% endfor %}
+		</div>
+	</div>
+</div>
+
 
 {% endblock %}
