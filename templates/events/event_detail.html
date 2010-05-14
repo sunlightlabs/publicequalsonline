@@ -26,24 +26,19 @@
             	{% endif %}
 
   		<p class="subtitle">Location: <a href="/events/?location={{ event.location }}&name=&location_range=50">{{ event.location }}</a></p>      
-            	<ul id="event_detail">
-				<li>Start Date: 
-						<abbr class="dtstart" title="{{ event.start_date.isoformat }}">
-                        {{ event.start_date|date}}
-                    	</abbr>
-					</li>
-					<li>
-
-                End Date:
-                    <abbr class="dtend" title="{{ event.end_date.isoformat }}">
-                        {{ event.end_date|date}}
-                    </abbr>
-                </li>
+            	
+				<p>Start Date:<abbr class="dtstart" title="{{ event.start_date.isoformat }}">{{ event.start_date|date}}</abbr></p>
+				</li>
+					
+				<p>End Date:
+                    <abbr class="dtend" title="{{ event.end_date.isoformat }}">{{ event.end_date|date}}</abbr>
+                </p>
 				
 				
 				{% if event.url %}
-				<li>URL:{{ event.url|urlize }}</li>
+				<p>For more information, visit: {{ event.url|urlize }}</p>
 				{% else %}
+				
 				&nbsp;
 				{% endif %}	
 					
@@ -51,11 +46,11 @@
                 {% if projects %}
                     Related Projects:
                     {% for project in projects %}
-                       <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
+                       <p><a href="{{project.get_absolute_url}}">{{project}}</a></p>
                     {% endfor %}
                 {% endif %}
                 {% endwith %}
-				</ul>
+		
         
 <p>This event was added by <a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a></p>
 
