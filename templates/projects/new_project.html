@@ -1,18 +1,12 @@
-{% extends "brainstorm/base.html" %}
+{% extends "base.html" %}
 
-{% block title %}
-Public Equals Online: Create Project
-{% endblock title %}
-
-{% block extrahead %}
-    {% include "projects/tags_js.html" %}
-{% endblock %}
+{% block title %}Create Project{% endblock title %}
 
 {% block body %}
 <div class="column span-24">
 	<div id="contentpage">
 		<div id="flat_contentpage">
-        <h2 class="space">Create A Project</h2>
+        	<h2 class="space">Create A Project</h2>
         	<form  method="POST" action="." id="project_form">
 				<ul id="default_form">
             		{% include "projects/base_form.html" %}
