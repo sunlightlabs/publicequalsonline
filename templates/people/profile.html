@@ -26,40 +26,37 @@
 
 
             
-    		<ul id="profile_meta">
+    			<ul id="profile_meta">
 				{% if p_user.profile.get_role_display %}
-				<li>Status: {{p_user.profile.get_role_display|safe}}</li>
+					<li>Status: {{p_user.profile.get_role_display|safe}}</li>
 				{% endif %}
 				{% if p_user.profile.url %}
-				<li>Site: <a class="url" rel="me" href="{{p_user.profile.url}}">URL</a></li>
+					<li>Site: <a class="url" rel="me" href="{{p_user.profile.url}}">URL</a></li>
 				{% endif %}
 					
 				{% if p_user.profile.twitter_id %}
-				<li>Twitter: <a href="http://www.twitter.com/{{p_user.profile.twitter_id}}">{{p_user.profile.twitter_id}}</a></li>	
+					<li>Twitter: <a href="http://www.twitter.com/{{p_user.profile.twitter_id}}">{{p_user.profile.twitter_id}}</a></li>	
 				{% endif %}
 				
 				{% if p_user.profile.location %}	
-				<li>Location: {{p_user.profile.location}}</li>
+					<li>Location: <a href="/people/?location={{p_user.profile.location}}&location_range=50">{{p_user.profile.location}}</a></li>
 				{% endif %}
 				
 				
 				{% if p_user.profile.about %}
 				<li>
 					<div id="profile_about">
-					<h4>About:</h4>
-					<p>{{p_user.profile.about}}</p>
+						<h4>About:</h4>
+						<p>{{p_user.profile.about}}</p>
 					</div>
 				</li>
-				{% endif %}
+				
+				{% else %}
 				
 				
-			
-			</ul>
-			
-			{% ifequal user.id p_user.id %}
-                <div id="profile_edit_box"><a href="{% url edit_profile %}"><img src="/media/images/profile_edit.png"></a></div>
-            {% endifequal %}
-			
+				{% endif %}			
+				</ul>
+
 			</div>
 		</div>
 	</div>
@@ -72,6 +69,10 @@
 <div class="column span-11 last">
 	<div id="contentpage">
 		<div id="sidebar_space">
+			{% ifequal user.id p_user.id %}
+                <div id="profile_edit_box"><a href="{% url edit_profile %}"><img src="/media/images/profile_edit.png"></a></div>
+            {% endifequal %}
+
 			<h4>Projects</h4>
        
                 {% if p_user.projects_lead_on.all %}
@@ -83,21 +84,29 @@
 
                     {# only show link if user==p_user==project.lead #}
                     {% ifequal user p_user %}
-                    {% ifequal user project.lead %} (<a class="projectEdit" href="{% url edit_project project.slug %}">edit</a>){% endifequal %}
+                    	{% ifequal user project.lead %} (<a class="projectEdit" href="{% url edit_project project.slug %}">edit</a>){% endifequal %}
                     {% endifequal %}
                     </li>
                     {% endfor %}
                     </ul>
                 {% else %}
-                    <p>{% display_name p_user %} hasn't started any projects just yet. 
-					<!--You could <a href="{% url contact_user p_user.username %}">contact</a> {% display_name p_user %} about starting something together.-->
+
+					{% ifequal user.id p_user.id %}
+		             <p>Hey, you should <a href="/projects/new">start a project</a>!</p>
+		
+					{% else %}
+		            <p>{% display_name p_user %} hasn't started any projects yet. 
+					You could <a href="{% url contact_user p_user.username %}">contact</a> {% display_name p_user %} about starting something.
 					</p>
+		            {% endifequal %}
+
+
                 {% endif %}
             
 
                 {% with p_user.project_roles.active.select_related as helped_projects %}
                 {% if helped_projects %}
-                <h4>{% possessive p_user %} helped out with:</h4>
+                <h4>Helping out with:</h4>
                 <ul id="profile_projects">
                     {% for r in helped_projects %}
                         <li><a href="{{r.project.get_absolute_url}}">{{r.project}}</a></li>

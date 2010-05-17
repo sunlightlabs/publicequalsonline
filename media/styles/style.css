@@ -46,7 +46,7 @@ h4.profile  { margin:0; padding:0;}
 #profile_projects { margin:0; padding:0;}
 #profile_projects li { list-style:none; padding-bottom:5px; margin-bottom:10px;}
 
-#profile_edit_box { margin-top:30px;}
+#profile_edit_box { margin:30px 0 30px 0; text-align:right;}
 
 
 /* tables? */
@@ -392,12 +392,18 @@ border-bottom:1px solid #d9d9d9;
 .side_error { background:url(http://assets.publicequalsonline.com.s3.amazonaws.com/media/images/sidebar_nm.jpg); background-position:right 100px; background-repeat:no-repeat; }
 #error_image { margin-left:550px;}
 
-#error_list li { font-size:20px; list-style-type:none; padding:5px; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px;}
+#error_list { background-color:#c69683;}
+#error_list li {list-style-type:none; padding:5px; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif; line-height:36px; font-size:24px;}
 
 #error_list a:link { text-decoration:none; color:#b0b0b0; }
 #error_list a:visited { text-decoration:none; color:#c0c0c0;}
 #error_list a:hover {text-decoration:none; color:#3465c0; }
 #error_list a:active {text-decoration:none; color:#b0b0b0;}
+
+
+/* The default django error field is errorlist */
+.errorlist {  background-color:#c69683; padding:5px 5px 0 5px; width:250px; text-align:right;}
+.errorlist li {color: #74341c; font-weight:bold;}
 
 /* FOOTER */
 #footer_content_box {width:550px; margin-bottom:20px;  }
@@ -731,6 +737,15 @@ background:#dde7d3;
 #events_table th {background-color:#dde7d3;}
 #users_table th {background-color:#dde7d3;}
 
+td.users_table_name {vertical-align:top; }
+
+table.users_table { color:#000000;}
+table.users_table th { background-color:#dde7d3; }
+table.users_table tr a { text-decoration:none; color:#000000;}
+table.users_table tr.user_two { background-color:#f2f6ee; }
+table.users_table tr:hover {background-color:#bbd0a8; }
+
+.row_meta { display:block; height:100%;}
 
 tr.even td { background-color:#f2f6ee; }
 
@@ -741,10 +756,6 @@ tr.even td { background-color:#f2f6ee; }
 
 #event_simple_search_form input {  font-size:18px; }
 
-
-
-
-
 ul#attendeeList dd { line-height: 20px;}
 
 
@@ -754,5 +765,5 @@ ul#attendeeList dd { line-height: 20px;}
 
 
 
-.errorlist { margin:0; padding:0;}
-.errorlist li {color: #74341c; font-weight:bold;}
+
+
