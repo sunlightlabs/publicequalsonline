@@ -15,9 +15,14 @@
 
         	<form id="account_form" method="POST" action="." enctype="multipart/form-data">
             	<ul>
-                	{% for field in form %}
-                    <li>{{field.label_tag}} {{field}}</li>
-                	{% endfor %}
+					<li>{{ form.name.errors }} <label for="id_name">Name</label> {{ form.name }}</li>
+					<li>{{ form.email.errors }} <label for="id_email">Email</label>{{ form.email }}</li>
+					<li>{{ form.url.errors }} <label for="id_url">Your Website</label>{{ form.url }}</li>
+					<li>{{ form.twitter_id.errors }} <label for="id_twitter_id">Twitter Username</label>{{ form.twitter_id }}</li>
+					<li>{{ form.position.errors }} <label for="id_position">Role</label>{{ form.position }}</li>
+					<li>{{ form.location.errors }} <label for="id_location">Location</label>{{ form.location }}</li>
+					<li>{{ form.about.errors }} <label for="id_about">About You</label>{{ form.about }}</li>
+
 					<li><input type="submit" value="Submit Your Account Changes" class="buttonAccount" /></li>
             	</ul>
         	</form>
@@ -33,5 +38,3 @@
 	</div>	
 </div>
 {% endblock %}
-
-

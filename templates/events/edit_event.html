@@ -3,19 +3,20 @@
 
 {% block title %} Add an Event {% endblock %}
 
-{% block extrahead %}
+{% block body %}
 {% css "styles/jquery-ui-1.7.2.custom.css" %}
 {% js "scripts/jquery-ui-1.7.2.custom.min.js" %}
+{% js "scripts/jquery.ptTimeSelect.js" %}
 <script type="text/javascript">
-    $(function() {
+    $(function() 
+			{
         $('#id_start_date_0').datepicker({ dateFormat: 'yy-mm-dd'});
         $('#id_end_date_0').datepicker({ dateFormat: 'yy-mm-dd'} );
         $('#id_related_projects').multiselect();
-    });
+			});
 </script>
-{% endblock %}
 
-{% block body %}
+
 <div class="column span-24 last">
 	<div id="contentpage">
 		<div id="flat_contentpage">
@@ -29,7 +30,36 @@
         <p> Use the form below to tell the community about your event.</p>
         {% endif %}
         <form id="event_form" method="POST" action="." enctype="multipart/form-data">
-            <ul id="generic_form">
+            
+<li><label for="id_title">Title</label>{{ form.title }}</li>
+<li><label for="id_description">Description</label>{{ form.description }}</li>
+<li><label for="id_location">Location</label>{{ form.location }}</li>
+<li><label for="id_url">Website</label>{{ form.url }}</li>
+
+<li><label id="startTitle">Event Start</label>
+	<ul class="timeDetails" id="timebox">
+		<li><label>Date</label><input type="text" name="start_date_0" id="id_start_date_0" /></li>	
+		<li><label>Time</label><input type="text" id="start_date_1" /></li> 
+	</ul>
+</li>
+
+<li><label id="endTitle">Event End</label>
+	<ul class="timeDetails" id="timebox">
+		<li><label>Date</label><input type="text" name="end_date_0" id="id_end_date_0" /></li>
+		<li><label>Time</label><input type="text" name="end_date_1" id="id_end_date_1" /></li>
+	</ul>
+</li>
+
+        </form>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+I NEED TO FIGURE OUT A TIME PICKER SOLUTION.
+
+<ul id="generic_form">
                 {% for field in form %}
                     {% ifnotequal field.name "start_date" %}
                     {% ifnotequal field.name "end_date" %} 
@@ -56,10 +86,3 @@
 
 				<li><input type="submit" value="Create Your Project" class="buttonEvent" /></li>
             </ul>
-
-
-        </form>
-		</div>
-	</div>
-</div>
-{% endblock %}

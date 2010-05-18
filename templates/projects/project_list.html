@@ -15,17 +15,15 @@ Projects
         			{% ifequal projects "official" %} Official {% endifequal %}
         			{% ifequal projects "community" %} Community {% endifequal %}
 					{% ifequal projects "all" %} All {% endifequal %}
-
         			Projects
         			{% if tag %} tagged "{{tag}}" {% endif %}
 				</h2>
+				{% if tag %}
+				&nbsp;
+				{% else %}
 				<p>Content goes here about projects and stuff.</p>
-				
-				
-				
-				
-				
-				
+				{% endif %}
+	
 		</div>
 	</div>
 </div>

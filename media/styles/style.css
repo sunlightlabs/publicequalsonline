@@ -31,8 +31,13 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 
 /* PROFILE PAGES */
 
-#profile_meta { margin:0; padding:0;}
+#profile_meta { margin:10px 0 10px 20px; padding:0;}
 #profile_meta li { padding:0; list-style:none;}
+
+#profile_meta_about { margin:0; padding:0;}
+#profile_meta_about li { padding:0; list-style:none;}
+
+
 #profile_box { margin-left:90px; }
 
 h4.profile  { margin:0; padding:0;}
@@ -41,7 +46,7 @@ h4.profile  { margin:0; padding:0;}
 #gravatar_edit { padding:3px; border:1px solid #c6c6c6; float:left; margin-right:10px;}
 
 #profile_about { margin-top:20px;}
-#profile_about h4 {}
+#profile_about h4 {margin:0; padding:0;}
 
 #profile_projects { margin:0; padding:0;}
 #profile_projects li { list-style:none; padding-bottom:5px; margin-bottom:10px;}
@@ -211,7 +216,7 @@ a.logged_in:active { color:#669933; text-decoration:none;}
 #contentpage p { font-size:15px; font-family:Georgia, Cambria, "Times New Roman", Times, serif; line-height:22px;}
 
 #flat_contentpage { margin-bottom:50px;}
-#flat_contentpage h3 { font-family: "arial","helvetica",sans-serif; color:#74341c; font-size:18px; text-transform:uppercase; margin:0 0 10px 0;}
+#flat_contentpage h3 { font-family: "arial","helvetica",sans-serif; color:#000; font-size:16px; margin:0 0 10px 0;}
 #flat_contentpage h2 { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#74341c; font-size:22px; text-transform:uppercase; margin:0 0 10px 0;}
 
 #sidebar_space { margin-top:60px; margin-left:20px;}
@@ -539,6 +544,8 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 #project_summary_box a:hover { text-decoration:none; color:#000;}
 #project_summary_box a:active { text-decoration:none; color:#000;}
 
+#join_project { border-top:1px solid #c6c6c6; margin-top:10px; padding-top:10px;}
+
 .project_summary_date { color:#648844; font-size:10px; text-align:right; display:block; padding-right:10px;}
 
 #team { }
@@ -550,6 +557,8 @@ a#sfsprite:hover { background: url('http://assets.publicequalsonline.com.s3.amaz
 
 
 #project_meta_info { margin-bottom:20px;}
+#project_meta_info p { font-size:12px; margin:0; padding:0;}
+
 
 #project_tags { margin:0; padding:0;}
 
@@ -564,7 +573,7 @@ th.project_date { text-align:right;}
 
 td.project_date { width:100px; text-align:right; vertical-align:top;  }
 td.project_title { width:300px; vertical-align:top;  }
-td.project_description {vertical-align:top; }
+td.project_description {vertical-align:top;  }
 table.projects_table { color:#000000;}
 table.projects_table th { background-color:#dde7d3; }
 table.projects_table tr a { text-decoration:none; color:#000000;}
@@ -763,6 +772,10 @@ ul#attendeeList dd { line-height: 20px;}
 /*HIDING STUFF FROM USERS */
 #hidefeedform { display:none;}
 
+
+
+
+/* TIME PICKER */
 
 
 

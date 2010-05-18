@@ -11,19 +11,13 @@
 			<h2 class="page_header">{{project.name}}</h2> 
     
 <div id="project_meta_info">
+		<p>Launched: {{project.creation_date|date}}</p>
         {% tags_for_object project as tags %}
-          <span>Tag(s):</span> 
-               {% for tag in tags %}
-                	<a href="{% url projects_tagged tag %}">{{tag}}</a> 
-                {% endfor %}
-
-
-
+         <p> Tag(s):{% for tag in tags %}<a href="{% url projects_tagged tag %}">{{tag}}</a>{% endfor %}</p>
 
 </div>
-
 	<p>{{project.description}}</p>
-	<p>Launched {{project.creation_date|date}}</p>
+
 
 	
 
@@ -45,10 +39,11 @@
 {% ifequal project.lead user %}
 			
 {% else %}
-
+<div id="join_project">
 <h3>Want to Join This Project?</h3>
 <p>If you're interested in helping out on this project, you should contact the leader:</p>
 <a href="{% url join_project project.slug %}"><img src="/media/images/project_join.png" border="0"></a>
+</div>
 {% endifequal %}
 
 

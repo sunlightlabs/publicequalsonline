@@ -31,7 +31,7 @@
 					<li>Status: {{p_user.profile.get_role_display|safe}}</li>
 				{% endif %}
 				{% if p_user.profile.url %}
-					<li>Site: <a class="url" rel="me" href="{{p_user.profile.url}}">URL</a></li>
+					<li>Site: <a class="url" rel="me" href="{{p_user.profile.url}}">{{p_user.profile.url|urlizetrunc:50}}</a></li>
 				{% endif %}
 					
 				{% if p_user.profile.twitter_id %}
@@ -41,8 +41,9 @@
 				{% if p_user.profile.location %}	
 					<li>Location: <a href="/people/?location={{p_user.profile.location}}&location_range=50">{{p_user.profile.location}}</a></li>
 				{% endif %}
+				</ul>
 				
-				
+				<ul id="profile_meta_about">
 				{% if p_user.profile.about %}
 				<li>
 					<div id="profile_about">
