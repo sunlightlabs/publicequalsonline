@@ -5,11 +5,16 @@
 
 {% block body %}
 {% css "styles/jquery-ui-1.7.2.custom.css" %}
+{% css "styles/timePicker.css" %}
 {% js "scripts/jquery-ui-1.7.2.custom.min.js" %}
-{% js "scripts/jquery.ptTimeSelect.js" %}
+{% js "scripts/jquery.timePicker.js" %}
+
+
 <script type="text/javascript">
     $(function() 
 			{
+	   	$("#id_start_date_1").timePicker({step: 30});   		
+	   	$("#id_end_date_1").timePicker({step: 30});  
         $('#id_start_date_0').datepicker({ dateFormat: 'yy-mm-dd'});
         $('#id_end_date_0').datepicker({ dateFormat: 'yy-mm-dd'} );
         $('#id_related_projects').multiselect();
@@ -24,65 +29,36 @@
 	            <h2 class="page_header">Edit Your Event</h2>
 	        {% else %}
 				<h2 class="page_header">Add an Event</h2>
-
-
        
         <p> Use the form below to tell the community about your event.</p>
         {% endif %}
         <form id="event_form" method="POST" action="." enctype="multipart/form-data">
-            
+{{form.errors.title}}            
 <li><label for="id_title">Title</label>{{ form.title }}</li>
+{{form.errors.description}}
 <li><label for="id_description">Description</label>{{ form.description }}</li>
+{{form.errors.location}}
 <li><label for="id_location">Location</label>{{ form.location }}</li>
 <li><label for="id_url">Website</label>{{ form.url }}</li>
 
 <li><label id="startTitle">Event Start</label>
 	<ul class="timeDetails" id="timebox">
 		<li><label>Date</label><input type="text" name="start_date_0" id="id_start_date_0" /></li>	
-		<li><label>Time</label><input type="text" id="start_date_1" /></li> 
+		<li><label>Time</label><input type="text"  name="start_date_1" id="id_start_date_1" size="6"/></li> 
 	</ul>
 </li>
 
 <li><label id="endTitle">Event End</label>
 	<ul class="timeDetails" id="timebox">
 		<li><label>Date</label><input type="text" name="end_date_0" id="id_end_date_0" /></li>
-		<li><label>Time</label><input type="text" name="end_date_1" id="id_end_date_1" /></li>
+		<li><label>Time</label><input type="text" name="end_date_1" id="id_end_date_1" size="6"/></li>
 	</ul>
 </li>
+
+	<li><input type="submit" value="Create Your Event" class="buttonEvent" /></li>
 
         </form>
 		</div>
 	</div>
 </div>
 {% endblock %}
-
-
-I NEED TO FIGURE OUT A TIME PICKER SOLUTION.
-
-<ul id="generic_form">
-                {% for field in form %}
-                    {% ifnotequal field.name "start_date" %}
-                    {% ifnotequal field.name "end_date" %} 
-                        {# normal field display #}
-                        <li> {{field.errors}} {{field.label_tag}} {{ field }} </li>
-
-                        {% else %} {# end_date #}
-
-                        <li>
-                            {{ field.errors }}
-                            <label id="endTitle">Event End</label>
-                            <ul class="timeDetails" id="timebox">{{ field }}</ul>
-                        </li>
-
-                        {% endifnotequal %}
-                    {% else %} {# start_date #}
-                        <li>
-                        {{ field.errors }}
-                        <label id="startTitle">Event Start</label>
-                        <ul class="timeDetails" id="timebox"> {{ field }} </ul>
-                        </li>
-                    {% endifnotequal %}
-                {% endfor %}
-
-				<li><input type="submit" value="Create Your Project" class="buttonEvent" /></li>
-            </ul>

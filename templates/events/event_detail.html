@@ -27,12 +27,8 @@
 
   		<p class="subtitle">Location: <a href="/events/?location={{ event.location }}&name=&location_range=50">{{ event.location }}</a></p>      
             	
-				<p>Start Date:<abbr class="dtstart" title="{{ event.start_date.isoformat }}">{{ event.start_date|date}}</abbr></p>
-				</li>
-					
-				<p>End Date:
-                    <abbr class="dtend" title="{{ event.end_date.isoformat }}">{{ event.end_date|date}}</abbr>
-                </p>
+				<p>Start Date:{{ event.start_date|date}} - Start Time: {{ event.start_date|time}}
+				<br />End Date:{{ event.end_date|date}} - End Time: {{ event.end_date|time}}</p>
 				
 				
 				{% if event.url %}
