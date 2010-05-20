@@ -236,7 +236,7 @@ a.logged_in:active { color:#669933; text-decoration:none;}
 
 
 h3.red {font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#73341c; font-size:24px; text-transform:uppercase; margin:0; padding:0; }
-
+.subred { color:#74341c;}
 
 .right { text-align:right;}
 
@@ -363,7 +363,7 @@ label.field { display:block;}
 
 .upcoming_event_title { font-family: "chunk-1","chunk-2","arial","helvetica",sans-serif; color:#333333; font-size:14px; display:block; text-transform:uppercase; }
 
-.upcoming_event_date { font-family:"arial","helvetica",sans-serif; font-size:12px; color:#c6c6c6; display:block; text-align:right; float:right; width:150px;}
+.upcoming_event_date { font-family:"arial","helvetica",sans-serif; font-size:12px; color:#c6c6c6; display:block;}
 .upcoming_event_location { font-family:"arial","helvetica",sans-serif;  font-size:12px; color:#c6c6c6; }
 
 #event_listing {
