@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block body %}
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+				<h2 class="page_header">Activation</h2>
+
+
+{% if account %}
+
+<p>{% trans "Account successfully activated" %}</p>
+
+<p><a href="{% url auth_login %}">{% trans "Log in" %}</a></p>
+
+{% else %}
+
+<p>{% trans "Account activation failed" %}</p>
+
+{% endif %}
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

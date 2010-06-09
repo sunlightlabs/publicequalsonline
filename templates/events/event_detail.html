@@ -1,0 +1,116 @@
+{% extends "events/base.html" %}
+{% load blog %}
+{% load people %}
+
+{% block title %}{{block.super}}{{event}}{% endblock title %}
+
+{% block body %}
+<div class="column span-16">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="summary {% ifequal event.creator user %}addedEvent{% endifequal %}">{{event}} 
+				{% ifequal event.creator user %}
+				<sup><span class="edit_this"><a class="projectEdit" href="{% url edit_event event.id %}">(edit this event)</a></sup></span>
+        		{% endifequal %}
+        	</h2>
+    	
+            
+			
+            
+        
+
+		<span class="description">{{ event.description }}</span>
+
+            	{% if finished %}
+            	<p>This event has already taken place.</p>
+            	{% endif %}
+
+  		<p class="subtitle">Location: <a href="/events/?location={{ event.location }}&name=&location_range=50">{{ event.location }}</a></p>      
+            	
+				<p>Start Date:{{ event.start_date|date}} - Start Time: {{ event.start_date|time}}
+				<br />End Date:{{ event.end_date|date}} - End Time: {{ event.end_date|time}}</p>
+				
+				
+				{% if event.url %}
+				<p>For more information, visit: {{ event.url|urlize }}</p>
+				{% else %}
+				
+				&nbsp;
+				{% endif %}	
+					
+                {% with event.related_projects.all as projects %}
+                {% if projects %}
+                    Related Projects:
+                    {% for project in projects %}
+                       <p><a href="{{project.get_absolute_url}}">{{project}}</a></p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+		
+        
+<p>This event was added by <a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a></p>
+
+
+
+
+<div id="event_interested">
+
+        {% if user.is_authenticated %}
+		<h4>I'm interested in attending this event:</h4>
+        <form id="joinProjectForm" method="POST" action=".">
+            <ul id="generic_form">
+                {{ form.as_ul }}
+                	<input type="submit" value="Join Us" />
+                </button>
+            </ul>
+        </form>
+        {% else %}
+		<h4>Interested in attending this event?</h4>
+        Please <a href="/accounts/login/">sign in</a> or <a href="/accounts/register/">create an account</a> to RSVP
+        {% endif %}
+</div>
+
+    </div>
+
+
+</div>
+</div>
+
+<div class="column span-8 last">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			
+    {% if not finished %}
+    {% with event.attendances.all as attendances %}
+
+
+        {% if attendances %}
+        <h4>Attendees</h4>
+        <ul id="event_attending">
+            {% for att in attendances %}
+		
+                 <li> <a href="{% url user_profile att.user.username %}">{% display_name att.user %}</a>
+					{% ifnotequal att.guests 0 %}(+{{att.guests}} guests) {% else %}&nbsp;{% endifnotequal %} {% if att.message %}
+					
+				"{{att.message}}"
+				
+				{% else %}
+					&nbsp;
+				{% endif %}
+				
+            	</li>
+            {% endfor %}
+        </ul>
+		    
+        {% endif %}
+{% endwith %}
+	    {% endif %}
+
+
+
+
+            
+    </div>
+</div>
+</div>
+{% endblock %}

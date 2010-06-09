@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load facebook_tags %}
+{% load twitter_tags %}
+{% load openid_tags %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block body %}
+<div class="column span-12">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+				<h2 class="page_header">Sign in</h2>
+				<form method="post" action="." id="login_form">
+					<ul id="form_ul">
+					{{ form.as_ul }}
+  					<li><input type="submit" value="{% trans 'Sign in to Public=Online' %}" class="button" /></li>
+  					<li><input type="hidden" name="next" value="{{ next }}" /></li>
+					</ul>	
+				</form>
+				
+				
+					<p>{% trans "Forgot your password" %}? No worries, you can <a href="{% url auth_password_reset %}">{% trans "reset it" %}</a>!</p>
+
+				
+		
+			
+		</div>
+	</div>
+</div>
+
+<div class="column span-12 last">
+	<div id="sidebar_space">	
+	
+						<p>{% trans "Don't have an account yet" %}? <a href="{% url registration_register %}">{% trans "Sign up" %}</a>!</p>
+	
+			<p>Or, you can simply sign in to Public=Online using your Twitter or Facebook account. Don't worry, we don't collect or access any personal information.</p>
+			<div id="social_reg_box">
+				<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div>
+				<div id="tw_butt">{% twitter_button %}</div>
+			</div>
+	
+		
+
+	</div>
+</div>
+
+{% endblock %}

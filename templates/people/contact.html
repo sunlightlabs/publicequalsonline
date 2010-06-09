@@ -1,0 +1,28 @@
+{% extends "people/base.html" %}
+{% load people %}
+
+{% block title %}
+{{block.super}} - Contact {% display_name to_user %}
+{% endblock %}
+
+{% block body %}
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="page_header">Contact {% display_name to_user %}</h2>
+
+        	<p>Please note that when contacting this user your email will be visible to them so that they may reply.</p>
+        
+			<form id="account_form" action="." method="post">
+            <ul>
+                {{ form.as_ul }}
+                <li><input type="submit" value="Contact the Leader" class="buttonAccount" /></li>
+            </ul>
+        	</form>
+    	</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

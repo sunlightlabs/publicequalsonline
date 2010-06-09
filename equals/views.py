@@ -1,13 +1,21 @@
+from django.contrib import auth
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.template.loader import render_to_string
 from django.contrib.flatpages.views import flatpage
 # from blogdor.models import Post
 # from blogdor.views import archive
 from publicequalsonline.equals.models import FeaturedPost, PledgeCount
 from feedinator.models import FeedEntry
 from django.db.models import F
+
+from anthill.projects.models import Project
+from anthill.events.models import Event
+from anthill.people.models import Profile
+
+from django.contrib.gis.shortcuts import render_to_kml
 
 
 def index(request):
@@ -22,7 +30,29 @@ def index(request):
         'feature_post': feature_post,
          }
 
-        return render_to_response("index.html", context)
+        return render_to_response("index.html", context, context_instance=RequestContext(request))
+ 
+ 
+
+
+def login(request):
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            auth.login(request, user)
+        
+            return HttpResponseRedirect("/account/loggedin/")
+        else:
+            return HttpResponseRedirect("/account/invalid/")
+ 
+def logout(request):
+            auth.logout(request)
+# Redirect to a success page.
+            return HttpResponseRedirect("/account/loggedout/")
+ 
+ 
+ 
     
                              
 #def blog_wrapper(request):
@@ -68,7 +98,7 @@ def get_count(request):
 def news(request):      
     feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[:20]
     data = { "feature_post": feature_post }
-    return render_to_response("news.html", data)
+    return render_to_response("news.html", data, context_instance=RequestContext(request))
 
 
 #def meeting(request):
@@ -77,8 +107,22 @@ def news(request):
 #def event_detail(request, id):
 #    return render_to_response("event.html")
        
-       
-# WHERE AM I?
-     
-       
+
+# THESE ARE FOR
+
+def generateEventKml(request):
+    locations = Event.objects.all().values('title','description','lat_long')    
+#    return render_to_kml('events/events.kml',{'locations': locations})
+    return HttpResponse(render_to_string('events/events.kml',{'locations': locations}), mimetype="application/vnd.google-earth.kml+xml")
+
+def generatePeopleKml(request):
+    locations = Profile.objects.all().values('user','role','lat_long')
+#    return render_to_kml('people/people.kml',{'locations': locations})
+    return HttpResponse(render_to_string('people/people.kml',{'locations': locations}), mimetype="application/vnd.google-earth.kml+xml") 
+
+#Projects don't currently have location/geo data associated.
+#def generateProjectKml(request):
+#    locations = Project.objects.all().values('name','lat_long')
+#   return render_to_kml('projects/projects.kml',{'locations': locations})
+#    return HttpResponse(render_to_string('projects/projects.kml',{'locations': locations}), mimetype="text/plain") 
        

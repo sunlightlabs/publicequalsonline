@@ -1,0 +1,115 @@
+{% extends "brainstorm/base.html" %}
+{% load people %}
+{% load tagging_tags %}
+{% block title %}Projects - {{project.name}}{% endblock title %}
+
+{% block body %}
+
+<div class="column span-15">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="page_header">{{project.name}}</h2> 
+    
+<div id="project_meta_info">
+		<p>Launched: {{project.creation_date|date}}</p>
+        {% tags_for_object project as tags %}
+         <p> Tag(s):{% for tag in tags %}<a href="{% url projects_tagged tag %}">{{tag}}</a>{% endfor %}</p>
+
+</div>
+	<p>{{project.description}}</p>
+
+
+	
+
+ 	
+{% if project.links.all %}
+<div id="project_links_box">
+	<h3>Project Links:</h3>
+            <ul id="project_links">
+                {% for link in project.links.all %}
+                <li class="{{link.get_link_type_display}}_link">
+                    <a title="{{link.get_link_type_display}}" href="{{link.url}}">{{link.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+</div>
+{% endif %}
+
+
+{% ifequal project.lead user %}
+			
+{% else %}
+<div id="join_project">
+<h3>Want to Join This Project?</h3>
+<p>If you're interested in helping out on this project, you should contact the leader:</p>
+<a href="{% url join_project project.slug %}"><img src="/media/images/project_join.png" border="0"></a>
+</div>
+{% endifequal %}
+
+
+
+
+
+
+			{% ifequal project.lead user %}
+				<a href="{% url edit_project project.slug %}"><img src="/media/images/project_edit.png" border="0"></a> <a href="{% url all_projects %}"><img src="/media/images/projects_view.png" border="0"></a>
+			    {% else %}
+
+			<!--<p><a href="{% url all_projects %}"><img src="/media/images/projects_view.png" border="0"></a></p>-->
+			    {% endifequal %}
+
+
+
+        {% with project.asks.all as asks %}
+        {% if asks %}
+
+            <h4>Help Wanted:</h4>
+                <ul>
+                    {% for ask in asks %}
+                    <li>
+                    {{ask}}
+                    </li>
+                    {% endfor  %}
+                </ul>
+                <a id="allRequests_link" href="{% url all_project_asks %}">View All Requests for Help »</a>
+
+        {% endif %}
+        {% endwith %}
+	</div>
+  </div>      
+</div>
+
+<div class="column span-1">&nbsp;</div>
+
+
+<div class="column span-8 last">
+	<div id="sidebar_space">
+		
+	
+		{% with project.get_members as members %}
+
+		<div id="project_team_box">
+		 	<h3>Project Leader</h3>
+		 		<ul id="team">
+				<li><a href="{{project.lead.get_absolute_url}}">{% display_name project.lead %}</a></li>
+		 		</ul>
+			
+		{% if members %}
+		  	<h3>The Project Team</h3>
+		  		<ul id="team">
+		      
+					{% for member in members %}
+		       <li><a href="{{member.get_absolute_url}}">{% display_name member %}</a></li>
+		      		{% endfor %}
+		  </ul>
+
+		  {% endif %}
+				</div>
+		  {% endwith %}
+	
+	
+	
+	</div>
+</div>
+
+{% endblock %}

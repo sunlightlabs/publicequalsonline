@@ -1,6 +1,8 @@
 {% load i18n %}
 {% load media %}
 {% load pledge %}
+{% load facebook_tags %}
+{% load twitter_tags %}
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -9,11 +11,15 @@
 
 <head>
 
+	<META name="description" content="Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.">
+	<META name="keywords" content="open government, opengov, sunlight foundation, government, transparency, accountable, transparent, congress, disclosure">
 
 	{% css "/styles/screen.css" %}
     {% css_print "/styles/print.css" %}
     <!--[if IE 6]>{% css "/styles/ie.css" %}<![endif]-->
     {% css "/styles/style.css" %}
+
+
 
 	<!-- icons -->
 		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
@@ -30,6 +36,7 @@
 <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 
     <title>{% block title %}{% endblock %} - Public Equals Online</title>
+{% block extrahead %} {% endblock %}
 </head>
 
 <body class="tk-active">
@@ -47,6 +54,25 @@
 
 	</script>
 	<div id="stripe">&nbsp;</div>
+	<div class="container">
+		
+		<div class="column span-13">&nbsp;</div>
+		<div class="column span-11 last">
+			<div id="account_corner" style="float:right;">
+			{% if user.is_authenticated %}
+		&nbsp;
+			{% else %}
+			<!--<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>-->
+			<div id="social_reg_box">
+				<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div>
+				<div id="tw_butt">{% twitter_button %}</div>
+			</div>
+			{% endif %}
+			</div>
+			
+			
+		</div>
+
 
 	<div class="container">		
 		<div class="column span-12">
@@ -55,11 +81,18 @@
 			<div id="logo_topleft"><a href="/"><h1 class="technique-three">Public Equals Online</h1></a></div>
 		</div>
 		<div class="column span-12 last">
+
+			
 			<div id="joinbox">
 				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
 				<br />
-				<span class="already_member">ALREADY SIGNED?</span><a href="http://local.publicequalsonline.com/page/invite/peoshare" class="get_in_here">SHARE THE PLEDGE</a>
+				{% if user.is_authenticated %}
+				<span class="logged_in">Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a></span>
+				{% else %}
+				<a href="/accounts/login/" class="get_in_here">SIGN IN</a> | <a href="/accounts/register/" class="get_in_here">GET AN ACCOUNT</a>
 			</div>
+				{% endif %}
+			
 		</div>		
 	</div>
 
@@ -69,12 +102,13 @@
 	<div class="container">
 		<div class="column span-21">
 			<ul id="topnav">
-				<li><a href="/">HOME</li>			
-				<li><a href="/pledge/">SIGN THE PLEDGE</a></li>
+				<li><a href="/">HOME</a></li>
 				<li><a href="/actnow/">ACT NOW</a></li>
-				<li><a href="/volunteer/">VOLUNTEER</a></li>
+				<li><a href="/events/">EVENTS</a></li>
+				<li><a href="/projects/">PROJECTS</a></li>
+				<li><a href="/people/">PEOPLE</a></li>		
 				<li><a href="/about/">ABOUT</a></li>
-				<li><a href="/logos/">SPREAD THE WORD</a></li>
+				<li><a href="/logos/">LOGOS</a></li>
 				<li><a href="http://wiki.publicequalsonline.com/">WIKI</a></li>
 			</ul>	
 		</div>

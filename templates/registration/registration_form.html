@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load facebook_tags %}
+{% load twitter_tags %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+
+<div class="column span-24">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+		<h2 class="page_header">Create an Account</h2>
+	
+		<form method="post" action="." id="registration_form">
+			<ul id="form_ul">	
+				{{ form.as_ul }}
+				
+			<li><input type="submit" value="{% trans 'Create Your Account' %}" class="button"/></li>	
+				
+			</ul>
+	
+		</form>
+	</div>
+	</div>
+</div>
+
+	
+		
+{% endblock %}
