@@ -5,24 +5,22 @@
 {% block title %}Donate{% endblock %}
 
 {% block body %}
-<div class="column span-24">
-	<div id="contentpage">
-		<div id="flat_contentpage">		
-		<h2>Let's set up a few things</h2>
-		{% if error %}
-		<p>Whoops.  It appears that your session has timed out. Perhaps, try again?</p>
-		{% else %}
-		<form action="." method="post">
-		<table>
-		{{ form }}
-		</table>
-		{% social_csrf_token %}
-		<input type="submit" value="save" />
-		</form>
-		{% endif %}
-
-
+	<div class="column span-24">
+		<div id="contentpage">
+			<div id="flat_contentpage">		
+				<h2>Let's set up a few things</h2>
+				{% if error %}
+					<p>Whoops.  It appears that your session has timed out. Perhaps, try again?</p>
+				{% else %}
+					<form action="." method="post">
+						<table>
+							{{ form }}
+						</table>
+						{% social_csrf_token %}
+						<input type="submit" value="save" />
+					</form>
+				{% endif %}
+			</div>
 		</div>
 	</div>
-</div>
 {% endblock %}

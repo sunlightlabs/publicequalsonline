@@ -59,7 +59,4 @@ class CustomRegistrationConsumer(RegistrationConsumer):
         self.do_logout(request)
         return super(CustomRegistrationConsumer, self).show_error(request, message, exception)
 
-
-
-
 registration_consumer = CustomRegistrationConsumer()
