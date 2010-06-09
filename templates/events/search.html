@@ -1,0 +1,139 @@
+{% extends "events/base.html" %}
+{% load media %}
+
+{% block title %}{{block.super}}Find Local Events{% endblock %}
+
+{% block extrahead %}
+{% js "jquery.tablesorter.min.js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#events_table').tablesorter({widgets: ['zebra'] });
+    });
+</script>
+
+<body>
+
+{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+function clickclear(thisfield, defaulttext) {
+if (thisfield.value == defaulttext) {
+thisfield.value = "";
+}
+}
+function clickrecall(thisfield, defaulttext) {
+if (thisfield.value == "") {
+thisfield.value = defaulttext;
+}
+}
+</script>
+
+
+
+<div class="column span-15">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			<h2 class="page_header">Local Events</h2>
+
+			<div id="events_content_box">
+{% if searched %}
+&nbsp;
+{% else %}			
+
+				<p>Across the nation, bloggers, activists, web developers, technologists and more are coming together to work toward greater government transparency in our city halls, state legislatures and in Washington, D.C.</p><p> This is the portal to find out where and how you can make government more open. Don’t see an event to attend in your area? Don’t see an activity you’d like to do? <a href="{% url new_event %}">Plan an event</a> for your local community. Or check back regularly to see what <a href="/events/archive/">new events</a> will be taking place in your community.
+					</p>
+{% endif %}					
+			<form id="event_form" method="GET" action="." name="event_simple_search_form">
+				<fieldset>
+				<input type="text" name="location" value="City, State or Zipcode" id="id_location" size="30" onclick="clickclear(this, 'City, State or Zipcode')" onblur="clickrecall(this,'City, State or Zipcode')"/>
+			
+			<input type="hidden" name="name">
+			<input type="hidden" name="location_range" value="50">
+			<input type="submit" value="Find Local Events" class="buttonEventSearch" />
+			</fieldset>
+			</form>
+			</div>
+
+{% if searched %}
+<div id="events_results">
+<h4 class="goudy">{{search_results|length}} Events Found {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h4>
+    <table id="events_table">
+        <thead>
+            <tr id="titles">
+                <th class="table_left sort" id="title_name">Name</th>
+                <th class="table_center table_position sort">Location</th>
+                <th class="table_right sort">Distance <small>(mi)</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in search_results %}
+            <tr class="{% cycle 'odd' 'even' %}">
+                <td class="table_left">
+                    <a id="event_name" href="{{ event.get_absolute_url }}">{{event}}</a>
+                </td>
+                <td class="table_center table_position">{{ event.location }}</td>
+                <td class="table_right">{% if event.distance %} {{event.distance.mi|floatformat}} {% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+
+ <div style="padding:20px 10px 20px 20px; border:1px solid #c6c6c6; width:520px;">
+<iframe width="500" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fupgrade.publicequalsonline.com%2Fevents%2Fevents.kml&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fupgrade.publicequalsonline.com%2Fevents%2Fevents.kml" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</div>
+
+
+
+{% endif %}
+
+
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div class="column span-1">&nbsp;</div>
+
+<div class="column span-8 last">
+	<div id="sidebar_space">
+		
+	<h3 class="subred">Upcoming Local Events</h3>
+		<div id="upcoming_events">
+			<ul id="events">
+	        {% for event in event_list %}
+	        <li>
+			<a href="{{event.get_absolute_url}}">
+				<div id="event_listing">
+					<span class="upcoming_event_title">{{event.title}}</span>
+					
+	        		<span class="upcoming_event_location">{{event.location|upper}}</span>
+	        		<span class="upcoming_event_date">{{event.start_date|date:"M d P"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d P" }} {% endif %}</span>
+				</div>
+			</a>
+			</li>
+	        {% endfor %}
+			</ul>
+		</div>
+		
+		<div id="plan_event_button">
+		<a href="{% url new_event %}">
+			<img src="/media/images/events_plan.png" border="0">
+		</a>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+{% endblock %}
+
+

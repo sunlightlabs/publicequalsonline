@@ -1,0 +1,54 @@
+{% load tagging_tags %}
+
+{% for field in project_form.hidden_fields %}
+    {{ field }}
+{% endfor %}
+
+<script>   
+// Based Upon DjangoSnippets: http://www.djangosnippets.org/snippets/1488/
+jQuery.fn.slugify = function(obj) {
+    jQuery(this).data('origquery', this);
+    jQuery(this).data('obj', jQuery(obj));
+    jQuery(this).keyup(function() {
+        var obj = jQuery(this).data('obj');
+        var oquery = jQuery(this).data('origquery');
+        var vals = [];
+        jQuery(oquery).each(function (i) {
+            vals[i] = (jQuery(this).val());
+        });
+        var slug = vals.join(' ').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9\-]/g,'');
+        obj.val(slug);
+    });
+}
+
+$(function() {
+    $("#id_name").slugify("#id_slug");
+    $(".prepopulate_slug").slugify("#id_slug2");
+});
+
+</script>
+
+
+    
+<li>{{ project_form.name.errors }} 
+	<label for="id_name">Name of Project</label> 
+	{{ project_form.name }}
+</li>
+
+<li> 
+	<label for="id_slug">Project ID</label> 
+	{{ project_form.slug }}
+</li>
+
+    
+<li>{{ project_form.description.errors }} 
+	<label for="id_description">Project Description</label> 
+	{{ project_form.description }}
+</li>
+
+    
+<li>{{ project_form.tags.errors }} 
+	<label for="id_tags">Tags</label>
+	{{ project_form.tags }}
+</li>
+

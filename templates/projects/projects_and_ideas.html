@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock title %}
+
+{% block body %}
+
+<div class="column span-16">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+    		<h2 class="page_header">Community Projects</h2>
+			<p>Local community projects are the backbone of the <span class="chunk">Public=Online</span> campaign. Our movement simply can't build a more open and transparent government without working together at the local level, and that's why we need to work together.
+</p>
+		<p>
+			We will provide as much help as we can for your projects through styleguides, toolkits and even financial resources. In many cases, we may even be able to help you put together events, provide talking points, teach you how to effectively lobby your elected officials, and help you be the catalyst to open up our government.
+		</p>
+			
+			
+			
+    		<a href="/projects/new/">
+    			<img src="/media/images/project_start.png" border="0">
+    		</a>
+
+
+
+			<a href="{% url all_projects %}">
+				<img src="/media/images/projects_view.png" border="0">
+			</a>
+		
+
+		</div>
+	</div>
+</div>
+
+<div class="column span-8 last">
+&nbsp;
+</div>
+
+
+{% endblock %}

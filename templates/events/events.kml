@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Upcoming Public=Online Events</name>
+<description>Events related to the Public=Online Campaign</description>
+{% for location in locations %}{% if location.lat_long %}
+  <Placemark>
+    <name>{% if location.title %}{{ location.title }}{% else %}{% endif %}</name>
+    <description>{% if location.description %}{{ location.description }}{% else %}{% endif %}</description>
+    <Point>
+        <coordinates>{{location.lat_long.y}},{{location.lat_long.x}}</coordinates>
+    </Point>
+  </Placemark>
+{% endif %}{% endfor %}
+</Document>
+</kml>

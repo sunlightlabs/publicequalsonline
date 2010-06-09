@@ -1,0 +1,27 @@
+{% extends "brainstorm/base.html" %}
+
+{% block title %}
+Public Equals Online: Join Project
+{% endblock title %}
+
+{% block body %}
+
+<div class="column span-14">
+	<div id="contentpage">
+		<div id="flat_contentpage">
+			
+        <h2 class="page_header">Request to Join</h2>
+
+        <p>Ask the project lead to add you to the project "{{project}}"</p>
+
+        <form id="login_form" method="POST" action=".">
+            <ul>
+             {{ form.message }}
+			<li><input type="submit" value="Send Request to Join" class="button" /></li>
+			<li>Don't worry, they're nice!</li>
+            </ul>
+        </form>
+		</div>
+	</div>
+</div>
+{% endblock %}
