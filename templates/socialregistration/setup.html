@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% comment %}
 {% load socialregistration_tags %}
+{% social_csrf_token %} <--- this went into form
+{% endcomment %}
 
 {% block title %}Donate{% endblock %}
 
@@ -16,7 +19,6 @@
 						<table>
 							{{ form }}
 						</table>
-						{% social_csrf_token %}
 						<input type="submit" value="save" />
 					</form>
 				{% endif %}
