@@ -1,4 +1,4 @@
-Django
+django >=1.2.1, <1.3
 
 # non-django dependencies
 boto
@@ -6,44 +6,23 @@ python-twitter
 markdown
 textile
 feedparser
-
-# for django social reg
-# oauth
-# python-openid
-# pyfacebook
-
--e git://github.com/leah/python-oauth.git#egg=oauth
--e git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook
--e git://github.com/openid/python-openid.git#egg=python-openid
-
-
-# github version of social registration wouldn't give us .2, so we opted for pypi.
-#-e git://github.com/flashingpumpkin/django-socialregistration.git#egg=django-socialregistration==0.2
-
-django-socialregistration==0.2
-
-
+django-debug-toolbar
 
 -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
 
-
-# third party apps
-# -e hg+https://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
-# -e git://github.com/thauber/django-schedule.git#egg=django-schedule
-# -e git://github.com/t11e/boto.git#egg=boto
-
-
-# sunlight apps
--e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
--e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
-# -e git://github.com/sunlightlabs/django-gatekeeper.git@0.1.0#egg=django-gatekeeper
-django-mediasync
-#django-debug-toolbar
-
+# for django social reg
+-e git://github.com/leah/python-oauth.git#egg=oauth
+-e git://github.com/sciyoshi/pyfacebook.git#egg=pyfacebook
+-e git://github.com/openid/python-openid.git#egg=python-openid
+django-socialregistration==0.2
 
 # anthill
 django-tagging
 -e git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield
 -e git://github.com/sunlightlabs/django-brainstorm.git#egg=django-brainstorm
-
 -e git://github.com/sunlightlabs/anthill.git#egg=django-anthill
+
+# sunlight apps
+-e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
+-e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
+django-mediasync
