@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load media %}
 
 {% block title %}Projects{% endblock title %}
 
@@ -17,13 +18,13 @@
 			
 			
     		<a href="/projects/new/">
-    			<img src="/media/images/project_start.png" border="0">
+    			<img src="{% media_url %}/images/project_start.png" border="0">
     		</a>
 
 
 
 			<a href="{% url all_projects %}">
-				<img src="/media/images/projects_view.png" border="0">
+				<img src="{% media_url %}/images/projects_view.png" border="0">
 			</a>
 		
 
