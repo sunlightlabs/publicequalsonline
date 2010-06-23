@@ -20,6 +20,6 @@ urlpatterns = patterns('callingtool.views',
     
     
     
-    #url(r'^reset/$', 'reset', name='reset'),
+    url(r'^reset/$', 'reset', name='reset'),
 
 )

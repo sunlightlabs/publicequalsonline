@@ -12,7 +12,7 @@ from simplesurvey.models import AnswerSet, Answer, Question, QuestionSet
 from callingtool.models import LegislatorDetail
 from uspolitics.politicians.models import Politician
 
-S482_QSET = QuestionSet.objects.get(slug='s482-call')
+S482_QSET = QuestionSet.objects.get(slug='disclose-call')
 
 BAD_WORDS = ('.ru', 'Porn', 'porn')
 
@@ -170,7 +170,7 @@ def delete_call(request, id):
 @login_required
 def reset(request):
     LegislatorDetail.objects.all().delete()
-    for senator in Politician.objects.filter(title='Sen'):
+    for senator in Politician.objects.filter(title='Sen', in_office=True):
         LegislatorDetail(
             legislator=senator,
             on_bill='U',

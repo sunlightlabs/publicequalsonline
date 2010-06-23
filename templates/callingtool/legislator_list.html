@@ -1,40 +1,25 @@
-{% extends "base.html" %}
+{% extends "callingtool/base.html" %}
+{% load media %}
 
-{% block body %}
-	<script type="text/javascript">
-		$().ready(function() {
-			//$("table").tablesorter();
-			$('#stateform').submit(function() {
-				return false;
-			}).find('input[type=submit]').hide();
-			$('#state').change(function() {
-				if (this.value != '') {
-					var url = '/call/state_senators/' + this.value + '/';
-					$('#rep-list').load(url, null, function() {
-						$('#step2').fadeIn();
-					});
-				}
-			});
-		});
-	</script>
-
+{% block callingtool %}
 
 	{% if has_called %}
 		<div id="thanks_box"><h1 class="header thanks">Thank you for taking the time to call your representative.</h1></div>
+	{% else %}
+		<ol id="step-preview">
+			<li><span>Determine your senator.</span></li>
+			<li><span>Call his or her office.</span></li>
+			<li><span>Ask if he or she will co-sponsor the 72 Hour Rule (H. Res. 554).</span></li>
+		</ol>
 	{% endif %}
 	
-	<ol>
-		<li>Determine your representative.</li>
-		<li>Call his or her office.</li>
-		<li>Ask if he or she will co-sponsor the 72 Hour Rule (H. Res. 554).</li>
-	</ol>
-
-	<p>Please enter your zip code to begin:</p>
+	<p>Please enter your state to begin:</p>
 	
 	<ol id="steps">
+		
 		<li id="step1" class="step">
 			<form action="." method="post" id="stateform">
-				<label for="state">Select your state</label>
+				<h4><label for="state">Select your state</label></h4>
 				<select id="state" name="state">
 					<option value=""></option>
 					<option value="AL">Alabama</option>
@@ -45,7 +30,7 @@
 					<option value="CO">Colorado</option>
 					<option value="CT">Connecticut</option>
 					<option value="DE">Delaware</option>
-					<option value="DC">District of Columbia</option>
+					<!-- <option value="DC">District of Columbia</option> -->
 					<option value="FL">Florida</option>
 					<option value="GA">Georgia</option>
 					<option value="HI">Hawaii</option>
@@ -92,9 +77,40 @@
 				<input type="submit" value="Search">
 			</form>
 		</li>
+		
 		<li id="step2" class="step" style="display: none;">
-			<p>Select a Representative to Contact by Phone</p>
+			<h4>Select a Senator to Contact by Phone</h4>
 			<div id="rep-list"></div>
+			<div class="clear"></div>
 		</li>
+		
 	</ol>
+	
+	<div id="loading">
+		<img src="{% media_url %}/images/ajax-loader.gif">
+	</div>
+	
+	<script type="text/javascript">
+		$().ready(function() {
+			//$("table").tablesorter();
+			var loading = $('#loading')
+			var repList = $('#rep-list');
+			$('#stateform').submit(function() {
+				return false;
+			}).find('input[type=submit]').hide();
+			$('#state').change(function() {
+				if (this.value != '') {
+					var url = '/call/state_senators/' + this.value + '/';
+					repList.hide();
+					loading.show();
+					repList.load(url, null, function() {
+						loading.hide();
+						repList.show();
+						$('#step2').show();
+					});
+				}
+			});
+		});
+	</script>
+	
 {% endblock %}

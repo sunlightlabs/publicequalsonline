@@ -31,6 +31,8 @@ a.alertbox:active { text-decoration:none; color:#4d4d4d; background-color:#d9d9d
 .sans {font-family:"arial","helvetica",sans-serif; }
 .serif {font-family:Georgia, Cambria, "Times New Roman", Times, serif; }
 
+#loading { clear: both; display: none; }
+
 /* PROFILE PAGES */
 
 #profile_meta { margin:10px 0 10px 20px; padding:0;}
@@ -776,8 +778,51 @@ ul#attendeeList dd { line-height: 20px;}
 
 
 
-/* TIME PICKER */
+/* calling tool */
 
+#callingtool p, #callingtool li {
+	font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+	font-size: 15px;
+	line-height: 22px;
+}
 
+#callingtool h4 { font-weight: bold; margin-bottom: 10px; }
+#callingtool ol#step-preview {
+	background-color: #C5D7B5;
+	border-top: 2px solid #59793D;
+	border-bottom: 2px solid #59793D;
+	color: #59793D;
+	font-size: 180%;
+	padding-left: 2em;
+}
+#callingtool ol#step-preview li { margin: 1em 0; }
 
+#callingtool .moc { float: left; margin: 0 1em 1em 0; padding: 1em 1em 0 1em; width: 360px; }
+#callingtool .moc h3 { margin: 0; }
+#callingtool .moc h3 a { color: #59793D; text-decoration: none; }
+#callingtool .moc p { margin: 10px 0; padding: 10px 0; }
+#callingtool .moc img { float: left; margin: 0 1em 1em 0; }
+#callingtool .moc .calls { margin: 0; }
+#callingtool .moc a.call-button {
+	background-color: #6E954B;
+	border: 2px solid #59793D;
+	color: #C9D686;
+	font-size: 160%;
+	font-weight: bold;
+	line-height: 160%; 
+	margin-top: 1em;
+	padding: 0.3em 1em;
+	text-decoration: none;
+	-moz-border-radius: 5px; /* FF1+ */
+	-webkit-border-radius: 5px; /* Saf3+, Chrome */
+	border-radius: 5px; /* Opera 10.5, IE 9 */
+}
+#callingtool .moc a.call-button:hover { background-color: #59793D; }
+#callingtool #call_complete { display: none; }
+#callingtool .on_bill_answer { display: none; }
 
+#callingtool #steps { list-style: none; padding: 0; }
+#callingtool li.step { padding-left: 70px; margin-bottom: 60px; }
+#callingtool li#step1 { background: url(http://media.sunlightprojects.org/s223/images/num_1.png) top left no-repeat; }
+#callingtool li#step2 { background: url(http://media.sunlightprojects.org/s223/images/num_2.png) top left no-repeat; }
+#callingtool #loading { margin-left: 180px; }

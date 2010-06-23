@@ -1,23 +1,17 @@
-<h4>The US Senators for the State of {{state_name}}</h4> 
+<!-- <h5>The US Senators for the State of {{state_name}}</h5> -->
 
 {% for rep in senators %}
-	<div class="column span-9 {% if forloop.last %} last {% endif %}"> 
-		<div id="senator_photo">
-			<a href="{% url call_legislator rep.id %}#step3">
-				<img src="http://assets.sunlightfoundation.com/moc/100x125/{{ rep.legislator.bioguide_id }}.jpg" border="0">
-			</a>
-		</div> 
-		<div id="senator_info">
-			<a href="{% url call_legislator rep.id %}#step3"> 
-				<ul> 
-					<li><a href="{% url call_legislator rep.id %}#step3"><strong>Rep. {{ rep.legislator.lastname }} ({{ rep.legislator.party }})</strong></a></li> 
-					{% comment %}
-					<li>Supports 72 Hour Rule: {{rep.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
-					<li>Cosponsor: {{rep.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
-					{% endcomment %}
-					<li>Calls: {{ rep.num_calls }} reported</li>
-				</ul>
-			</a>
-		</div> 
+	<div class="moc">
+		<a href="{% url call_legislator rep.id %}#step3" class="avatar">
+			<img src="http://assets.sunlightfoundation.com/moc/100x125/{{ rep.legislator.bioguide_id }}.jpg" border="0">
+		</a>
+		<h3><a href="{% url call_legislator rep.id %}#step3">Rep. {{ rep.legislator.lastname }} ({{ rep.legislator.party }})</a></h3>
+		<p class="calls">Calls: {{ rep.num_calls }} reported</p>
+		<a href="{% url call_legislator rep.id %}#step3" class="call-button">Call</a>
+		{% comment %}
+		<li>Supports 72 Hour Rule: {{rep.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
+		<li>Cosponsor: {{rep.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
+		{% endcomment %}
+		<div class="clear"></div>
 	</div> 
 {% endfor %}
