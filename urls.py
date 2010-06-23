@@ -15,6 +15,7 @@ urlpatterns = patterns('',
 
 # anthill
 urlpatterns += patterns('',
+    url(r'^call/', include('publicequalsonline.callingtool.urls')),
     url(r'^events/', include('anthill.events.urls')),
     url(r'^people/', include('anthill.people.urls')),
     url(r'^projects/', include('anthill.projects.urls')),

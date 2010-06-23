@@ -1,218 +1,166 @@
+<!DOCTYPE html>
 {% load i18n %}
 {% load media %}
 {% load pledge %}
 {% load facebook_tags %}
 {% load twitter_tags %}
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-
-	<META name="description" content="Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.">
-	<META name="keywords" content="open government, opengov, sunlight foundation, government, transparency, accountable, transparent, congress, disclosure">
-
-	{% css "/styles/screen.css" %}
-    {% css_print "/styles/print.css" %}
-    <!--[if IE 6]>{% css "/styles/ie.css" %}<![endif]-->
-    {% css "/styles/style.css" %}
-
-
-
-	<!-- icons -->
+<html>
+	<head>
+		<meta name="description" content="Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.">
+		<meta name="keywords" content="open government, opengov, sunlight foundation, government, transparency, accountable, transparent, congress, disclosure">
+		{% css "/styles/screen.css" %} <!-- blueprint screen -->
+		{% css_print "/styles/print.css" %}<!-- blueprint print -->
+		{% css "/styles/style.css" %}
+		<!--[if IE 6]>{% css "/styles/ie.css" %}<![endif]-->
+		<!-- icons -->
 		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
-		<link href="http://assets.publicequalsonline.com/favicon.ico" rel="shortcut icon" type="image/ico" />
-	
-	<!-- scripts -->
-
-	<script type="text/javascript" src="http://use.typekit.com/ywh3rds.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
-<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-
-    <title>{% block title %}{% endblock %} - Public Equals Online</title>
-{% block extrahead %} {% endblock %}
-</head>
-
-<body class="tk-active">
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-1265484-49']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-	  })();
-
-	</script>
-	<div id="stripe">&nbsp;</div>
-	<div class="container">
-		
-		<div class="column span-13">&nbsp;</div>
-		<div class="column span-11 last">
-			<div id="account_corner" style="float:right;">
-			{% if user.is_authenticated %}
-		&nbsp;
-			{% else %}
-			<!--<a href="/accounts/login/">Sign In</a> | <a href="/accounts/register/">Create an Account</a>-->
-			<div id="social_reg_box">
-				<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div>
-				<div id="tw_butt">{% twitter_button %}</div>
+		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/ico" />
+		<!-- scripts -->
+		<script type="text/javascript" src="http://use.typekit.com/ywh3rds.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		{% block extrahead %} {% endblock %}
+		<title>{% block title %}{% endblock %} - Public Equals Online</title>
+	</head>
+	<body class="tk-active">
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-1265484-49']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+			})();
+		</script>
+		<div class="container">
+			<div class="column span-13">&nbsp;</div>
+			<div class="column span-11 last">
+				<div id="account_corner" style="float:right;">
+					{% if user.is_authenticated %}
+						&nbsp;
+					{% else %}
+						<div id="social_reg_box">
+							<div id="fb_butt">{% facebook_button %}{% facebook_js %}</div>
+							<div id="tw_butt">{% twitter_button %}</div>
+						</div>
+					{% endif %}
+				</div>
 			</div>
-			{% endif %}
+			<div class="container">		
+				<div class="column span-12">
+					<div id="logo_topleft">
+						<a href="/">
+							<h1 class="technique-three">Public Equals Online</h1>
+						</a>
+					</div>
+				</div>
+				<div class="column span-12 last">
+					<div id="joinbox">
+						<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
+						<br />
+						{% if user.is_authenticated %}
+							<span class="logged_in">Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a></span>
+						{% else %}
+							<a href="/accounts/login/" class="get_in_here">SIGN IN</a> | <a href="/accounts/register/" class="get_in_here">GET AN ACCOUNT</a>
+						{% endif %}		
+					</div>
+				</div>		
 			</div>
-			
-			
-		</div>
+			<div class="container">
+				<div class="column span-21">
+					<ul id="topnav">
+						<li><a href="/">HOME</a></li>
+						<li><a href="/actnow/">ACT NOW</a></li>
+						<li><a href="/events/">EVENTS</a></li>
+						<li><a href="/projects/">PROJECTS</a></li>
+						<li><a href="/people/">PEOPLE</a></li>		
+						<li><a href="/about/">ABOUT</a></li>
+						<li><a href="/logos/">LOGOS</a></li>
+						<li><a href="http://wiki.publicequalsonline.com/">WIKI</a></li>
+					</ul>	
+				</div>
+				<div class="column span-3 last">
+					<ul id="social_bar">	
+						<li id="panel2b"><a href="http://twitter.com/sunlightnetwork"></a></li>
+						<li id="panel3b"><a href="http://www.facebook.com/sunlightfoundation"></a></li>
+						<li id="panel4b"><a href="http://www.flickr.com/photos/publicequalsonline/"></a></li>
+						<li id="panel5b"><a href="http://www.youtube.com/publicequalsonline"></a></li>
+					</ul>
+				</div>
+				
+				<div class="column span-24 collapsed">
+					<div id="hor_dot_top">&nbsp;</div>
+				</div>
+				
+				{% block body %}{% endblock %}
 
-
-	<div class="container">		
-		<div class="column span-12">
-			
-			
-			<div id="logo_topleft"><a href="/"><h1 class="technique-three">Public Equals Online</h1></a></div>
-		</div>
-		<div class="column span-12 last">
-
-			
-			<div id="joinbox">
-				<span class="join_strong">{% pledge %} STRONG</span><a href="/pledge/" class="join_us">JOIN US</a>
-				<br />
-				{% if user.is_authenticated %}
-				<span class="logged_in">Hi, <a href="/people/{{ user }}/">{{ user }}</a>. Good to see you, again! | <a href="/logout/">Log Out</a></span>
-				{% else %}
-				<a href="/accounts/login/" class="get_in_here">SIGN IN</a> | <a href="/accounts/register/" class="get_in_here">GET AN ACCOUNT</a>
+				{% block footer %}
+					<div class="column span-24">
+						<div id="hor_dot_bottom">&nbsp;</div>
+					</div>		
+					<div class="column span-7">
+						<h4 class="footer_header">About The Campaign</h4>
+						<ul id="footer_links">
+							<li><a href="/about/">Learn More</a></li>
+							<li><a href="/about/why/">Watch the PSA</a></li>
+							<li><a href="/about/philosophy/">Our Philosophy</a></li>
+						</ul>
+					</div>
+					<div class="column span-7">
+						<h4 class="footer_header">Act Now</h4>
+						<ul id="footer_links">
+							<li><a href="/pledge/">Sign The Pledge</a></li>
+							<li><a href="http://local.publicequalsonline.com/page/invite/peo">Share The Pledge</a></li>
+							<li><a href="/actnow/guidelines/">Guidelines</a></li>
+						</ul>
+					</div>
+					<div class="column span-7">
+						<h4 class="footer_header">Support The Campaign</h4>
+						<ul id="footer_links">
+							<li><a href="/volunteer/">Volunteer</a></li>
+							<li><a href="/logos/">Show Your Support</a></li>
+							<li><a href="http://www.facebook.com/sunlightfoundation">Become a Fan</a></li>
+						</ul>
+					</div>
+					<div class="column span-3 last">
+						<div id="footer_box">
+							<div id="sflogo_sprite">
+								<a id="sfsprite" href="http://www.sunlightfoundation.com"></a>
+							</div>
+						</div>
+					</div>
+					<div class="column span-24">
+						<div id="footer_disclaimer">
+							<p>We seek to create a transparent government built on open data and information. We believe a transparent government is one more deserving of our trust, allowing its citizens the ability to fully participate, collaborate and hold government accountable as our Founders intended. </p>
+						</div>
+						<div id="license">
+							<p><span class="chunk">Public=Online</span> is an initiative of the Sunlight Foundation.
+								This work by the Sunlight Foundation is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0</a> United States License.</p>
+						</div>
+					</div>
+				{% endblock %}	
 			</div>
-				{% endif %}
-			
-		</div>		
-	</div>
-
-
-
-
-	<div class="container">
-		<div class="column span-21">
-			<ul id="topnav">
-				<li><a href="/">HOME</a></li>
-				<li><a href="/actnow/">ACT NOW</a></li>
-				<li><a href="/events/">EVENTS</a></li>
-				<li><a href="/projects/">PROJECTS</a></li>
-				<li><a href="/people/">PEOPLE</a></li>		
-				<li><a href="/about/">ABOUT</a></li>
-				<li><a href="/logos/">LOGOS</a></li>
-				<li><a href="http://wiki.publicequalsonline.com/">WIKI</a></li>
-			</ul>	
+			<script type="text/javascript">
+				var _sf_async_config={uid:980,domain:"publicequalsonline.com"};
+				(function(){
+					function loadChartbeat() {
+						window._sf_endpt=(new Date()).getTime();
+						var e = document.createElement('script');
+						e.setAttribute('language', 'javascript');
+						e.setAttribute('type', 'text/javascript');
+						e.setAttribute('src',
+						(("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+							"static.chartbeat.com/js/chartbeat.js");
+						document.body.appendChild(e);
+					}
+					var oldonload = window.onload;
+					window.onload = (typeof window.onload != 'function') ?
+					loadChartbeat : function() { oldonload(); loadChartbeat(); };
+				})();
+			</script>
 		</div>
-
-		
-		<div class="column span-3 last">
-			<ul id="social_bar">	
-				<li id="panel2b"><a href="http://twitter.com/sunlightnetwork"></a></li>
-				<li id="panel3b"><a href="http://www.facebook.com/sunlightfoundation"></a></li>
-				<li id="panel4b"><a href="http://www.flickr.com/photos/publicequalsonline/"></a></li>
-				<li id="panel5b"><a href="http://www.youtube.com/publicequalsonline"></a></li>
-			</ul>
-		</div>
-
-<div class="column span-24 collapsed"><div id="hor_dot_top">&nbsp;</div></div>
-		{% block body %}
-
-		{% endblock %}
-
-
-
-{% block footer %}
-<div class="column span-24">
-	<div id="hor_dot_bottom">&nbsp;</div>
-</div>		
-
-<div class="column span-7">
-<h4 class="footer_header">About The Campaign</h4>
-<ul id="footer_links">
-	<li><a href="/about/">Learn More</a></li>
-	<li><a href="/about/why/">Watch the PSA</a></li>
-	<li><a href="/about/philosophy/">Our Philosophy</a></li>
-
-
-</ul>		
-</div>
-<div class="column span-7">
-<h4 class="footer_header">Act Now</h4>
-	<ul id="footer_links">
-		<li><a href="/pledge/">Sign The Pledge</a></li>
-		<li><a href="http://local.publicequalsonline.com/page/invite/peo">Share The Pledge</a></li>
-				<li><a href="/actnow/guidelines/">Guidelines</a></li>
-
-	</ul>
-</div>
-<div class="column span-7">
-<h4 class="footer_header">Support The Campaign</h4>
-	<ul id="footer_links">
-	<li><a href="/volunteer/">Volunteer</a></li>
-	<li><a href="/logos/">Show Your Support</a></li>
-			<li><a href="http://www.facebook.com/sunlightfoundation">Become a Fan</a></li>
-	</ul>
-</div>
-
-
-
-<div class="column span-3 last">
-	<div id="footer_box">
-		<div id="sflogo_sprite">
-			<a id="sfsprite" href="http://www.sunlightfoundation.com"></a>
-		</div>
-	</div>
-</div>
-
-<div class="column span-24">
-	
-	
-
-	<div id="footer_disclaimer">
-		<p>We seek to create a transparent government built on open data and information. We believe a transparent government is one more deserving of our trust, allowing its citizens the ability to fully participate, collaborate and hold government accountable as our Founders intended. </p>
-	</div>
-	
-		<div id="license">
-			<p><span class="chunk">Public=Online</span> is an initiative of the Sunlight Foundation.
-	This work by the Sunlight Foundation is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0</a> United States License.</p>
-
-		</div>
-	
-	
-</div>
-
-</div>
-{% endblock %}
-
-
-<script type="text/javascript">
-var _sf_async_config={uid:980,domain:"publicequalsonline.com"};
-(function(){
-  function loadChartbeat() {
-    window._sf_endpt=(new Date()).getTime();
-    var e = document.createElement('script');
-    e.setAttribute('language', 'javascript');
-    e.setAttribute('type', 'text/javascript');
-    e.setAttribute('src',
-       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
-       "static.chartbeat.com/js/chartbeat.js");
-    document.body.appendChild(e);
-  }
-  var oldonload = window.onload;
-  window.onload = (typeof window.onload != 'function') ?
-     loadChartbeat : function() { oldonload(); loadChartbeat(); };
-})();
-
-</script>
-</body>
-
+	</body>
 </html>

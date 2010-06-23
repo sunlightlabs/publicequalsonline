@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+	<script> 
+		$(function() {
+    		$('#on_bill').change(function() {
+        		$('.on_bill_answer').hide();
+        		$('#on_bill_'+this.value).slideDown();
+        		if(this.value == 'unknown' || this.value == 'no' || this.value=='yes') {
+            		$('#call_complete').slideDown();
+        		}
+    		});
+		});
+	</script> 
+ 
+	<div id="the_inside_pitch"> 
+		<img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button_b.png" border="0" style="float:right;"> 
+		<h3 class="pitch">Where does Rep. {{legislator.legislator.lastname}} stand?</h3> 
+		<span class="headline">Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on the 72 Hour Rule (H. Res. 554) and let
+			{{legislator.him_or_her}} know that {{legislator.he_or_she}} should support the bill.
+		</span> 
+	</div> 
+ 
+	<a name="step3"></a> 
+	<div id="senator_page_box_info"> 
+   	    <div id="senator_page_box_photo"><img src="http://assets.sunlightfoundation.com/moc/100x125/{{legislator.legislator.bioguide_id}}.jpg" border="0"></div> 
+		<div id="senator_page_box_status"> 
+			<ul> 
+				<li><h2>{{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h2></li> 
+				<li>Supports 72 Hour Rule {{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
+				<li>Cosponsor: {{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">,CALL"|safe}}</li> 
+				<li>Calls: <a href="#calls">{{legislator.num_calls}} reported</a> {% if legislator.needs_more_calls %}(our goal is {{legislator.call_goal}} calls){% endif %}</li> 
+			</ul> 
+		</div> 
+	</div> 
+ 
+ 
+ 
+	<div id="step_3"> 
+  		<h3><img src="http://media.sunlightprojects.org/s223/images/num_3.png" alt="Step 3" border="0">Call Rep. {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3> 
+	</div> 
+ 
+	<div class="call_note"><p>Ask to speak to a legislative aide, or you can leave a message with the receptionist.</p></div> 
+ 
+	<form method="post" action="{% url submit_call legislator.id %}"> 
+ 
+{% if legislator.is_cosponsor %}
+    <div class="script_item" id="script_opener"> 
+ 
+    <h5>Suggested Conversation Script</h5> 
+    <p>I am calling to thank Rep. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} co-sponsorship of the 72 Hour Rule.</p> 
+ 
+    {% include "callingtool/amendment_script.html" %}
+ 
+{% else %} 
+ 
+    <div class="script_item" id="script_opener"> 
+    <h4>Suggested Conversation Script</h4> 
+    <p> 
+	I am calling to ask Representative {{legislator.legislator.lastname}} to support H. Res. 554, the 72 Hour Rule. This legislation will ensure that members of Congress and the public have 72 hours to read bills online before Congress begins debating them.</p> 
+ 
+    <p>Will Rep. {{legislator.legislator.lastname}} support H. Res. 554?</p> 
+ 
+    <select name="on_bill" id="on_bill"> 
+      <option value="n/a">-- Report the Response --</option> 
+      <option value="yes">Yes</option> 
+      <option value="unknown">I Don't Know / Representative hasn't decided yet</option> 
+      <option value="no">No</option> 
+    </select> 
+ 
+    </div> 
+ 
+        <div class="script_item on_bill_answer" id="on_bill_yes"> 
+        <h5 class="green">If "Yes" on Supporting or Cosponsoring Read the Bill</h5> 
+      	<p>Great. Please thank Representative {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more
+transparent Congress.</p> 
+  {% include "callingtool/end_call.html" %}
+        </div> 
+ 
+        <div class="script_item on_bill_answer" id="on_bill_unknown"> 
+        <h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5> 
+        <p>Please let Representative {{legislator.legislator.lastname}} know that the 72 Hour Rule is a simple solution that will give
+		legislators and people like me the chance to read and understand bills
+		before Congress begins debating them. 
+		
+		Posting bills online 72 hours before consideration means that a lot of wasteful spending and last minute provisions will be avoided.</p> 
+        {% include "callingtool/end_call.html" %}
+        </div> 
+ 
+        <div class="script_item on_bill_answer" id="on_bill_no"> 
+        <h5 class="red">If "No"</h5> 
+        <p>Please let Representative {{legislator.legislator.lastname}} know that I hope {{legislator.he_or_she}} reconsiders. The 72 Hour Rule (H. Res. 554) is a simple solution that will give legislators and people like me the chance to read and understand bills before Congress begins debating them. Posting bills online 72 hours before consideration means that a lot of wasteful spending and last minute provisions will be avoided. </p> 
+ 
+         {% include "callingtool/end_call.html" %}
+        </div> 
+ 
+{% endif %}
+ 
+ 
+    <div class="script_item" id="call_complete"> 
+    <h5>Thank you for completing the call to {{legislator}}.  </h5> 
+    <p>Please fill out the form below to submit your findings.</p> 
+ 
+ 
+    <p><label>Name</label><input name="name" /><small>(optional)</small></p> 
+    <p><label>Email</label><input name="email" /><small>(not displayed publicly)</small></p> 
+    <p><label>Zip Code</label> <input name="zip" size="5"/><small>(optional)</small></p> 
+ 
+    <p><label>Comments / Notes</label></p> 
+    <textarea name="comments"></textarea><br /><br /> 
+    <input type="submit" value="Submit the Congressional Office's Response"  class="submit" /> 
+    </div> 
+ 
+ 
+<div class="made_calls"> 
+<a name="calls"></a> 
+<h4>{{legislator.num_calls}} calls have been made to {{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h4> 
+<table> 
+<tr> 
+<th>Caller</th><th>Time</th><th>Comments / Notes</th><th>Supports 72 Hour Rule</th></tr> 
+<tbody> 
+{% for call in calls %}
+<tr> 
+  <td width="10%">{{call.name}}</td> 
+  <td width="20%">{{call.date|date:"m.d.y"}} @ {{call.date|date:"h:i A"}}</td> 
+  <td width="40%">{{call.comments}}</td> 
+  <td width="15%">{{call.on_bill}}</td> 
+</tr> 
+{% endfor %}
+</tbody> 
+</table> 
+</div> 
+ 
+</form> 
+ 
+{% endblock %}

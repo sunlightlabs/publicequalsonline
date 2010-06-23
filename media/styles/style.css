@@ -1,6 +1,8 @@
 /* PUBLIC EQUALS ONLINE STYLES */
 /* 950 */
 
+body { border-top: 3px solid #76a050; padding-top: 15px; }
+
 /* USEFUL STUFF */
 
 a:link {color:#575757;}
@@ -61,7 +63,6 @@ tr .titles { background-color:#f0f0f0;}
 
 
 /* front page */
-#stripe { background-color:#76a050; margin:0 0 15px 0; padding:0; height:3px;}
 #logo_topleft { height:100px; width:475px; margin-bottom:50px; }
 
 #bsd_header_image { height:100px; margin-bottom:50px;}
