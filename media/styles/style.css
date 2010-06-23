@@ -825,4 +825,8 @@ ul#attendeeList dd { line-height: 20px;}
 #callingtool li.step { padding-left: 70px; margin-bottom: 60px; }
 #callingtool li#step1 { background: url(http://media.sunlightprojects.org/s223/images/num_1.png) top left no-repeat; }
 #callingtool li#step2 { background: url(http://media.sunlightprojects.org/s223/images/num_2.png) top left no-repeat; }
+#callingtool li#step3 { background: url(http://media.sunlightprojects.org/s223/images/num_3.png) top left no-repeat; }
+
 #callingtool #loading { margin-left: 180px; }
+
+#callingtool .made_calls { margin: 60px 0 40px; }
