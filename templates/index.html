@@ -2,129 +2,96 @@
 {% load feeds %}
 {% load media %}
 {% load i18n %}
+
 {% block title %}Public Equals Online{% endblock %}
 
 {% block body %}
-
-
-<div class="column span-24">
-	<div id="featured">
-		<div id="feature_box">
-		<div id="front_carousel_pledge_{{ 1236789|make_list|random }}">
-			<div id="front_pledge">&#8220;Government transparency is critical to creating a better democracy, and of highest importance in how I cast my vote. I pledge, through my sustained engagement, to hold public officials accountable for being open and transparent.&#8221;
+	<div class="column span-24">
+		<div id="featured">
+			<div id="feature_box">
+				<div id="front_carousel_pledge_{{ 1236789|make_list|random }}">
+					<div id="front_pledge">&#8220;Government transparency is critical to creating a better democracy, and of highest importance in how I cast my vote. I pledge, through my sustained engagement, to hold public officials accountable for being open and transparent.&#8221;</div>
+					<div id="front_pledge_buttons_sign">
+						<a href="/pledge/"><img src="http://assets.publicequalsonline.com/media/images/pledge_sign.png"></a>
+					</div>
+					<div id="front_pledge_buttons_share">	
+						<a href="http://local.publicequalsonline.com/page/invite/peo"><img src="http://assets.publicequalsonline.com/media/images/pledge_share.png"></a>
+					</div>
+				</div>
 			</div>
-			<div id="front_pledge_buttons_sign">
-			<a href="/pledge/"><img src="http://assets.publicequalsonline.com/media/images/pledge_sign.png"></a>
-			</div>
-			<div id="front_pledge_buttons_share">	
-			<a href="http://local.publicequalsonline.com/page/invite/peo"><img src="http://assets.publicequalsonline.com/media/images/pledge_share.png"></a>
+			<div id="main_nav_box">	
+				<ul id="main_nav">
+					<li><a href="/pledge/" class="option_1"></a></li>
+					<li><a href="/projects/" class="option_2"></a></li>
+					<li><a href="/events/" class="option_3"></a></li>
+					<li><a href="/about/why/" class="option_4"></a></li>
+				</ul>
 			</div>
 		</div>
-		</div>
-		
-		
-	<div id="main_nav_box">	
-		<ul id="main_nav">
-			<li><a href="/pledge/" class="option_1"></a></li>
-			<li><a href="/projects/" class="option_2"></a></li>
-			<li><a href="/events/" class="option_3"></a></li>
-			<li><a href="/about/why/" class="option_4"></a></li>						
-		</ul>
-	</div>
-
-
-	</div>
-
-
-
-
-<div class="container">
-	<div class="column span-24"><div id="hor_dot">&nbsp;</div></div>	
-<div class="column span-8 mission_line">
-	<div id="mission_front">
-	<h3>Our Mission</h3>
-	
-
-	
-	<p class="front_mission">We seek to create a transparent 
-	government built on open data 
-	and information. We believe a 
-	transparent government is one 
-	more deserving of our trust, 
-	allowing its citizens the ability to 
-	fully participate, collaborate and 
-	hold government accountable as 
-	our Founders intended.
-	</p>
-<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpublicequalsonline.com&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:300px; height:40px;"></iframe>
-	</div>
-	
-	</div>
-	
-<div class="column span-8">
-	<div id="front_blogs">
-		<h3>From the Blogs</h3>
-
-		<ul id="front_blog_posts">
-			
-			{% for feature_post in feature_post %}
-			<li>
-				
-			<h4><a href="{{ feature_post.url }}" target="_new">{{ feature_post.title }}</a></h4>
-				<p><span class="front_blog_source">{{ feature_post.source }}</span> &mdash; {{ feature_post.summary }}</p>
-
-			</li>
-			{% endfor %}
-		<p class="right"><a href="/news/">Read more from the Blogs</a></p>
-		</ul>			
-	</div>	
-</div>
-
-	<div class="column span-8 last">
-		<div id="upcoming_front">		
-			<h3 class="header">The Twitter Buzz</h3>
-			<!--<ul id="front_upcoming">
-	 			{% headlines "upcoming_events" 5 %}	
-			</ul>
-			-->
-			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-			<script>
-			new TWTR.Widget({
-			  version: 2,
-			  type: 'search',
-			  search: 'opengov',
-			  interval: 6000,
-			  title: 'Government in Real Time',
-			  subject: 'PUBLIC=ONLINE',
-			  width: 275,
-			  height: 250,
-			  theme: {
-			    shell: {
-			      background: '#cdd69b',
-			      color: '#3f6819'
-			    },
-			    tweets: {
-			      background: '#ffffff',
-			      color: '#444444',
-			      links: '#1985b5'
-			    }
-			  },
-			  features: {
-			    scrollbar: false,
-			    loop: true,
-			    live: true,
-			    hashtags: true,
-			    timestamp: true,
-			    avatars: true,
-			    behavior: 'default'
-			  }
-			}).render().start();
-			</script>
-			
-				
+		<div class="container">
+			<div class="column span-24">
+				<div id="hor_dot">&nbsp;</div>
+			</div>	
+			<div class="column span-8 mission_line">
+				<div id="mission_front">
+					<h3>Our Mission</h3>
+					<p class="front_mission">We seek to create a transparent government built on open data and information. We believe a transparent government is one more deserving of our trust, allowing its citizens the ability to fully participate, collaborate and hold government accountable as our Founders intended.</p>
+					<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpublicequalsonline.com&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:300px; height:40px;"></iframe>
+				</div>	
+			</div>
+			<div class="column span-8">
+				<div id="front_blogs">
+					<h3>From the Blogs</h3>
+					<ul id="front_blog_posts">
+						{% for feature_post in feature_post %}
+							<li>
+								<h4><a href="{{ feature_post.url }}" target="_new">{{ feature_post.title }}</a></h4>
+								<p><span class="front_blog_source">{{ feature_post.source }}</span> &mdash; {{ feature_post.summary }}</p>
+							</li>
+						{% endfor %}
+					</ul>	
+					<p class="right"><a href="/news/">Read more from the Blogs</a></p>
+				</div>	
+			</div>
+			<div class="column span-8 last">
+				<div id="upcoming_front">		
+					<h3 class="header">The Twitter Buzz</h3>
+					<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+					<script>
+					new TWTR.Widget({
+				  			version: 2,
+				  			type: 'search',
+				  			search: 'opengov',
+				  			interval: 6000,
+				  			title: 'Government in Real Time',
+				  			subject: 'PUBLIC=ONLINE',
+				  			width: 275,
+				  			height: 250,
+				  			theme: {
+				    			shell: {
+				      				background: '#cdd69b',
+				      				color: '#3f6819'
+				    			},
+				    			tweets: {
+				      				background: '#ffffff',
+				      				color: '#444444',
+				      				links: '#1985b5'
+				    			}
+				  			},
+				  			features: {
+				    			scrollbar: false,
+				    			loop: true,
+				    			live: true,
+				    			hashtags: true,
+				    			timestamp: true,
+				    			avatars: true,
+				    			behavior: 'default'
+				  			}
+						}).render().start();
+					</script>
+				</div>
+			</div>
+			<div class="column span-24">&nbsp;</div>
 		</div>
 	</div>
-
-<div class="column span-24">&nbsp;</div>
-
 {% endblock %}
