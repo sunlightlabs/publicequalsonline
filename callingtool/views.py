@@ -12,6 +12,9 @@ from simplesurvey.models import AnswerSet, Answer, Question, QuestionSet
 from callingtool.models import LegislatorDetail
 from uspolitics.politicians.models import Politician
 
+from sunlightapi import sunlight
+sunlight.apikey = settings.SUNLIGHT_API_KEY
+
 S482_QSET = QuestionSet.objects.get(slug='disclose-call')
 
 BAD_WORDS = ('.ru', 'Porn', 'porn')
@@ -109,6 +112,17 @@ def state_senators(request, state):
                               {'state_name': STATE_DICT[state],
                                'senators': senators},
                                   context_instance=RequestContext(request))
+
+def state_reps(request, zipcode):
+
+    ids = [l.bioguide_id for l in sunlight.legislators.allForZip(zipcode)
+                if l.title != 'Sen']
+    reps = LegislatorDetail.objects.filter(legislator__bioguide_id__in=ids)
+
+    return render_to_response('callingtool/state_reps.html',
+                              {'reps': reps},
+                              context_instance=RequestContext(request))
+
 
 def submit_call(request, id):
     if request.method != 'POST':

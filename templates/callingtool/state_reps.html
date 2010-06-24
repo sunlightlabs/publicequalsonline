@@ -1,0 +1,21 @@
+{% for rep in reps %}
+	<div class="moc">
+		<a href="{% url call_legislator rep.id %}#step3" class="avatar">
+			<img src="http://assets.sunlightfoundation.com/moc/100x125/{{ rep.legislator.bioguide_id }}.jpg" border="0">
+		</a>
+        <h3><a href="{% url call_legislator rep.id %}#step3">Rep. {{ rep.legislator.lastname }} ({{ rep.legislator.party }}-{{rep.legislator.state}}{{rep.legislator.district}})</a></h3>
+		<p class="calls">Calls: {{ rep.num_calls }} reported</p>
+		<a href="{% url call_legislator rep.id %}#step3" class="call-button">Call</a>
+		{% comment %}
+		<li>Supports 72 Hour Rule: {{rep.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
+		<li>Cosponsor: {{rep.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
+		{% endcomment %}
+		<div class="clear"></div>
+    </div> 
+{% empty %}
+    <div class="moc">
+        <h3>Sorry, but no representative was found for that zip.</h3>
+        <p> If your zipcode is relatively new you might want to try a neighboring zipcode as the Postal Service might not have linked your zipcode to a congressional district just yet. Sorry for the inconvinience. </p>
+		<div class="clear"></div>
+    </div>
+{% endfor %}
