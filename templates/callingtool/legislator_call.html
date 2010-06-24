@@ -34,8 +34,8 @@
 			
 						<div class="script_item" id="script_opener"> 
 							<h4>Suggested Conversation Script</h4> 
-							<p>I am calling to ask Representative {{legislator.legislator.lastname}} to support H.R. 5175, the DISCLOSE Act. This legislation will make sure the American people are able to know how groups like unions or corporations are spending money on elections by disclosing that information online.</p>
-							<p>Will Rep. {{legislator.legislator.lastname}} support H.R. 5175?</p> 
+							<p>&#8220;I am calling to ask Representative {{legislator.legislator.lastname}} to support H.R. 5175, the DISCLOSE Act. This legislation will make sure the American people are able to know how groups like unions or corporations are spending money on elections by disclosing that information online.</p>
+							<p>Will Rep. {{legislator.legislator.lastname}} support H.R. 5175?&#8221;</p> 
 							<select name="on_bill" id="on_bill"> 
 								<option value="n/a">-- Report the Response --</option> 
 								<option value="yes">Yes</option> 
@@ -46,19 +46,19 @@
 				
 						<div class="script_item on_bill_answer" id="on_bill_yes"> 
 							<h5 class="green">If "Yes" on Supporting or Cosponsoring Read the Bill</h5> 
-							<p>Great. Please thank Representative {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.</p> 
+							<p>&#8220;Great. Please thank Representative {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.&#8221;</p> 
 							{% include "callingtool/end_call.html" %}
 						</div> 
 				
 						<div class="script_item on_bill_answer" id="on_bill_unknown"> 
 							<h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5> 
-							<p>Please let Representative {{legislator.legislator.lastname}} know that because the Supreme Court has made it possible for more money than ever before to be spent on elections, the very least we can do is make sure all that money is disclosed to the public online and in real-time. The DISCLOSE Act is a practical solution that will give people like me the chance to at least know who is trying to influence our government, and I hope Representative {{legislator.legislator.lastname}} will commit to supporting a more transparent government through this bill.</p>
+							<p>&#8220;Please let Representative {{legislator.legislator.lastname}} know that because the Supreme Court has made it possible for more money than ever before to be spent on elections, the very least we can do is make sure all that money is disclosed to the public online and in real-time. The DISCLOSE Act is a practical solution that will give people like me the chance to at least know who is trying to influence our government, and I hope Representative {{legislator.legislator.lastname}} will commit to supporting a more transparent government through this bill.&#8221;</p>
 							{% include "callingtool/end_call.html" %}
 						</div> 
  
 						<div class="script_item on_bill_answer" id="on_bill_no"> 
 							<h5 class="red">If "No"</h5>
-							<p>Please let Representative {{legislator.legislator.lastname}} know that I sincerely hope {{legislator.he_or_she}} reconsiders. It makes me nervous to think that unions and corporations could be influencing Representative {{legislator.legislator.lastname}}'s campaign this year and I would never know about it. The very least we can do is make sure all this money is disclosed to the to people like me online and in real-time. The DISCLOSE Act is a practical solution, and I hope Representative {{legislator.legislator.lastname}} will ultimately commit to supporting a more transparent government.</p>
+							<p>&#8220;Please let Representative {{legislator.legislator.lastname}} know that I sincerely hope {{legislator.he_or_she}} reconsiders. It makes me nervous to think that unions and corporations could be influencing Representative {{legislator.legislator.lastname}}'s campaign this year and I would never know about it. The very least we can do is make sure all this money is disclosed to the to people like me online and in real-time. The DISCLOSE Act is a practical solution, and I hope Representative {{legislator.legislator.lastname}} will ultimately commit to supporting a more transparent government.&#8221;</p>
 							{% include "callingtool/end_call.html" %}
 						</div> 
 				
