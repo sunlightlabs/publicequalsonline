@@ -172,6 +172,23 @@ def all_calls(request):
         'num_calls': num_calls, 'num_unique': num_unique, 'num_sens': num_sens},
            context_instance=RequestContext(request))
 
+
+def call_totals(request):
+    from collections import defaultdict
+
+    answers = AnswerSet.objects.all()
+    counter = defaultdict(int)
+    for a in answers:
+        counter[a.object_id] += 1
+
+    legislators = LegislatorDetail.objects.in_bulk(counter.keys())
+    call_totals = [(legislators[i], n) for i,n in counter.iteritems()]
+    call_totals = sorted(call_totals, key=lambda x: x[0].legislator.lastname)
+
+    return render_to_response('callingtool/call_totals.html',
+                              {'call_totals': call_totals},
+                              context_instance=RequestContext(request))
+
 @login_required
 def delete_call(request, id):
     ans = AnswerSet.objects.filter(id=id)[0]

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+
+<div>
+    <br />
+<table> 
+<tr> 
+    <th>Representative</th><th># Calls</th>
+</tr>
+<tbody> 
+{% for call in call_totals %}
+<tr> 
+    <td width="10%"><a href="{% url call_legislator call.0.id %}">{{call.0}}</a></td> 
+  <td width="10%">{{call.1}}</td> 
+</tr> 
+{% endfor %}
+</tbody> 
+</table> 
+</div>
+{% endblock %}

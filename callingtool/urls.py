@@ -12,6 +12,7 @@ urlpatterns = patterns('callingtool.views',
     url(r'^submit_call/(?P<id>\d+)/$', 'submit_call', name='submit_call'),
 
     url(r'^all_calls/$', 'all_calls', name='all_calls'),
+    url(r'^call_totals/$', 'call_totals', name='call_totals'),
     url(r'^delete_call/(?P<id>\d+)/$', 'delete_call', name='delete_call'),
 
     url(r'^reset/$', 'reset', name='reset'),
