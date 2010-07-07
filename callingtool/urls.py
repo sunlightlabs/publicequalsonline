@@ -15,6 +15,4 @@ urlpatterns = patterns('callingtool.views',
     url(r'^call_totals/$', 'call_totals', name='call_totals'),
     url(r'^delete_call/(?P<id>\d+)/$', 'delete_call', name='delete_call'),
 
-    url(r'^reset/$', 'reset', name='reset'),
-
 )

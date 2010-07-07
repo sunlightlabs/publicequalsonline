@@ -12,11 +12,12 @@ ON_BILL_CHOICES = (
     ('O', 'Opposes'))
 
 class LegislatorDetailManager(models.Manager):
-    def get_query_set(self):
-        return super(LegislatorDetailManager, self).get_query_set().extra(
-            select={'num_calls': 'SELECT COUNT(*) FROM simplesurvey_answerset WHERE content_type_id=%s AND object_id=callingtool_legislatordetail.id'},
-            select_params=(ContentType.objects.get(app_label='callingtool', model='legislatordetail').id,)
-            )
+    pass
+#     def get_query_set(self):
+#         return super(LegislatorDetailManager, self).get_query_set().extra(
+#             select={'num_calls': 'SELECT COUNT(*) FROM simplesurvey_answerset WHERE content_type_id=%s AND object_id=callingtool_legislatordetail.id'},
+#             select_params=(ContentType.objects.get(app_label='callingtool', model='legislatordetail').id,)
+#             )
 
 class LegislatorDetail(models.Model):
 
@@ -33,6 +34,9 @@ class LegislatorDetail(models.Model):
     def __unicode__(self):
         return u' '.join([self.legislator.get_title_display(), 
                           self.good_fname(), self.legislator.lastname])
+
+    def num_calls(self, qs):
+        return self.calls.filter(query_set=qs).count()
 
     def good_fname(self):
         return self.legislator.nickname or self.legislator.firstname

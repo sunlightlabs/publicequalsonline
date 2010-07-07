@@ -3,9 +3,9 @@
 {% block callingtool %}
  
 	<div id="the_inside_pitch"> 
-		<h2>Where does Rep. {{legislator.legislator.lastname}} stand?</h2> 
+		<h2>Where does {{legislator.legislator.title}}. {{legislator.legislator.lastname}} stand?</h2> 
 		<h4>
-			Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on the DISCLOSE Act (H.R. 5175) and let
+			Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on the Earmark Transparency Act ({{ bill }}) and let
 			{{legislator.him_or_her}} know that {{legislator.he_or_she}} should support the bill.
 		</h4> 
 	</div> 
@@ -14,12 +14,12 @@
 		<li id="step3" class="step">
 			<div class="moc">
 				<img src="http://assets.sunlightfoundation.com/moc/100x125/{{ legislator.legislator.bioguide_id }}.jpg" border="0">
-				<h3>Rep. {{ legislator.legislator.lastname }} ({{ legislator.legislator.party }})</h3>
-				<p class="calls">Calls: {{ legislator.num_calls }} reported</p>
+				<h3>{{legislator.legislator.title}}. {{ legislator.legislator.lastname }} ({{ legislator.legislator.party }})</h3>
+				<p class="calls">Calls: {{ calls|length }} reported</p>
 			</div>	
 			<div class="clear"></div>
  
-			<h3>Call Rep. {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3>
+			<h3>Call {{legislator.legislator.title}}. {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3>
 			<p>Ask to speak to a legislative aide, or you can leave a message with the receptionist.</p> 
  
 			<form method="post" action="{% url submit_call legislator.id %}"> 
@@ -27,38 +27,38 @@
 					{% if legislator.is_cosponsor %}
 			
 						<h5>Suggested Conversation Script</h5> 
-						<p>I am calling to thank Rep. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} co-sponsorship of the DISCLOSE Act.</p>
+						<p>I am calling to thank {{legislator.legislator.title}}. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} co-sponsorship of {{ bill }}, the Earmark Transparency Act.</p>
 						{% include "callingtool/amendment_script.html" %}
 				
 					{% else %} 
 			
 						<div class="script_item" id="script_opener"> 
 							<h4>Suggested Conversation Script</h4> 
-							<p>&#8220;I am calling to ask Representative {{legislator.legislator.lastname}} to support H.R. 5175, the DISCLOSE Act. This legislation will make sure the American people are able to know how groups like unions or corporations are spending money on elections by disclosing that information online.</p>
-							<p>Will Rep. {{legislator.legislator.lastname}} support H.R. 5175?&#8221;</p> 
+							<p>&#8220;I am calling to ask {{legislator}} {{legislator.legislator.lastname}} to support {{ bill }}, the Earmark Transparency Act. This legislation will make sure the American people are able to know how groups like unions or corporations are spending money on elections by disclosing that information online.</p>
+							<p>Will {{legislator.legislator.title}}. {{legislator.legislator.lastname}} support {{ bill }}?&#8221;</p> 
 							<select name="on_bill" id="on_bill"> 
 								<option value="n/a">-- Report the Response --</option> 
 								<option value="yes">Yes</option> 
-								<option value="unknown">I Don't Know / Representative hasn't decided yet</option> 
+								<option value="unknown">I don't know / Has yet to decide</option> 
 								<option value="no">No</option> 
 							</select>
 						</div>
 				
 						<div class="script_item on_bill_answer" id="on_bill_yes"> 
 							<h5 class="green">If "Yes" on Supporting or Cosponsoring Read the Bill</h5> 
-							<p>&#8220;Great. Please thank Representative {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.&#8221;</p> 
+							<p>&#8220;Great. Please thank {{legislator.legislator.title}}. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.&#8221;</p> 
 							{% include "callingtool/end_call.html" %}
 						</div> 
 				
 						<div class="script_item on_bill_answer" id="on_bill_unknown"> 
-							<h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5> 
-							<p>&#8220;Please let Representative {{legislator.legislator.lastname}} know that because the Supreme Court has made it possible for more money than ever before to be spent on elections, the very least we can do is make sure all that money is disclosed to the public online and in real-time. The DISCLOSE Act is a practical solution that will give people like me the chance to at least know who is trying to influence our government, and I hope Representative {{legislator.legislator.lastname}} will commit to supporting a more transparent government through this bill.&#8221;</p>
+							<h5 class="orange">I Don't Know or {{legislator.legislator.title}}. Hasn't Decided Yet on 72 Hour Rule</h5> 
+							<p>&#8220;Please let {{legislator.legislator.title}}. {{legislator.legislator.lastname}} know that because the Supreme Court has made it possible for more money than ever before to be spent on elections, the very least we can do is make sure all that money is disclosed to the public online and in real-time. The DISCLOSE Act is a practical solution that will give people like me the chance to at least know who is trying to influence our government, and I hope Representative {{legislator.legislator.lastname}} will commit to supporting a more transparent government through this bill.&#8221;</p>
 							{% include "callingtool/end_call.html" %}
 						</div> 
  
 						<div class="script_item on_bill_answer" id="on_bill_no"> 
 							<h5 class="red">If "No"</h5>
-							<p>&#8220;Please let Representative {{legislator.legislator.lastname}} know that I sincerely hope {{legislator.he_or_she}} reconsiders. It makes me nervous to think that unions and corporations could be influencing Representative {{legislator.legislator.lastname}}'s campaign this year and I would never know about it. The very least we can do is make sure all this money is disclosed to the to people like me online and in real-time. The DISCLOSE Act is a practical solution, and I hope Representative {{legislator.legislator.lastname}} will ultimately commit to supporting a more transparent government.&#8221;</p>
+							<p>&#8220;Please let {{legislator.legislator.title}}. {{legislator.legislator.lastname}} know that I sincerely hope {{legislator.he_or_she}} reconsiders. It makes me nervous to think that unions and corporations could be influencing {{legislator.legislator.title}}. {{legislator.legislator.lastname}}'s campaign this year and I would never know about it. The very least we can do is make sure all this money is disclosed to the to people like me online and in real-time. The DISCLOSE Act is a practical solution, and I hope {{legislator.legislator.title}}. {{legislator.legislator.lastname}} will ultimately commit to supporting a more transparent government.&#8221;</p>
 							{% include "callingtool/end_call.html" %}
 						</div> 
 				
@@ -77,14 +77,14 @@
 
 					<div class="made_calls"> 
 						<a name="calls"></a> 
-						<h4>{{legislator.num_calls}} calls have been made to {{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h4> 
+						<h4>{{ calls|length }} calls have been made to {{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h4> 
 						<table>
 							<thead>
 								<tr> 
 									<th>Caller</th>
 									<th>Time</th>
 									<th>Comments / Notes</th>
-									<th>Supports H.R. 5175</th>
+									<th>Supports {{ bill }}</th>
 								</tr>
 							</thead>
 							<tbody> 
@@ -104,7 +104,9 @@
 			</form>
 		</li>
 	</ol>
+{% endblock %}
 
+{% block scripts %}
 	<script> 
 		$(function() {
 			$('#on_bill').change(function() {
@@ -116,5 +118,4 @@
 			});
 		});
 	</script>
- 
 {% endblock %}

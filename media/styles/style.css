@@ -803,7 +803,7 @@ ul#attendeeList dd { line-height: 20px;}
 #callingtool .moc h3 { margin: 0; }
 #callingtool .moc h3 a { color: #59793D; text-decoration: none; }
 #callingtool .moc p { margin: 10px 0; padding: 10px 0; }
-#callingtool .moc img { float: left; margin: 0 1em 1em 0; }
+#callingtool .moc img { background-color: #ddd; float: left; margin: 0 1em 1em 0; height: 125px; width: 100px; }
 #callingtool .moc .calls { margin: 0; }
 #callingtool .moc a.call-button {
 	background-color: #6E954B;

@@ -4,10 +4,10 @@
 {% block callingtool %}
 
 	{% if has_called %}
-    <div id="thanks_box"><h1 class="header thanks">Thank you for calling your representative in support of DISCLOSE!</h1>
+    <div id="thanks_box"><h1 class="header thanks">Thank you for calling your representative in support of the Earmark Transparency Act!</h1>
     <p>
     Could you also take a moment to ask your friends on Facebook and Twitter to call as well using this message: <br />
-    It's critical that we know who is influencing our government. Tell Congress to pass the DISCLOSE Act now <a href="http://snlg.ht/DiscloseNow">http://snlg.ht/DiscloseNow</a>
+    It's critical that we know who is influencing our government. Tell Congress to pass the Earmark Transparency Act now <a href="http://snlg.ht/DiscloseNow">http://snlg.ht/DiscloseNow</a>
     <hr />
     </p>
     </div>
@@ -15,7 +15,7 @@
 		<ol id="step-preview">
 			<li><span>Determine your representative.</span></li>
 			<li><span>Call his or her office.</span></li>
-			<li><span>Ask if he or she will co-sponsor H.R. 5175, the DISCLOSE Act.</span></li>
+			<li><span>Ask if he or she will co-sponsor the Earmark Transparency Act.</span></li>
 		</ol>
 	{% endif %}
 	
@@ -43,12 +43,15 @@
 		<img src="{% media_url %}/images/ajax-loader.gif">
 	</div>
 	
-	<script type="text/javascript">
+{% endblock %}
+
+{% block scripts %}
+	<script>
 		$().ready(function() {
 			var loading = $('#loading')
 			var repList = $('#rep-list');
-            $('#stateform').submit(function() {
-                var value = $('#zipcode')[0].value;
+	        $('#stateform').submit(function() {
+	            var value = $('#zipcode').val();
 				if (value != '') {
 					var url = '/call/state_reps/' + value + '/';
 					repList.hide();
@@ -57,11 +60,16 @@
 						loading.hide();
 						repList.show();
 						$('#step2').show();
+						window.location.hash = value;
 					});
-                    }
+	                }
 				return false;
 			});
+			var zipcode = window.location.hash.substr(1);
+			if (zipcode) {
+				$('#zipcode').val(zipcode);
+				$('#stateform').submit();
+			}
 		});
 	</script>
-	
 {% endblock %}

@@ -4,6 +4,7 @@ from django.http import HttpResponseNotAllowed, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.core.cache import cache
+from django.db.models import Count
 from django.utils.encoding import iri_to_uri
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
@@ -15,7 +16,7 @@ from uspolitics.politicians.models import Politician
 from sunlightapi import sunlight
 sunlight.apikey = settings.SUNLIGHT_API_KEY
 
-S482_QSET = QuestionSet.objects.get(slug='disclose-call')
+CALLTOOL_QSET = QuestionSet.objects.get(slug='peo-eta')
 
 BAD_WORDS = ('.ru', 'Porn', 'porn')
 
@@ -95,16 +96,18 @@ def legislator_list(request):
 def call_legislator(request, id):
     legislator = get_object_or_404(LegislatorDetail, id=id)
     calls = []
-    for call in legislator.calls.all():
+    for call in legislator.calls.filter(question_set=CALLTOOL_QSET):
         cdict = {'date':call.date}
         for q,a in call.q_and_a():
             if a:
                 cdict[q.text] = a.text
         calls.append(cdict)
 
-    return render_to_response('callingtool/legislator_call.html',
-                              {'legislator': legislator, 'calls': calls},
-                                 context_instance=RequestContext(request))
+    return render_to_response('callingtool/legislator_call.html', {
+        'legislator': legislator,
+        'calls': calls,
+        'bill': 'S.3335' if legislator.legislator.title == 'Sen' else 'H.R.5258'
+    }, context_instance=RequestContext(request))
 
 def state_senators(request, state):
     senators = LegislatorDetail.objects.filter(legislator__state=state, legislator__title='Sen')
@@ -114,11 +117,10 @@ def state_senators(request, state):
                                   context_instance=RequestContext(request))
 
 def state_reps(request, zipcode):
-
-    ids = [l.bioguide_id for l in sunlight.legislators.allForZip(zipcode)
-                if l.title != 'Sen']
+    ids = [l.bioguide_id for l in sunlight.legislators.allForZip(zipcode)]
     reps = LegislatorDetail.objects.filter(legislator__bioguide_id__in=ids)
-
+    for rep in reps:
+        rep.num_calls = rep.calls.filter(question_set=CALLTOOL_QSET).count()
     return render_to_response('callingtool/state_reps.html',
                               {'reps': reps},
                               context_instance=RequestContext(request))
@@ -138,7 +140,7 @@ def submit_call(request, id):
         if word in request.POST['comments']:
             return HttpResponseRedirect(reverse('legislator_list'))
 
-    call = AnswerSet.objects.create(question_set=S482_QSET,
+    call = AnswerSet.objects.create(question_set=CALLTOOL_QSET,
                                 related_object=LegislatorDetail.objects.get(id=id))
 
     for q in request.POST.iterkeys():
@@ -197,14 +199,3 @@ def delete_call(request, id):
     delete_url_cache('/call/%s/' % pol_id)
     delete_url_cache('/all_calls/')
     return HttpResponseRedirect(reverse('all_calls'))
-
-@login_required
-def reset(request):
-    LegislatorDetail.objects.all().delete()
-    for senator in Politician.objects.filter(title='Sen', in_office=True):
-        LegislatorDetail(
-            legislator=senator,
-            on_bill='U',
-            on_amendment=None
-        ).save()
-    return HttpResponseRedirect('/call/')
