@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
-from publicequalsonline.equals.models import FeaturedPost, PledgeCount, SplashButton
+from publicequalsonline.equals.models import FeaturedPost, PledgeCount, Splash, SplashButton
 import datetime
 
 
@@ -49,6 +49,15 @@ class FeatureAdmin(admin.ModelAdmin):
     recall.short_description = "Recall feature(s)"
 
 admin.site.register(FeaturedPost, FeatureAdmin)
+
+# splash
+
+class SplashAdmin(admin.ModelAdmin):
+    list_display = ('name','active')
+    list_display_links = ('name',)
+    prepopulated_fields = {'slug': ('name',)}
+
+admin.site.register(Splash, SplashAdmin)
 
 class SplashButtonAdmin(admin.ModelAdmin):
     list_display = ('name','url','image_url','order','is_published')

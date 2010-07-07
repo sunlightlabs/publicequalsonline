@@ -59,30 +59,30 @@ class PledgeCount(models.Model):
 
 # splash
 
-# class SplashManager(models.Manager):
-#     def carousel(self, limit=8):
-#         return Splash.objects.filter(is_published=True).order_by('-order')[:limit]
-# 
-# class Splash(models.Model):
-#     objects = SplashManager()
-#     name = models.CharField(max_length=128)
-#     slug = models.SlugField()
-#     url = models.URLField(verify_exists=False)
-#     image_url = models.URLField(verify_exists=False)
-#     order = models.IntegerField(blank=True, null=True)
-#     is_published = models.BooleanField(default=False)
-# 
-#     class Meta:
-#         ordering = ('-order',)
-# 
-#     def __unicode__(self):
-#         return self.name
-# 
-#     def save(self):
-#         if not self.order:
-#             max_order = Bumper.objects.aggregate(Max('order'))['order__max'] or 0
-#             self.order = max_order + 10
-#         super(Bumper, self).save()
+class SplashManager(models.Manager):
+    def current(self):
+        try:
+            return Splash.objects.get(active=True)
+        except Splash.DoesNotExist:
+            pass
+
+class Splash(models.Model):
+    objects = SplashManager()
+    name = models.CharField(max_length=128)
+    slug = models.SlugField()
+    content = models.TextField()
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __unicode__(self):
+        return self.name
+
+    def save(self):
+        if self.active:
+            Splash.objects.all().update(active=False)
+        super(Splash, self).save()
 
 # splash button
 

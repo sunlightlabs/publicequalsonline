@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load feeds %}
-{% load media %}
 {% load i18n %}
+{% load media %}
+{% load peo %}
 
 {% block title %}Public Equals Online{% endblock %}
 
@@ -20,15 +21,7 @@
 	<div class="column span-24">
 		<div id="featured">
 			<div id="feature_box">
-				<div id="front_carousel_pledge_{{ 1236789|make_list|random }}">
-					<div id="front_pledge">&#8220;Government transparency is critical to creating a better democracy, and of highest importance in how I cast my vote. I pledge, through my sustained engagement, to hold public officials accountable for being open and transparent.&#8221;</div>
-					<div id="front_pledge_buttons_sign">
-						<a href="/pledge/"><img src="http://assets.publicequalsonline.com/media/images/pledge_sign.png"></a>
-					</div>
-					<div id="front_pledge_buttons_share">	
-						<a href="http://local.publicequalsonline.com/page/invite/peo"><img src="http://assets.publicequalsonline.com/media/images/pledge_share.png"></a>
-					</div>
-				</div>
+				{% splash %}
 			</div>
 			<div id="main_nav_box">	
 				<ul id="main_nav">
