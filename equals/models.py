@@ -1,15 +1,11 @@
 from django.contrib.auth.models import User
-from feedinator.models import FeedEntry
-# from blogdor.models import Post
+from django.db import models
+from django.db.models import Max
 from anthill.events.models import Event
 from anthill.projects.models import Project, Role, Ask
 from anthill.people.signals import message_sent
 from brainstorm.models import Idea
-
-
-from django.db import models
-# from schedule.models.events import Event
-# Create your models here.
+from feedinator.models import FeedEntry
 
 CATEGORIES = (
     (1, 'sunlight'),
@@ -18,19 +14,7 @@ CATEGORIES = (
     (4, 'news'),
 )
 
-
-# def url_to_post(url):
-#    from django.core.urlresolvers import resolve
-#    view,_,pieces = resolve(url)
-#    return Post.objects.get(slug=pieces['slug'], timestamp__year=pieces['year'])
-#    popular.register(Post, '^/blog/[0-9]{4}/', url_to_post)
-
-#class Meeting(Event):
-#    location = models.CharField(max_length=64, db_index=True)
-
-#
-# Features
-#
+# features
 
 class FeatureManager(models.Manager):
     def published(self):
@@ -51,10 +35,14 @@ class Feature(models.Model):
     def __unicode__(self):
         return self.title
 
+# featured post
+
 class FeaturedPost(Feature):
     image = models.URLField(blank=True, null=True, verify_exists=False)
     source = models.CharField(max_length=255)
     category = models.IntegerField(blank=True, null=True, choices=CATEGORIES)
+
+# pledge count
 
 class PledgeCountManager(models.Manager):
     def current_count(self):
@@ -68,3 +56,57 @@ class PledgeCountManager(models.Manager):
 class PledgeCount(models.Model):
     objects = PledgeCountManager()
     count = models.IntegerField(default=0)
+
+# splash
+
+# class SplashManager(models.Manager):
+#     def carousel(self, limit=8):
+#         return Splash.objects.filter(is_published=True).order_by('-order')[:limit]
+# 
+# class Splash(models.Model):
+#     objects = SplashManager()
+#     name = models.CharField(max_length=128)
+#     slug = models.SlugField()
+#     url = models.URLField(verify_exists=False)
+#     image_url = models.URLField(verify_exists=False)
+#     order = models.IntegerField(blank=True, null=True)
+#     is_published = models.BooleanField(default=False)
+# 
+#     class Meta:
+#         ordering = ('-order',)
+# 
+#     def __unicode__(self):
+#         return self.name
+# 
+#     def save(self):
+#         if not self.order:
+#             max_order = Bumper.objects.aggregate(Max('order'))['order__max'] or 0
+#             self.order = max_order + 10
+#         super(Bumper, self).save()
+
+# splash button
+
+class SplashButtonManager(models.Manager):
+    def published(self, limit=4):
+        return SplashButton.objects.filter(is_published=True).order_by('-order')[:limit]
+
+class SplashButton(models.Model):
+    objects = SplashButtonManager()
+    name = models.CharField(max_length=128)
+    slug = models.SlugField()
+    url = models.URLField(verify_exists=False)
+    image_url = models.URLField(verify_exists=False)
+    order = models.IntegerField(blank=True, null=True)
+    is_published = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ('-order',)
+
+    def __unicode__(self):
+        return self.name
+
+    def save(self):
+        if not self.order:
+            max_order = SplashButton.objects.aggregate(Max('order'))['order__max'] or 0
+            self.order = max_order + 10
+        super(SplashButton, self).save()

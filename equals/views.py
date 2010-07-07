@@ -11,7 +11,7 @@ from anthill.projects.models import Project
 from anthill.events.models import Event
 from anthill.people.models import Profile
 from feedinator.models import FeedEntry
-from publicequalsonline.equals.models import FeaturedPost, PledgeCount
+from publicequalsonline.equals.models import FeaturedPost, PledgeCount, SplashButton
 
 def index(request):
     try:
@@ -21,6 +21,7 @@ def index(request):
     feature_post = FeaturedPost.objects.filter(published=True).order_by("-date_published")[0:3]
     context = {
         'feature_post': feature_post,
+        'splash_buttons': SplashButton.objects.published(),
     }
     return render_to_response("index.html", context, context_instance=RequestContext(request))
 

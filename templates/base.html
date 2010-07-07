@@ -6,23 +6,27 @@
 {% load twitter_tags %}
 <html>
 	<head>
+		
 		<meta name="description" content="Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.">
 		<meta name="keywords" content="open government, opengov, sunlight foundation, government, transparency, accountable, transparent, congress, disclosure">
+		
+		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/ico" />
+		{% block head %}{% endblock %}
+		
 		{% css "/styles/screen.css" %} <!-- blueprint screen -->
 		{% css_print "/styles/print.css" %}<!-- blueprint print -->
 		{% css "/styles/style.css?234298343478" %}
 		<!--[if IE 6]>{% css "/styles/ie.css" %}<![endif]-->
-		<!-- icons -->
-		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/ico" />
-		<!-- scripts -->
-		<script type="text/javascript" src="http://use.typekit.com/ywh3rds.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-		{% block extrahead %} {% endblock %}
+		{% block style %}{% endblock %}
+		
+		<script type="text/javascript">
+			var _sf_startpt=(new Date()).getTime(); // chartbeat
+		</script>
+
 		<title>{% block title %}{% endblock %} - Public Equals Online</title>
+		
 	</head>
 	<body class="tk-active">
 		<script type="text/javascript">
@@ -143,6 +147,9 @@
 					</div>
 				{% endblock %}	
 			</div>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+			<script type="text/javascript" src="http://use.typekit.com/ywh3rds.js"></script>
+			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 			<script type="text/javascript">
 				var _sf_async_config={uid:980,domain:"publicequalsonline.com"};
 				(function(){
@@ -161,6 +168,7 @@
 					loadChartbeat : function() { oldonload(); loadChartbeat(); };
 				})();
 			</script>
+			{% block scripts %}{% endblock %}
 		</div>
 	</body>
 </html>

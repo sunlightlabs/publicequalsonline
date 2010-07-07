@@ -28,5 +28,6 @@ django-tagging
 django-mediasync==1.0.1
 
 # callingtool apps
+python-sunlightapi
 -e git://github.com/sunlightlabs/django-uspolitics.git#egg=uspolitics
 -e git://github.com/sunlightlabs/django-simplesurvey.git#egg=simplesurvey

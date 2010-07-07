@@ -3,16 +3,13 @@
 
 {% block title %}{{block.super}}Find Local Events{% endblock %}
 
-{% block extrahead %}
-
+{% block scripts %}
 	{% js "jquery.tablesorter.min.js" %}
-	
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$().ready(function() {
 			$('#events_table').tablesorter({widgets: ['zebra'] });
 		});
 	</script>
-
 {% endblock %}
 
 {% block body %}
