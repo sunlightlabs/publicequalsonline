@@ -105,9 +105,14 @@ a.logged_in:active { color:#669933; text-decoration:none;}
 
 
 #topnav { margin:0 0 0 0; padding:0; }
-#topnav li { display: inline; font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;
- font-size:14px; margin:0; padding:0 30px 0 0;}
-
+#topnav li {
+	display: inline;
+	font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia, Cambria, "Times New Roman", Times, serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 20px 0 0;
+}
+#topnav a { text-transform: uppercase; }
 #topnav a:link { text-decoration:none; color:#575757; }
 #topnav a:visited { text-decoration:none; color:#575757;}
 #topnav a:hover {text-decoration:none; color:#3465c0; }
