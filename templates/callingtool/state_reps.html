@@ -5,7 +5,11 @@
 		</a>
         <h3><a href="{% url call_legislator rep.id %}#step3">{{ rep.legislator.title }}. {{ rep.legislator.lastname }} ({{ rep.legislator.party }}-{{rep.legislator.state}}{{rep.legislator.district}})</a></h3>
 		<p class="calls">Calls: {{ rep.num_calls }} reported</p>
-		<a href="{% url call_legislator rep.id %}#step3" class="call-button">Call</a>
+		{% if rep.called %}
+			<a href="{% url call_legislator rep.id %}#step3" class="called-button">Called</a>
+		{% else %}
+			<a href="{% url call_legislator rep.id %}#step3" class="call-button">Call</a>
+		{% endif %}
 		{% comment %}
 		<li>Supports 72 Hour Rule: {{rep.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 
 		<li>Cosponsor: {{rep.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li> 

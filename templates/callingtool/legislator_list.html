@@ -12,11 +12,18 @@
     </p>
     </div>
 	{% else %}
+		
 		<ol id="step-preview">
-			<li><span>Determine your representative.</span></li>
-			<li><span>Call his or her office.</span></li>
-			<li><span>Ask if he or she will co-sponsor the Earmark Transparency Act.</span></li>
+			<li><span>Find your representatives.</span></li>
+			<li><span>Call their offices.</span></li>
+			<li><span>Ask your Representative to cosponsor H.R. 5258, the Earmark Transparency Act, and ask your Senators if they’ll support S.R. 3335, the Senate version of the Earmark Transparency Act</span></li>
+			<li><span>Report the response.</span></li>
 		</ol>
+		
+		<p>Thanks for taking action to make our government more open and accountable!</p>
+		<p>The Earmark Transparency Act is a common sense step allowing the American public access to information about how our representatives are requesting and spending government funds for their districts. The bill has been introduced in both the House of Representatives and in the Senate, but Congress needs to hear from all of us to push it through.</p>
+		<p>Take a few minutes to call your Representative and Senators now and ask them to co-sponsor the bill. Together, our voices are stronger, so make sure to let us know what they say.</p>
+		
 	{% endif %}
 	
 	<p>Please enter your zip code to begin:</p>
@@ -26,13 +33,13 @@
 		<li id="step1" class="step">
 			<form action="." method="post" id="stateform">
                 <h4><label for="zip">Enter your zip code:</label></h4>
-                <input name="zip" id="zipcode" maxlength=5>
+                <input type="text" name="zip" id="zipcode" maxlength="5" size="5" />
 				<input type="submit" value="Search">
 			</form>
 		</li>
 		
 		<li id="step2" class="step" style="display: none;">
-			<h4>Select a representative to contact by phone</h4>
+			<h4>Click here for their number</h4>
 			<div id="rep-list"></div>
 			<div class="clear"></div>
 		</li>

@@ -16,7 +16,9 @@ from uspolitics.politicians.models import Politician
 from sunlightapi import sunlight
 sunlight.apikey = settings.SUNLIGHT_API_KEY
 
-CALLTOOL_QSET = QuestionSet.objects.get(slug='peo-eta')
+CALLTOOL_QSET_SLUG = 'peo-eta'
+CALLTOOL_QSET = QuestionSet.objects.get(slug=CALLTOOL_QSET_SLUG)
+CALLED_SESSION_KEY = "called-%s" % CALLTOOL_QSET_SLUG
 
 BAD_WORDS = ('.ru', 'Porn', 'porn')
 
@@ -106,27 +108,34 @@ def call_legislator(request, id):
     return render_to_response('callingtool/legislator_call.html', {
         'legislator': legislator,
         'calls': calls,
-        'bill': 'S.3335' if legislator.legislator.title == 'Sen' else 'H.R.5258'
+        'bill': 'S.3335' if legislator.legislator.title == 'Sen' else 'H.R.5258',
+        'chamber': 'senate' if legislator.legislator.title == 'Sen' else 'house',
+        'title': 'Senator' if legislator.legislator.title == 'Sen' else 'Representative',
     }, context_instance=RequestContext(request))
 
 def state_senators(request, state):
     senators = LegislatorDetail.objects.filter(legislator__state=state, legislator__title='Sen')
+    called = request.session.get(CALLED_SESSION_KEY, [])
     return render_to_response('callingtool/state_senators.html',
                               {'state_name': STATE_DICT[state],
-                               'senators': senators},
+                               'senators': senators,
+                               'called': called},
                                   context_instance=RequestContext(request))
 
 def state_reps(request, zipcode):
     ids = [l.bioguide_id for l in sunlight.legislators.allForZip(zipcode)]
     reps = LegislatorDetail.objects.filter(legislator__bioguide_id__in=ids)
+    called = request.session.get(CALLED_SESSION_KEY, [])
     for rep in reps:
         rep.num_calls = rep.calls.filter(question_set=CALLTOOL_QSET).count()
+        rep.called = str(rep.id) in called
     return render_to_response('callingtool/state_reps.html',
                               {'reps': reps},
                               context_instance=RequestContext(request))
 
 
 def submit_call(request, id):
+    
     if request.method != 'POST':
         return HttpResponseNotAllowed(['POST'])
 
@@ -145,10 +154,14 @@ def submit_call(request, id):
 
     for q in request.POST.iterkeys():
         Answer.objects.create(answer_set=call,
-                              question=Question.objects.get(text=q),
+                              question=Question.objects.get(text=q, question_set=CALLTOOL_QSET),
                               text=request.POST.get(q))
 
     request.session['has_called'] = id
+    
+    if 'called' not in request.session:
+        request.session[CALLED_SESSION_KEY] = []
+    request.session[CALLED_SESSION_KEY].append(id)
 
     # clear related cache keys
     delete_url_cache('/')
