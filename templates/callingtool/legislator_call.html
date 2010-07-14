@@ -1,9 +1,7 @@
 {% extends "callingtool/base.html" %}
  
 {% block callingtool %}
- 
 
- 
 	<ol id="steps">
 		<li id="step3" class="step">
 			
@@ -30,7 +28,7 @@
 						
 						<h4>Suggested Conversation Script</h4>
 						<blockquote>
-							<p>&#8220;Hi, my name is <em>[your name]</em> and I’m a constituent. I’m calling to thank {{ title }} {{ legislator.legislator.lastname }} for co-sponsoring the Earmark Transparency Act, {{ bill }}&#8221;</p>
+							<p>&#8220;I’m just calling to thank {{ title }} {{ legislator.legislator.lastname }} for {{ legislator.his_or_her }} co-sponsorship and support of the Earmark Transparency Act. This is a common sense step that would help me know how government funds are being spent in my district, and it means a lot to me as a constituent that {{ title }} {{ legislator.legislator.lastname }} is helping to make a more transparent government through this bill.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/amendment_script.html" %}
 						
@@ -67,7 +65,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_yes"> 
 						<!-- <h5 class="answer answer-yes">If "Yes" on supporting or cosponsoring {{ bill }}</h5> -->
 						<blockquote>
-							<p>&#8220;Great. Please thank {{legislator.legislator.title}}. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.&#8221;</p> 
+							<p>&#8220;That’s great! Please thank {{ title }} {{ legislator.legislator.lastname }} for {{ legislator.his_or_her }} support for a more transparent Congress.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
@@ -75,7 +73,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_unknown"> 
 						<!-- <h5 class="answer answer-unknown">I don't know or {{legislator.legislator.title}}. {{legislator.legislator.lastname}} hasn't decided yet on {{ bill }}</h5> -->
 						<blockquote>
-							<p>&#8220;Please let {{legislator.legislator.title}}. {{legislator.legislator.lastname}} know that because the Supreme Court has made it possible for more money than ever before to be spent on elections, the very least we can do is make sure all that money is disclosed to the public online and in real-time. The DISCLOSE Act is a practical solution that will give people like me the chance to at least know who is trying to influence our government, and I hope Representative {{legislator.legislator.lastname}} will commit to supporting a more transparent government through this bill.&#8221;</p>
+							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that as a constituent, I sincerely hope {{ legislator.he_or_she }} supports the Earmark Transparency Act.  This is a common sense step that would help me know how government funds are being spent in my district.  I hope {{ title }} {{ legislator.legislator.lastname }} will commit to supporting a more transparent government through this bill.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
@@ -83,7 +81,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_no"> 
 						<!-- <h5 class="answer answer-no">If "No"</h5> -->
 						<blockquote>
-							<p>&#8220;Please let {{legislator.legislator.title}}. {{legislator.legislator.lastname}} know that I sincerely hope {{legislator.he_or_she}} reconsiders. It makes me nervous to think that unions and corporations could be influencing {{legislator.legislator.title}}. {{legislator.legislator.lastname}}'s campaign this year and I would never know about it. The very least we can do is make sure all this money is disclosed to the to people like me online and in real-time. The DISCLOSE Act is a practical solution, and I hope {{legislator.legislator.title}}. {{legislator.legislator.lastname}} will ultimately commit to supporting a more transparent government.&#8221;</p>
+							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that I sincerely hope {{legislator.he_or_she}} reconsiders. The Earmark Transparency Act is a common sense step to allow myself and other constituents access to information about how government funds are being spent in my district.  This is public information that should be available online and in real time.  I hope {{ title }} {{ legislator.legislator.lastname }} will ultimately commit to supporting a more transparent government.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
