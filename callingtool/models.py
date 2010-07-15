@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.generic import GenericRelation
@@ -72,5 +71,3 @@ class LegislatorDetail(models.Model):
 
     def needs_more_calls(self):
         return self.calls.count() < self.call_goal
-
-admin.site.register(LegislatorDetail)
