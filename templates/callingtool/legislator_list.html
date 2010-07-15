@@ -8,28 +8,28 @@
 {% endblock %}
 
 {% block callingtool %}
-	<div id="calltool-thanks">
-		
-		<p class="thanks">Thank you for calling your representative in support of the Earmark Transparency Act!</p>
-		<p>Could you also take a moment to ask your friends to call as well using this message:</p>
-	
-		<blockquote>
-			<p>I just asked my representatives to cosponsor the Earmark Transparency Act. Will you? http://snlg.ht/ETAcall #opengov</p>
-		</blockquote>	
-		
-		<p>
-			Share on:
-			<a href="http://twitter.com/home?status=I+just+asked+my+representatives+to+cosponsor+the+Earmark+Transparency+Act.+Will+you%3F+http%3A//snlg.ht/ETAcall+%23opengov" target="_blank">
-				<img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Share on Twitter" />
-			</a>
-			<a class="fb_link" href="#">
-				<img src="http://wiki.developers.facebook.com/images/b/b1/Share_button.png" alt="Share on Facebook" />
-			</a>
-		</p>
-
-	</div>
 
 	{% if has_called %}
+		<div id="calltool-thanks">
+		
+			<p class="thanks">Thank you for calling your representative in support of the Earmark Transparency Act!</p>
+			<p>Could you also take a moment to ask your friends to call as well using this message:</p>
+	
+			<blockquote>
+				<p>I just asked my representatives to cosponsor the Earmark Transparency Act. Will you? http://snlg.ht/ETAcall #opengov</p>
+			</blockquote>	
+		
+			<p>
+				Share on:
+				<a href="http://twitter.com/home?status=I+just+asked+my+representatives+to+cosponsor+the+Earmark+Transparency+Act.+Will+you%3F+http%3A//snlg.ht/ETAcall+%23opengov" target="_blank">
+					<img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Share on Twitter" />
+				</a>
+				<a class="fb_link" href="#">
+					<img src="http://wiki.developers.facebook.com/images/b/b1/Share_button.png" alt="Share on Facebook" />
+				</a>
+			</p>
+
+		</div>
 	{% else %}
 		
 		<ol id="step-preview">
