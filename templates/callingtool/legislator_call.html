@@ -38,7 +38,7 @@
 						<h5>Thank you for completing the call to {{legislator}}.</h5>
 						<p>Please fill out the form below to submit your call.</p>
 						<ul>
-							<li><label>Name</label><input name="name" type="text" /><small>(optional, displayed publicly)</small></li>
+							<li><label>Name</label><input name="name" type="text" /><small>(optional, not displayed publicly)</small></li>
 							<li><label>Email</label><input name="email" type="email" /><small>(not displayed publicly)</small></li>
 							<li><label>Zip Code</label> <input name="zip" type="text" size="5"/><small>(optional)</small></li>
 							<li><label>Comments / Notes</label><textarea name="comments"></textarea></li>
@@ -90,7 +90,7 @@
 						<h5>Thank you for completing the call to {{legislator}}.</h5>
 						<p>Please fill out the form below to submit your findings.</p>
 						<ul>
-							<li><label>Name</label><input name="name" type="text" /><small>(optional, displayed publicly)</small></li>
+							<li><label>Name</label><input name="name" type="text" /><small>(optional, not displayed publicly)</small></li>
 							<li><label>Email</label><input name="email" type="email" /><small>(not displayed publicly)</small></li>
 							<li><label>Zip Code</label> <input name="zip" size="5" maxlength="5" type="text" /><small>(optional)</small></li>
 							<li><label>Comments / Notes</label><textarea name="comments"></textarea></li>
@@ -108,7 +108,6 @@
 		<table>
 			<thead>
 				<tr> 
-					<th>Caller</th>
 					<th>Time</th>
 					<th>Comments / Notes</th>
 					<th>Supports {{ bill }}</th>
@@ -117,10 +116,9 @@
 			<tbody> 
 				{% for call in calls %}
 					<tr> 
-						<td width="20%">{{call.name}}</td> 
-						<td width="15%">{{call.date|date:"m.d.y"}} @ {{call.date|date:"h:i A"}}</td> 
-						<td width="35%">{{call.comments}}</td> 
-						<td width="15%">{{call.on_bill}}</td> 
+						<td width="20%">{{call.date|date:"m.d.y"}} @ {{call.date|date:"h:i A"}}</td> 
+						<td width="45%">{{call.comments}}</td> 
+						<td width="20%">{{call.on_bill}}</td> 
 					</tr> 
 				{% endfor %}
 			</tbody> 
