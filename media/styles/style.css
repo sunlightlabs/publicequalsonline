@@ -789,6 +789,9 @@ ul#attendeeList dd { line-height: 20px;}
 	padding: 3px;
 }
 
+#callingtool p.thanks { font-size: 140%; font-weight: bold; }
+#callingtool div#calltool-thanks blockquote { width: 600px; }
+
 #callingtool p, #callingtool li {
 	font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 	font-size: 15px;

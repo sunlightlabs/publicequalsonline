@@ -1,16 +1,35 @@
 {% extends "callingtool/base.html" %}
 {% load media %}
 
+{% block meta-description %}Call your representatives and ask them to co-sponsor the Earmark Transparency Act.{% endblock %}
+{% block meta %}
+	<meta name="title" content="I just helped make the government a little more transparent. Will you?">
+	<link rel="image_src" href="http://assets.publicequalsonline.com/logos/public_equals_online_vertical_100x100.png" / >
+{% endblock %}
+
 {% block callingtool %}
+	<div id="calltool-thanks">
+		
+		<p class="thanks">Thank you for calling your representative in support of the Earmark Transparency Act!</p>
+		<p>Could you also take a moment to ask your friends to call as well using this message:</p>
+	
+		<blockquote>
+			<p>I just asked my representatives to cosponsor the Earmark Transparency Act. Will you? http://snlg.ht/ETAcall #opengov</p>
+		</blockquote>	
+		
+		<p>
+			Share on:
+			<a href="http://twitter.com/home?status=I+just+asked+my+representatives+to+cosponsor+the+Earmark+Transparency+Act.+Will+you%3F+http%3A//snlg.ht/ETAcall+%23opengov" target="_blank">
+				<img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Share on Twitter" />
+			</a>
+			<a class="fb_link" href="#">
+				<img src="http://wiki.developers.facebook.com/images/b/b1/Share_button.png" alt="Share on Facebook" />
+			</a>
+		</p>
+
+	</div>
 
 	{% if has_called %}
-    <div id="thanks_box"><h1 class="header thanks">Thank you for calling your representative in support of the Earmark Transparency Act!</h1>
-    <p>
-    Could you also take a moment to ask your friends on Facebook and Twitter to call as well using this message: <br />
-    It's critical that we know who is influencing our government. Tell Congress to pass the Earmark Transparency Act now <a href="http://snlg.ht/DiscloseNow">http://snlg.ht/DiscloseNow</a>
-    <hr />
-    </p>
-    </div>
 	{% else %}
 		
 		<ol id="step-preview">
@@ -77,6 +96,14 @@
 				$('#zipcode').val(zipcode);
 				$('#stateform').submit();
 			}
+			$('a.fb_link').click(function() {
+				var u = "http://snlg.ht/ETAcall";
+				var t = "I just helped make the government a little more transparent. Will you?";
+				window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+				return false;
+			});
 		});
+		function fbs_click() {
+		}
 	</script>
 {% endblock %}

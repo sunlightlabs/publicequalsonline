@@ -7,8 +7,9 @@
 <html>
 	<head>
 		
-		<meta name="description" content="Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.">
+		<meta name="description" content="{% block meta-description %}Public=Online is a national, non-partisan campaign seeking to create a transparent government built on open data and information.{% endblock %}">
 		<meta name="keywords" content="open government, opengov, sunlight foundation, government, transparency, accountable, transparent, congress, disclosure">
+		{% block meta %}{% endblock %}
 		
 		<link rel="shortcut icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="http://assets.publicequalsonline.com/favicon.ico" type="image/x-icon">
