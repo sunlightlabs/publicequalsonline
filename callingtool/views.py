@@ -191,17 +191,19 @@ def all_calls(request):
 def call_totals(request):
     from collections import defaultdict
 
-    answers = AnswerSet.objects.all()
+    answers = AnswerSet.objects.filter(question_set=CALLTOOL_QSET)
+    answers_total = answers.count()
     counter = defaultdict(int)
     for a in answers:
         counter[a.object_id] += 1
 
     legislators = LegislatorDetail.objects.in_bulk(counter.keys())
     call_totals = [(legislators[i], n) for i,n in counter.iteritems()]
-    call_totals = sorted(call_totals, key=lambda x: x[0].legislator.lastname)
+    call_totals = sorted(call_totals, key=lambda x: -x[1])
 
     return render_to_response('callingtool/call_totals.html',
-                              {'call_totals': call_totals},
+                              {'call_totals': call_totals,
+                              'total_calls': answers_total,},
                               context_instance=RequestContext(request))
 
 @login_required
