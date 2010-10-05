@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django.views.generic import list_detail
+from meetup.models import Event
 
 admin.autodiscover()
 
@@ -16,9 +18,17 @@ urlpatterns = patterns('',
 # anthill
 urlpatterns += patterns('',
     url(r'^call/', include('publicequalsonline.callingtool.urls')),
-    url(r'^events/', include('anthill.events.urls')),
+    #url(r'^events/', include('anthill.events.urls')),
     url(r'^people/', include('anthill.people.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
+)
+
+# generic views
+urlpatterns += patterns('',
+    url(r'^events/$', list_detail.object_list, {
+        'queryset': Event.objects.exclude(status='past').filter(start_time__isnull=False),
+        'allow_empty': True,
+    }),
 )
 
 # brainstorm - custom urls so slug isn't needed

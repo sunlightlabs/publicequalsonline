@@ -1,0 +1,33 @@
+{% extends "base_full.html" %}
+{% load peo %}
+
+{% block title %}PEO Events{% endblock %}
+
+{% block content %}
+	<a href="http://meetup.com/sunlightfoundation/">Create a Sunlight event on Meetup.com</a>
+	<img src="{% eventmap object_list %}">
+	<ul>
+		{% for ev in object_list %}
+			<li class="vevent">
+				<span class="rsvps">{{ ev.rsvp_count }} attending</span>
+				<span class="dtstart" title="{{ ev.start_time.isoformat }}">
+					{{ ev.start_time|date:"M d, Y" }}
+					{{ ev.start_time|time:"g:i A" }}
+				</span>
+				<span location="location vcard">
+					<span class="fn org">{{ ev.location }}</span>
+					<span class="adr">
+						{% if ev.address %}
+							<span class="street-address">{{ ev.address }}</span>
+						{% endif %}
+						{% if ev.city and ev.state %}
+							<span class="locality">{{ ev.city }}</span>,
+							<span class="region">{{ ev.state }}</span>
+						{% endif %}
+					</span>
+				</span>
+				<a href="{{ ev.meetup_url }}" class="url">More details or RSVP at Meetup.com</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
