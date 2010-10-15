@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('publicequalsonline.equals.urls')),
     url(r'^', include('socialregistration.urls')),
+    url(r'^', include('shortcuts.urls')),
 )
 
 # anthill
