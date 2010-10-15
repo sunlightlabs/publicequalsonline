@@ -878,3 +878,19 @@ ul#attendeeList dd { line-height: 20px;}
 
 
 #callingtool .made_calls { margin: 60px 0 40px; }
+
+#eventMap { float: left; margin-right: 30px; border: 3px solid #B3B3B3; padding: 5px;}
+#eventDescription { float: left; width: 635px; margin-right: 45px; }
+#createEvent { background: url(../images/btn_event.jpg) top left no-repeat; text-indent: -9999em; display: block; width: 208px; height: 80px; margin-bottom: 30px;}
+
+#eventDescription ul { list-style-type: none; padding-left: 0;}
+#eventDescription li { margin-bottom: 25px;}
+.dtstart { font-size: 150%; display: block; font-family:"sorts-mill-goudy-1","sorts-mill-goudy-2",Georgia,Cambria,"Times New Roman",Times,serif; color:#5A5A5A;}
+
+.org { display: block;}
+.rsvps { font-family: Georgia,Cambria,"Times New Roman",Times,serif; float: left; width: 80px;  text-align: center; margin-right: 15px;}
+.number {font-size: 200%; display: block;}
+.attending { font-size: 90%; font-style: oblique;}
+
+#eventDescription .moreDetails { display: block; margin-top: 15px;}
+.eventMetaData { float: left; width: 500px;}
