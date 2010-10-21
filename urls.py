@@ -27,7 +27,7 @@ urlpatterns += patterns('',
 # generic views
 urlpatterns += patterns('',
     url(r'^events/$', list_detail.object_list, {
-        'queryset': Event.objects.exclude(status='past').filter(start_time__isnull=False),
+        'queryset': Event.objects.filter(account__slug='casino-jack-screenings').exclude(status='past').filter(start_time__isnull=False),
         'allow_empty': True,
     }),
 )
