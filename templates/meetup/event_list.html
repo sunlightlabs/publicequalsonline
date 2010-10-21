@@ -1,0 +1,41 @@
+{% extends "base_full.html" %}
+{% load peo %}
+
+{% block title %}PEO Events{% endblock %}
+
+{% block content %}
+    <h2 class="page_header">Events</h2>
+	<img id="eventMap" src="{% eventmap object_list %}">
+	<div id="eventDescription">
+	    <h3>Casino Jack screenings</h3>
+	    <a id="createEvent" href="http://meetup.com/casino-jack-screening/">Create a Casino Jack screening on Meetup.com</a>
+    	<ul>
+    		{% for ev in object_list %}
+    			<li class="vevent clear">
+    			    <span class="rsvps"><span class="number">{{ ev.rsvp_count }}</span> <span class="attending">attending</span></span>
+    			    <div class="eventMetaData">
+    				    <span class="dtstart" title="{{ ev.start_time.isoformat }}">
+        					{{ ev.start_time|date:"M d, Y" }}
+        					{{ ev.start_time|time:"g:i A" }}
+        				</span>
+        				<span class="location vcard">
+        					<span class="fn org">{{ ev.location }}</span>
+        					<span class="adr">
+        						{% if ev.address %}
+        							<span class="street-address">{{ ev.address }}</span>
+        						{% endif %}
+        						{% if ev.city and ev.state %}
+        							<span class="locality">{{ ev.city }}</span>,
+        							<span class="region">{{ ev.state }}</span>
+        						{% endif %}
+        					</span>
+        				</span>
+				
+        				<a class="moreDetails" href="{{ ev.meetup_url }}" class="url">More details or RSVP at Meetup.com</a>
+    			    </div>
+    			    <div class="clear"></div>
+    		    </li>
+    		{% endfor %}
+    	</ul>
+	</div>
+{% endblock %}

@@ -8,6 +8,11 @@ from publicequalsonline.equals.models import PledgeCount, Splash
 register = template.Library()
 
 @register.simple_tag
+def eventmap(events):
+    points = "|".join("%s,%s" % (e.latitude, e.longitude) for e in events if e.latitude and e.longitude)
+    return "http://maps.google.com/maps/api/staticmap?size=200x200&amp;sensor=false&amp;markers=%s" % points
+    
+@register.simple_tag
 def active(request, pattern):
     import re
     if re.search(pattern, request.path):
