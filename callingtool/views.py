@@ -16,7 +16,7 @@ from uspolitics.politicians.models import Politician
 from sunlightapi import sunlight
 sunlight.apikey = settings.SUNLIGHT_API_KEY
 
-CALLTOOL_QSET_SLUG = 'peo-eta'
+CALLTOOL_QSET_SLUG = 'save-the-data'
 CALLTOOL_QSET = QuestionSet.objects.get(slug=CALLTOOL_QSET_SLUG)
 CALLED_SESSION_KEY = "called-%s" % CALLTOOL_QSET_SLUG
 

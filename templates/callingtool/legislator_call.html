@@ -7,10 +7,9 @@
 			
 			<div id="the_inside_pitch">
 				<img src="http://assets.sunlightfoundation.com/moc/100x125/{{ legislator.legislator.bioguide_id }}.jpg" border="0">
-				<h2>Where does {{legislator.legislator.title}}. {{legislator.legislator.lastname}} ({{ legislator.legislator.party }}) stand?</h2> 
+				<h2>Where does {{legislator.legislator.title}}. {{legislator.legislator.lastname}} ({{ legislator.legislator.party }}) stand?</h2>
 				<p>
-					Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on the Earmark Transparency Act ({{ bill }}) and let
-					{{legislator.him_or_her}} know that {{legislator.he_or_she}} should support the bill.
+				    Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on protecting crucial government transparency initiatives, and let {{legislator.him_or_her}} know {{legislator.he_or_she}} should support the Electronic Government Fund.
 				</p>
 				<!-- <p class="calls">Calls: {{ calls|length }} reported</p> -->
 			</div>
@@ -52,7 +51,7 @@
 					<div class="script_item" id="script_opener"> 
 						<h4>Suggested Conversation Script</h4>
 						<blockquote>
-							<p>&#8220;Hi, my name is <em>[your name]</em> and I'm a constituent. I'm calling to ask {{ title }} {{ legislator.legislator.lastname }} to co-sponsor the Earmark Transparency Act, {{ bill }}. This legislation will help me as a constituent better understand how government money is being requested and used in my district. Will {{ title }} {{ legislator.legislator.lastname }} support {{ bill }}?&#8221;</p>
+						    <p>&#8220;Hi, my name is <em>[your name]</em> and I’m a constituent. I’m calling to ask {{ title }} {{ legislator.legislator.lastname }} to protect the Electronic Government Fund in this week’s budget vote. Websites like USASpending.gov and Data.gov are important initiatives that make government more open and transparent. Will {{ title }} {{ legislator.legislator.lastname }} support the E-Government Fund and protect these websites?&#8221;</p>
 						</blockquote>
 						<select name="on_bill" id="on_bill"> 
 							<option value="n/a">-- Report the Response --</option> 
@@ -65,7 +64,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_yes"> 
 						<!-- <h5 class="answer answer-yes">If "Yes" on supporting or cosponsoring {{ bill }}</h5> -->
 						<blockquote>
-							<p>&#8220;That’s great! Please thank {{ title }} {{ legislator.legislator.lastname }} for {{ legislator.his_or_her }} support for a more transparent Congress.&#8221;</p>
+							<p>&#8220;That’s great! Please thank {{ title }} {{ legislator.legislator.lastname }} for {{ legislator.his_or_her }} support for a more transparent government.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
@@ -73,7 +72,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_unknown"> 
 						<!-- <h5 class="answer answer-unknown">I don't know or {{legislator.legislator.title}}. {{legislator.legislator.lastname}} hasn't decided yet on {{ bill }}</h5> -->
 						<blockquote>
-							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that as a constituent, I sincerely hope {{ legislator.he_or_she }} supports the Earmark Transparency Act.  This is a common sense step that would help me know how government funds are being spent in my district.  I hope {{ title }} {{ legislator.legislator.lastname }} will commit to supporting a more transparent government through this bill.&#8221;</p>
+							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that as a constituent, I sincerely hope {{ legislator.he_or_she }} protects the Electronic Government Fund and websites like Data.Gov and USASpending.gov. These websites help the public see how the government is spending our money and make Washington more transparent and accountable. I hope {{ title }} {{ legislator.legislator.lastname }} will commit to supporting a more transparent government through {{ legislator.his_or_her }} vote this week.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
@@ -81,7 +80,7 @@
 					<div class="script_item on_bill_answer" id="on_bill_no"> 
 						<!-- <h5 class="answer answer-no">If "No"</h5> -->
 						<blockquote>
-							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that I sincerely hope {{legislator.he_or_she}} reconsiders. The Earmark Transparency Act is a common sense step to allow myself and other constituents access to information about how government funds are being spent in my district.  This is public information that should be available online and in real time.  I hope {{ title }} {{ legislator.legislator.lastname }} will ultimately commit to supporting a more transparent government.&#8221;</p>
+							<p>&#8220;Please let {{ title }} {{ legislator.legislator.lastname }} know that I sincerely hope {{ legislator.he_or_she }} reconsiders. The Electronic Government Fund supports commonsense projects like Data.Gov, USASpending.gov and the IT Dashboard, which both save the government money and help hold Washington accountable.&#8221;</p>
 						</blockquote>
 						{% include "callingtool/end_call.html" %}
 					</div> 
